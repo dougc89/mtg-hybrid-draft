@@ -7,3 +7,5 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/meta/vue/templates/app-navigation-bar.p
 include_once(__DIR__.'/examples/example-card/template.php');
 include_once(__DIR__.'/examples/example-modal/template.php');
 
+
+include_once(__DIR__.'/mtg-card/template.php');

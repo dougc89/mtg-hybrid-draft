@@ -13,7 +13,7 @@
 
     <v-tabs-items v-model="tab" dark>
         <v-tab-item key="example_1">
-
+            <mtg-card v-for='card in cards' :multiverse_id='card'></mtg-card>
         </v-tab-item>
         <v-tab-item key="example_2">
 

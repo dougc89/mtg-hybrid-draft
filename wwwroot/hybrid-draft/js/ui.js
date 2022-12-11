@@ -28,6 +28,8 @@ const ui = new Vue({
                 // {title: 'Scheduling Group Members', href:'https://lcso.freshservice.com/a/solutions/articles/17000078522'},
             ], 
 
+            cards: [],
+
         }
     },
     mounted(){
@@ -43,13 +45,16 @@ const ui = new Vue({
         } 
 
         // call the init method
-        this.initialize()
+        this.get_cards()
     },
     methods: {
-        async initialize(){
+        async get_cards(){
 
-            // let response = await $.get(`path_to_api_endpoint`)
-            
+            let res = await $.get('https://api.scryfall.com/cards/search?q=set%3ABRO')
+            for(let card in res.data){
+                console.log(res.data[card])
+                if(this.cards.length < 100) this.cards.push(res.data[card]['multiverse_ids'][0])
+            }
             
         }
     }
