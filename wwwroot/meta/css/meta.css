@@ -1,0 +1,2329 @@
+﻿.printOnly, .printonly, .print-only{/*accomodate various spellings*/
+    display: none !important; /*doesn't show up unless on the printable screen*/
+}
+
+@media print {
+    .printOnly, .printonly, .print-only { /*accomodate various spellings*/
+        display: block !important; /*only shows up on the printable screen*/
+    } 
+    .no-print, .no-print * , .noprint, .noprint *{/*.no-print and .noprint alias*/
+        display: none !important;/*doesn't show up on the printable screen*/
+    }
+    body div.modern{
+        margin: 10px !important;
+    }
+
+    /* allows for page breaking for prints */
+    .print-footer {page-break-after: always;}
+}
+/****Transition to Modern********************************************************************************************************************/
+@media all {
+    /*
+    .heatmap-enabled{
+        position: relative;
+    }
+    .heatmap-enabled::after {
+        content: ""; /* ::before and ::after both require content 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        opacity: var(--opacity, 0); /*this will be adjusted by showHeatmap action
+        display: var(--heatmapShow, none);
+    }
+    */
+
+    [v-cloak] {
+        /*hide view {{placeholders}} while loading*/
+        display: none;
+    } 
+
+    .v-none {
+        visibility: hidden;
+    }
+    /* clickable rows in our vue-datatable component, applied by a dynamic class .rows_clickable */
+    .rows_clickable .v-data-table__wrapper tr:hover{
+        cursor: pointer
+    }
+    
+
+    .app-content {
+        overflow-x: scroll;
+        /*since the app-content container is a fixed width right now, we might put something in it than is wider than the container can hold, 
+         we still need to give the user a way to see that content*/
+    }
+
+    .scrollable {
+        width: 100%; /*we want to fill the entire container width*/
+        max-width: 100%; /*can't go wider than container*/
+        max-height: 100%; /*can't expand vertically either, but we will let it have an auto height until we reach the extent of the container*/
+        overflow: scroll; /*we get an x AND y scroll bar if we overflow the container*/
+    }
+
+    .scrollable-X, scrollable-x { /*same principle as scrollable class, but only pertaining to width | Note: synonymous class names to avoid mistypes in production*/
+        width: 100%; /*we want to fill the entire container width*/
+        max-width: 100%; /*can't go wider than container*/
+        overflow-x: scroll; /*we get an x AND y scroll bar if we overflow the container*/
+    }
+
+    .rounded-corner, .rounded-corner.col-12, .rounded-corners, .rounded-corners.col-12, .rounded-corners.modal-content { /*synonymous names: rounded-corner and rounded-corners*/
+        /*ensuring that this applies to elements which are supposed to fill an entire row (col-12)*/
+        border-radius: 10px;
+        overflow: hidden; /*so that we can maintain the rounded corners by default*/
+    }
+
+    .v-application{
+        border-radius: 10px;
+    }
+
+    .min-height-100{
+        min-height: 100px
+    }
+
+    [v-cloak] { display: none; } /* hide vue element {{placeholders}} while init */
+
+    body.transition-to-modern{
+        background: #101010;
+    }
+
+    body.transition-to-modern.printable{
+        background: white !important;
+    }
+    
+    body div.modern{
+        /* app container, legacy referenced as #container*/
+            margin: 10px 100px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    
+
+
+    #mainContent {
+        background-color: #151515; /*this is not a complete black but Google's advised dark grey background color for dark theme*/
+    }
+
+    #middleContent.transition-to-modern {
+        background-color: #151515; /*this is not a complete black but Google's advised dark grey background color for dark theme*/
+    }
+
+    #footerLinks.transition-to-modern {
+        background: none; /*these background highlights are visually annoying, removing them as default*/
+    }
+
+    /* Vuetify overrides of link defaults */
+    a.v-btn.theme--light, a.v-btn.theme--light:hover{
+        color: black;
+    }
+    a.v-btn.theme--dark, a.v-btn.theme--dark:hover{
+        color: white;
+    }
+
+    /*Link Fixes during Transition*/
+    a.transition-to-modern, table.table .blue-grey a.transition-to-modern { /*special inclusion for links within a mdb.table*/
+        background-color: rgba(255,255,255,0); /*totally transparent background, when you hover over an anchor tag*/
+        font-weight: 500;
+        color: #004ecb; /*Material color: Blue A400 Dark, if on a light background*/
+        cursor: pointer;
+    }
+
+        a.transition-to-modern:hover, table.table a.transition-to-modern:hover {
+            color: #2979ff; /*Material color: Blue A400 | if on a regular light background*/
+            cursor: pointer;
+        }
+
+    .dark a.transition-to-modern {
+        /* background-color: rgba(255,255,255,0); totally transparent background, when you hover over an anchor tag*/
+        color: #2979ff; /*Material color: Blue A400, if on a dark background*/
+    }
+
+        .dark a.transition-to-modern:hover {
+            color: #75a7ff; /*Material color: Blue A400 Light| if on a dark background*/
+        }
+
+    a.transition-to-modern.list-group-item-action {
+        background-color: rgba(255,255,255,1); /*totally white background, if the link has been styled as a list item*/
+    }
+    a.transition-to-modern.list-group-item:hover {
+        background-color: rgba(255,255,255,0.1); /*slightly opague white background, if the link has been styled as a list item*/
+    }
+        a.transition-to-modern.list-group-item-action:hover, a.modern-link.list-group-item-action:hover {
+            background-color: #f8f9fa; /*Tiny grayish tint when hovered*/
+        }
+
+    a.danger-link, a.danger-text, a.transition-to-modern.danger-link, .dark a.transition-to-modern.danger-text, .dark a.transition-to-modern.danger-link, .dark table.table a.transition-to-modern.danger-link { /*trying to catch all use cases of .danger-link*/
+        color: #f44336; /*Red 500*/
+    }
+
+
+    a.danger-link:hover, a.transition-to-modern.danger-link:hover,
+    .dark a.transition-to-modern.danger-link:hover,
+    .dark table.table a.transition-to-modern.danger-link:hover
+    {
+        color: #ff7961; /*Red 500 Light*/
+    }
+
+    .unselectable { /*place this class on anything (ie. text) we don't want want the user to be able to highlight*/
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .cursive, .cursive--Yellowtail {
+        font-family: 'Yellowtail', sans-serif; /*fallback to sans-serif if we didn't load the Google font*/
+        /*Include the following on pages where you want to use it:
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yellowtail"> 
+          For more Google Handwriting fonts: https://fonts.google.com/?category=Handwriting
+        */
+    }
+    .cursive--Alex-Brush {
+        font-family: 'Alex Brush', sans-serif; /*fallback to sans-serif if we didn't load the Alex+Brush font*/
+        font-size: larger;
+        /*Include the following on pages where you want to use it:
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush"> 
+          for signatures and such*/
+    }
+    /*textarea.textarea-autosize {
+        height: 2.25rem;
+        min-height: 2.25rem;
+        resize: none;
+        overflow-y: hidden;
+    }*/
+
+    hr.divider { /*for dividing sections*/
+        height: .25rem;
+        border-radius: 0.125rem;
+        margin: 0;
+        background: white;
+        border: none;
+        margin-left: -15px;
+    }
+    .custom-control-label:hover {
+        cursor: pointer; /*input fields with labels (checkbox/radio) show a pointer on hover*/
+    }
+
+    /* bootstrap modals were ending up as white text on white background, overriding here so that the text is visible*/
+    .modal{
+        color: black;
+    }
+
+    .question-hover {
+        cursor: help; /*shows a little question mark with the mouse cursor, in case you want to indicate that hovering shows additional information (such as via html title)*/
+    }
+    .action-hover {
+        cursor: pointer;
+    }
+
+    .mt-5em {
+        margin-top: 5em; /*custom top margin for freestanding apps (like Seniorwatch) that need to bump their content below a navbar*/
+    }
+
+    .nowrap {
+        white-space: nowrap; /*if you don't want something to wrap, forcing it to remain on one line (maybe to display a phone number, etc.)*/
+        flex-wrap: nowrap; /*if applied to a flexbox item*/
+        /*min-width: min-content; prevent things from just squishy down infinitesimally*/
+    }
+
+    input[type=text].nowrap {
+        min-width: 10ch; /*should make the min width of a text input 10 "character widths" */
+    }
+
+    .dataTables_wrapper { /*provides automatic centering to datatables generated by MDB DataTable method*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dark .dataTables_wrapper .pagination .page-link{
+        color:white;/*so that it is visible on a black background*/
+    }
+        .dataTables_wrapper .pagination .page-link:hover {
+            color: black;
+        }
+
+    .light .dataTables_wrapper {
+        /*simulates a card at 1dp height from the datatable generated by MDB DataTable method*/
+        background-color: #ffffff;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        border-radius: 1em;
+        padding: 0.5em;
+        margin-bottom: 2em;
+    }
+    .light .dataTables_wrapper .pagination .page-link {
+        color: black;
+    }
+
+    .homepageAlert{
+        width: 974px;/*Since the legacy content container was fixed at 974px, we are forcing the homepage alert to match its width when displayed above (while the legacy content container is still a thing...)*/
+    }
+
+
+}
+/*******************************************************************************************************************Transition to Modern*****/
+
+/***** Customizations from MDB defauls**************************************************************************************************/
+@media (min-width:150px) {
+    .modal .modal-fluid {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 50px; /*I like the idea of a fluid width modal, by don't want it to touch the edges of the screen*/
+        padding-left: 50px; /*I like the idea of a fluid width modal, by don't want it to touch the edges of the screen*/
+    }
+}
+
+@media all {
+
+    /* help vuetify.css overrule conflicts with bootstrap.css */
+    label.v-label{
+        margin-bottom: 0;
+    }
+
+
+}
+
+/**************************************************************************************************Modal Customizations from MDB defauls*****/
+
+/*****Icon Styles****************************************************************************************************************************/
+@media all {
+    i.fa-xl, .btn i.fa-xl {
+        font-size: 1.5em; /*custom definition of mine, MDB uses fa-lg (sometimes too small) and fa-2x (very big), but I want something in the middle!*/
+    }
+}
+/***************************************************************************************************************************Icon Styles******/
+
+/*****Custom Floating Action Buttons**********************************************************************************************************/
+@media all {
+    /*.fab is a class that applies to button.btn types (with MDB baseline styling for button.btn)*
+     *sizing options: .tiny-fab, .small-fab, .big-fab (default medium size applies by just .fab */
+    .fab {
+        min-height: 60px;
+        min-width: 60px;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+    }
+
+        .fab.tiny-fab { /*allows specific small-fab format applied to an existing fab, or just small-fab class standalone*/
+            min-height: 30px;
+            min-width: 30px;
+        }
+
+        .fab.small-fab { /*allows specific small-fab format applied to an existing fab, or just small-fab class standalone*/
+            min-height: 45px;
+            min-width: 45px;
+        }
+
+        .fab.big-fab { /*allows specific small-fab format applied to an existing fab, or just small-fab class standalone*/
+            min-height: 75px;
+            min-width: 75px;
+        }
+
+        .fab a {
+            /*to align ligature icons inside of one of these fabs, just wrap the icon in an otherwise blank anchor link <a><i></i></a>*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+}
+/**********************************************************************************************************Custom Floating Action Buttons*****/
+/****Dark Theme Stuff************************************************************************************************************************/
+@media all {
+    body.dark, body .dark {
+        background-color: #151515; /*eventual, after transition to modern is complete; this is not a complete black but Google's advised dark grey background color for dark theme*/
+        color: white;
+    }
+
+    .dark .app-container{
+        background-color: #202020;
+    }
+
+    .dark.dp-16 { /*modals*/
+        background-color: #383838;
+        color: white;
+    }
+
+    .card.dark {
+        background-color: #202020; /*simulated height: 1dp calculation*/
+        color: white;
+    }
+
+    /*body.transition-to-modern is deprecated and will be replaced in Gen3 by body.dark*/
+    .dark .tooltip-inner, body.transition-to-modern .tooltip-inner {
+        background-color: #fff59d; /*yellow 200*/
+        color: black; /*for readability*/
+    }
+
+    .dark .tooltip.bs-tooltip-right .arrow:before, body.transition-to-modern .tooltip.bs-tooltip-right .arrow:before {
+        border-right-color: #fff59d !important;
+    }
+
+    .dark .tooltip.bs-tooltip-left .arrow:before, body.transition-to-modern .tooltip.bs-tooltip-left .arrow:before {
+        border-left-color: #fff59d !important;
+    }
+
+    .dark .tooltip.bs-tooltip-bottom .arrow:before, body.transition-to-modern .tooltip.bs-tooltip-bottom .arrow:before {
+        border-bottom-color: #fff59d !important;
+    }
+
+    .dark .tooltip.bs-tooltip-top .arrow:before, body.transition-to-modern .tooltip.bs-tooltip-top .arrow:before {
+        border-top-color: #fff59d !important;
+    }
+
+    .dark .light-yellow {
+        background-color: #fff59d;/*Yellow 200*/
+        color:black;
+    }
+    .dark .light-yellow-text, .dark .text-light-yellow {
+        color: #fff59d; /*Yellow 200*/
+    }
+
+    .dark .material-light-green {
+        background-color: #81c784; /*Green 300*/
+        color: black;
+    }
+
+    .dark .material-light-green-text {
+        color: #81c784; /*Green 300*/
+    }
+
+    .dark .material-bright-green {
+        background-color: #5efc82; /*Green A700-light*/
+        color: black;
+    }
+
+    .dark .material-bright-green-text {
+        color: #5efc82; /*Green A700-light*/
+    }
+
+
+    .dark .material-light-green.action:hover,
+    .dark .material-bright-green.action:hover { /*If we want to use this color to describe a button/area as actionable*/
+        cursor: pointer;
+        background-color: #00c853; /*Green A700*/
+    }
+    .dark .material-light-green.action:active,
+    .dark .material-bright-green.action:active { /*If we want to use this color to describe a button/area as actionable*/
+        cursor: pointer;
+        background-color: #5efc82; /*Green A700-light*/
+    }
+
+    .dark .accent-green.action:hover,
+    .dark .accent-green.action:active { /*If we want to use this color to describe a button/area as actionable*/
+        cursor: pointer;
+        background-color: #5efc82; /*Green A700-light*/
+    }
+
+    /*****Static Sections************************************************************************/
+    .dark .blue-section{
+        background-color: #004ecb;
+        color:white;
+    }
+    .dark .red-section {
+        background-color: #ba000d;
+        color: white;
+    }
+    .dark .green-section {
+        background-color: #009624;
+        color: white;
+    }
+    .dark .yellow-section {
+        background-color: #ffeb3b;
+        color: black;
+    }
+    /*****end: Static Sections*******************************************************************/
+
+    /*****Main Action Colors Usage***************************************************************/
+    .action-btn:hover{/*basic pointer styling for something that is actionable, but colored differently*/
+        cursor: pointer;
+    }
+
+    .dark .action-blue {
+        background-color: #2979ff; /*Blue A400*/
+        color: black;
+    }
+        .dark .action-blue:hover {/*to indicate that this area is actionable*/
+            background-color: #75a7ff; /*Blue A400-light*/
+            cursor:pointer;
+        }
+
+    .dark .action-red, 
+    .danger-action {/*danger-action is a deprecated class*/
+        /*action buttons we want to emphasize in red*/
+        background-color: #f44336; /*Red 500*/
+        color: black;
+    }
+
+        .dark .action-red:hover,
+        .dark .danger-action:hover { /*danger-action is a deprecated class*/
+            background-color: #ff7961; /*Red 500 Light*/
+            cursor: pointer;
+        }
+
+    .action-green { /*Regular light theme defaults*/
+        background-color: #2e7d32;
+        color: white;
+        cursor: pointer;
+    }
+
+        .action-green:hover { /*Regular light theme defaults*/
+            background-color: #60ad5e; /*Green A700 Light*/
+            color:black;
+            cursor: pointer;
+        }
+
+    .dark .action-green,
+    .dark .material-light-green.action, /*.material-light-green.action is a deprecated class combo*/
+    .dark .material-bright-green.action { /*.material-bright-green.action is a deprecated class combo*/
+        background-color: #00c853; /*Green A700*/
+        color: black;
+        cursor: pointer;
+    }
+
+        .dark .action-green:hover,
+        .dark .material-light-green.action:hover,
+        .dark .material-bright-green.action:hover { /*If we want to use this color to describe a button/area as actionable*/
+            background-color: #b2fab4; /*Green A700 Light*/
+            cursor: pointer;
+        }
+
+    .dark .action-yellow {
+        background-color: #ffff72; 
+        color: black;
+    }
+
+        .dark .action-yellow:hover { /*to indicate that this area is actionable*/
+            background-color: #fff59d; 
+            cursor: pointer;
+        }
+    /*****end: Main Action Colors Usage**********************************************************/
+
+    .dark .action-light-blue {
+        background-color: #75a7ff; /*Blue A400-light*/
+        color: black;
+    }
+
+        .dark .action-light-blue:hover { /*to indicate that this area is actionable*/
+            background-color: #2979ff; /*Blue A400*/
+            cursor: pointer;
+            color: black;
+        }
+
+    .dark .action-light-blue-text {
+        color: #75a7ff; /*Blue A400-light*/
+    }
+
+        .dark .action-light-blue-text:hover { /*to indicate that this text is actionable*/
+            color: #2979ff; /*Blue A400*/
+            cursor: pointer;
+        }
+
+}
+/************************************************************************************************************************Dark Theme Stuff****/
+
+/****Light Theme Stuff************************************************************************************************************************/
+@media all {
+    body.light {
+        background-color: #fafafa;
+        color: black;
+    }
+
+    .red-wireframe {
+        border: 1px solid #ff6659;
+        color: #ff6659;
+    }
+
+    .app-container.light {
+        background-color: #fafafa; /*simulated height: 1dp calculation*/
+        min-height: 100vh;
+    }
+
+    .light a.modern-link {
+        color: #004ecb;
+    }
+
+        .light a.modern-link:hover {
+            color: #2979ff;
+        }
+
+    .card.light, card.light.dp-1 {
+        background-color: #fafafa; /*simulated height: 1dp calculation*/
+        color: black;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    }
+}
+/************************************************************************************************************************Light Theme Stuff****/
+
+/****Material Design Card Styling************************************************************************************************************/
+@media all {
+    .app-content {
+        overflow-x: scroll;
+    }
+
+    .col-12.row {
+        margin-left: 0; /*to replicate a col-12 within a row (without an offset from its parent row), when we want to assign row class for itself (to contain other cols inside it)*/
+    }
+}
+/************************************************************************************************************Material Design Card Styling****/
+
+/*****Toggle Switches (custom material design style)******************************************************************************************/
+
+/*** 
+	Material Design Switches for Bootstrap 4 and Material Design Bootstrap (MDB)
+	by djibe
+	JSFiddle : https://jsfiddle.net/djibe89/9deak9dh/
+***/
+@media all {
+    .material-switch > input[type="checkbox"] {
+        display: none;
+    }
+
+    .material-switch > label {
+        cursor: pointer;
+        height: 0px;
+        position: relative;
+        top: 2px;
+        width: 40px;
+    }
+
+        .material-switch > label::before {
+            background: rgb(0, 0, 0);
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            content: '';
+            height: 16px;
+            margin-top: -8px;
+            position: absolute;
+            opacity: 0.3;
+            transition: all 0.4s ease-in-out;
+            width: 40px;
+        }
+
+        .material-switch > label::after {
+            background: rgb(255, 255, 255);
+            border-radius: 16px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            content: '';
+            height: 24px;
+            left: -4px;
+            margin-top: -8px;
+            position: absolute;
+            top: -4px;
+            transition: all 0.3s ease-in-out;
+            width: 24px;
+        }
+
+    .material-switch > input[type="checkbox"]:checked + label::before {
+        background: inherit;
+        opacity: 0.5;
+    }
+
+    .material-switch > input[type="checkbox"]:checked + label::after {
+        background: inherit;
+        left: 20px;
+    }
+}
+/******************************************************************************************Toggle Switches (custom material design style)*****/
+
+/*****Fancy Material Toasts (custom material design style)******************************************************************************************/
+@media all {
+    /*** 
+	Forked from "Pure CSS/JS Toast Notification"
+	by Pierre Smith
+	CodePen: https://codepen.io/kipp0/pen/pPNrrj
+    
+    Format your toast like this:
+    <div id="identifier" class="toast"><div class="icon">Icon</div><div class="desc">You need to open a table first</div></div> //Note: #identifier is an example of a unique querystring
+
+    Usage in jQuery:
+    function launch_toast(querystring) {
+        //@querystring: string | unique identifying querystring to select the target toast
+        //the toast will display for 5 secs, per hardcoded css animations
+        var x = $(querystring);
+        x.addClass('show');
+        setTimeout(function(){ x.removeClass("show"); }, 5000);
+    }
+    ***/
+
+    .toast {
+        visibility: hidden;
+        /*width: fit-content;*/
+        width:fit-content;
+        max-width: 1000px !important;/*had to mark as important to override bootstrap default*/
+        /*max-width: 50px;*/
+
+        height: 50px;
+        /*margin-left: -125px;*/
+        margin-left: auto; /*positions the toast in the bottom right*/
+        margin-right: 50px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+        .toast .icon {
+            width: 50px;
+            height: 50px;
+            float: left;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            box-sizing: border-box;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .toast .desc {
+            max-width: 0;
+            color: #fff;
+            padding: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /*old stable*
+        .toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+        }
+
+        */
+        .toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 4s, invisible 2s 4.5s;
+            animation: fadein 0.5s, fadeout 0.5s 4s, invisible 2s 4.5s;
+        }
+
+            .toast.show .desc {
+                -webkit-animation: expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 3.5s;
+                animation: expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 3.5s;
+            }
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes expand {
+        from {
+            max-width: 0px;
+            padding: 16px 0px 16px 0px;
+        }
+
+        to {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+    }
+
+    @keyframes expand {
+        from {
+            max-width: 0px;
+            padding: 16px 0px 16px 0px;
+        }
+
+        to {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+    }
+
+    @-webkit-keyframes stay {
+        from {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+
+        to {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+    }
+
+    @keyframes stay {
+        from {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+
+        to {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+    }
+    @-webkit-keyframes shrink {
+        from {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+
+        to {
+            max-width: 0px;
+            padding: 16px 0px 16px 0px;
+        }
+    }
+
+    @keyframes shrink {
+        from {
+            max-width: 1000px;
+            padding: 16px 16px 16px 16px;
+        }
+
+        to {
+            max-width: 0px;
+            padding: 16px 0px 16px 0px;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 60px;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 60px;
+            opacity: 0;
+        }
+    }
+
+    @keyframes invisible{
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes invisible {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}
+/******************************************************************************************Fancy Material Toasts (custom material design style)*****/
+
+/****App Containers**************************************************************************************************************************/
+@media all {
+    .app-content {
+        overflow-x: scroll; /**/
+    }
+}
+/**************************************************************************************************************************App Containers****/
+
+/****Navbar Styling**************************************************************************************************************************/
+@media all {
+    .navbar li.nav-item {
+        border-radius: 1em; /*knock those edges of the rectangle*/
+        overflow: hidden; /*so that waves effects don't act like we have a rectangular element here*/
+    }
+    .navbar li.nav-item.dropdown {
+        border-radius: 1em; /*knock those edges of the rectangle*/
+        overflow: visible; /*if we have a dropdown, it will need to show the overflow*/
+    }
+        /*.navbar li.nav-item div.waves-ripple,
+        .navbar li.nav-item div.waves-ripple.waves-rippling {
+            border-radius: 1em; 
+        }*/
+        .navbar li.nav-item.active {
+            background-color: rgba(255,255,255,0.1); /*mostly transparent white*/
+        }
+
+    .navbar-brand .lcso-branding, .navbar-text .lcso-branding {
+        /*Displays in top right of navigation menu*/
+        background-color: white;
+        color: black !important; /*Try to avoid use of !important*/
+        border-radius: 5px;
+        /*Text of LCSO Branding not selectable*/
+        -webkit-user-select: none; /* Chrome all / Safari all */
+        -moz-user-select: none; /* Firefox all */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Likely future */
+    }
+
+    /* .navbar-brand .lcso-branding img {
+            #Tiny adjustments to small LCSO logo positioning
+            transform: translateY(-10%);
+            margin: 2px;
+        }*/
+
+
+
+    .navbar.dark.dp-4 { /*dp-4 indicates a material design simulated height: 4 digital pixels*/
+        background-color: #2A2A2A;
+        color: #00c853; /*green A700*/
+    }
+
+        a.text-green-200:hover, .navbar.dark.dp-4 a:hover {
+            color: #5efc82; /*green A700 - light*/
+        }
+
+        .navbar.dark.dp-4 .nav-item.active {
+            color: #5efc82; /*green A700 - light*/
+        }
+
+    .dropdown-item:active {
+        background-color: #5efc82; /*green A700 - light*/
+    }
+}
+/**************************************************************************************************************************Navbar Styling****/
+
+/****Modern Intranet Design Colors***********************************************************************************************************/
+@media all {
+    .bluegrey-800, .bluegray-800 { /*accommodate spelling alternatives*/
+        background-color: #37474f;
+        color: white; /*text color default, for readability*/
+    }
+
+    .text-bluegrey-800, .text-bluegray-800 {
+        color: #37474f;
+    }
+
+    .bluegrey-800-light, .bluegray-800-light { /*accommodate spelling alternatives*/
+        background-color: #62727b;
+        color: white; /*text color default, for readability*/
+    }
+
+    .text-bluegrey-800-light, .text-bluegray-800-light {
+        color: #62727b;
+    }
+
+    .bluegrey-800-dark, .bluegray-800-dark { /*accommodate spelling alternatives*/
+        background-color: #102027;
+        color: white; /*text color default, for readability*/
+    }
+
+    .text-bluegrey-800-dark, .text-bluegray-800-dark {
+        color: #102027;
+    }
+
+    .bluegrey-50, .bluegray-50 { /*accommodate spelling alternatives*/
+        background-color: #eceff1;
+        color: black; /*text color default, for readability*/
+    }
+
+    .bluegrey-200, .bluegray-200 { /*accommodate spelling alternatives*/
+        background-color: #b0bec5;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-bluegrey-200, .text-bluegray-200 {
+        color: #b0bec5;
+    }
+
+    .bluegrey-100, .bluegray-100 { /*accommodate spelling alternatives*/
+        background-color: #cfd8dc;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-bluegrey-100, .text-bluegray-100 {
+        color: #cfd8dc;
+    }
+
+    .danger-section { /*Danger Sections or Red Alerts*/
+        background-color: #ba000d; /*Red 500 - Dark*/
+        color: white; /*text color default, for readability*/
+    }
+
+    .danger-text { /*Warning Text*/
+        color: #f44336; /*Red 500*/
+    }
+
+    .danger-text.action:hover { /*to indicate clickability*/
+        cursor:pointer;
+    }
+
+    .grey-200{
+        background-color: #eeeeee;
+        color: black;
+    }
+
+    .blue-grey-100 {
+        background-color: #cfd8dc;
+        color: black;
+    }
+
+    .green-200, .material-light-green {
+        background-color: #a5d6a7; /*Green 200 - desaturated to reduce eye strain*/
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-green-200, .material-light-green-text {
+        color: #a5d6a7; /*Green 200*/
+    }
+
+
+
+    .green-A700, .accent-green {
+        background-color: #00c853; /*Green A700*/
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-green-A700, .accent-green-text {
+        color: #00c853; /*Green A700*/
+    }
+
+    .green-A700-dark, .green-background {
+        background-color: #009624; /*Green A700 - dark*/
+        color: white; /*text color default, for readability*/
+    }
+    .text-green-A700-dark {
+        color: #009624; /*Green A700 - dark*/
+    }
+
+    .green-A700-light {
+        background-color: #5efc82; /*Green A700 - light*/
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-green-A700-light {
+        color: #5efc82; /*Green A700 - light*/
+    }
+
+    .green-800 {/*Deprecated color*/
+        background-color: #2e7d32; /*Green 800 */
+        color: white; /*text color default, for readability*/
+    }
+
+    .green-A700{/*Material Green-A700*/
+        background-color:#00c853;
+        color:black;
+    }
+    .text-green-A700 { /*Material Green-A700*/
+        color: #00c853;
+    }
+
+    .yellow-200 {
+        background-color: #fff59d; /*Yellow 200 - desaturated to reduce eye strain*/
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-yellow-200 {
+        color: #fff59d; /*Yellow 200 - desaturated to reduce eye strain*/
+    }
+
+    .yellow-500 {
+        background-color: #ffeb3b; /*Yellow 500*/
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-yellow-500 {
+        color: #ffeb3b; /*Yellow 500*/
+    }
+
+    .yellow-500-light {
+        background-color: #ffff72; /*Yellow 500-light*/
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-yellow-500-light {
+        color: #ffff72; /*Yellow 500-light*/
+    }
+
+    /*Following colors used during Transition Phase only (deprecated)*/
+    .blue-900 { /*Used During Transition Phase only (deprecated)*/
+        background-color: #0d47a1;
+        color: white; /*text color default, for readability*/
+    }
+
+    .text-blue-900 {
+        color: #0d47a1;
+    }
+
+    .red-200 { /*Used During Transition Phase only (deprecated)*/
+        background-color: #ef9a9a;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-red-200 {
+        color: #ef9a9a;
+    }
+
+    .red-500, .danger-red {
+        background-color: #f44336;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-red-500, .danger-red-text {
+        color: #f44336;
+    }
+
+    .red-500-light { /*Used During Transition Phase only (deprecated)*/
+        background-color: #ff7961;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-red-500-light {
+        color: #ff7961;
+    }
+
+    .red-900 { /*Used During Transition Phase only (deprecated)*/
+        background-color: #b71c1c;
+        color: white; /*text color default, for readability*/
+    }
+
+        .red-900 a:hover, .red-900 a.transition-to-modern:hover, .red-900 a.transition-to-modern.text-white:hover {
+            color: #0d47a1; /*hovered links are blue-900*/
+        }
+
+    .text-red-900 {
+        color: #b71c1c;
+    }
+
+    .blue-A400, .blue-accent-400, .action-blue, button.modern-link, button.modern-link:hover { /*(blue-accent-400 deprecated name)*/
+        background-color: #2979ff;
+        color: white; /*text color default, for readability*/
+    }
+
+    .text-blue-A400, .text-blue-accent-400, .action-blue-text {
+        color: #2979ff;
+    }
+
+    .modal .action-blue-text {
+        color: #004ecb;/*modals are on a lighter background*/
+    }
+
+    .text-blue-A400-light {
+        color: #75a7ff;
+    }
+}
+/***********************************************************************************************************Modern Intranet Design Colors****/
+
+/*****GIJGO datepicker customizations********************************************************************************************************/
+.gj-picker div[role=navigator] div { /*designated to align the left/right chevrons for datepicker to be centered properly*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.input-group .gj-datepicker[role=wrapper]{
+    flex-grow:1;/*correct the default max width to allow it to fill its container div*/
+}
+div.input-group .gj-datepicker[role=wrapper] i {
+    margin: 0.25em 0.25em 0 0; /*a datepicker within a mdbootstrap input group container needs a little tweek to its icon placement*/
+}
+
+/********************************************************************************************************GIJGO datepicker customizations*****/
+
+/********************************************************************************************************************************************/
+/*****************************************************|||  Page Specifics |||****************************************************************/
+/**************************************************************(below)***********************************************************************/
+
+/****Legacy Menu Design*************************************************************************************************************************/
+@media all {
+    .menu-section{
+        opacity:0.8;/*80% opacity by default*/
+    }
+    .menu-section:hover{
+        opacity:1;/*fully opague when hovered over*/
+    }
+
+        .menu-section .menu-top3-area {
+            opacity: 1;/*the parent div may be at half opacity when at rest, but we want this fully opague*/
+        }
+        .menu-section .menu-top3-area a{
+            color:white;
+        }
+}
+/*************************************************************************************************************************Legacy Menu Design****/
+
+
+
+/****New Menu Design*************************************************************************************************************************/
+@media all {
+    .tile-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .progress-bar-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        border-radius: 1em;
+        /*overflow:hidden;*/
+        height: 2em;
+        padding-left: 1%;
+    }
+
+    .progress-bar {
+        display: inline-block;
+        margin: 0;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+    }
+
+        .progress-bar span {
+            position: relative;
+            top: 0.25em;
+            transform: translateY(-0.5em);
+            font-weight: bold;
+        }
+
+        .progress-bar.deprecated-apps, .progress-bar.deprecated-docs {
+            background-color: #e53935;
+            color: black;
+            border: 2px solid #e53935;
+        }
+
+        .progress-bar.notStarted-apps, .progress-bar.notStarted-docs {
+            border: 2px solid #ffeb3b; /*yellow 500*/
+            background-color: rgba(0,0,0,0);
+            color: #ffeb3b; /*yellow 500*/
+        }
+
+        .progress-bar.inProgress-apps, .progress-bar.inProgress-docs {
+            border: 2px solid #5efc82; /*green A700-light*/
+            background-color: rgba(0,0,0,0);
+            color: #5efc82; /*green A700-light*/
+        }
+
+        .progress-bar.done-apps, .progress-bar.done-docs {
+            border: 2px solid #00c853; /*green A700*/
+            background-color: #00c853; /*green A700*/
+            color: black;
+        }
+
+    .square {
+        height: 0;
+        width: 240px;
+        padding-bottom: 240px;
+        margin: 15px;
+    }
+
+    .card.tile {
+        border: 2px solid #ffeb3b; /*yellow 500*/
+        background-color: #202020; /*resting elevation: dp2*/
+    }
+
+        .card.tile:hover {
+            border: 2px solid #ffff72; /*yellow 500-light*/
+            cursor: pointer;
+            background-color: #313131; /*picked up elevation: dp8*/
+        }
+
+        .card.tile p.card-text.url-line {
+            color: white; /*to show that the url was set for direct linking*/
+        }
+
+        .card.tile.in-progress {
+            border: 2px solid #00c853; /*green A700*/
+        }
+
+            .card.tile.in-progress .waves-ripple {
+                background-color: #5efc82; /*green A700 - light*/
+            }
+
+            .card.tile.in-progress:hover {
+                border: 2px solid #5efc82; /*green A700 - light*/
+            }
+
+        .card.tile.deprecated {
+            border: 2px solid #e53935; /*red 600*/
+        }
+
+            .card.tile.deprecated .waves-ripple {
+                background-color: #ff6f60; /*red 600 - light*/
+            }
+
+            .card.tile.deprecated:hover {
+                border: 2px solid #ff6f60; /*red 600 - light*/
+                cursor: pointer;
+            }
+
+        .card.tile.done {
+            border: 2px solid #00c853; /*green A700*/
+            background-color: #00c853; /*green A700*/
+            color: black;
+        }
+
+            .card.tile.done:hover {
+                border: 2px solid #81c784; /*green 300*/
+                background-color: #81c784; /*green 300*/
+            }
+
+            .card.tile.done .waves-ripple {
+                background-color: #5efc82; /*green A700 - light*/
+            }
+
+            .card.tile.done p.card-text {
+                color: black;
+            }
+
+    .add-btn {
+        display: block;
+        width: 60px;
+        height: 60px;
+        padding: 30px;
+        border-radius: 50%;
+        background-color: #ffeb3b;
+        position: relative;
+        left: 50%;
+        top: 120px;
+        transform: translate(-50%, -50%);
+    }
+
+        .add-btn i {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+}
+/*************************************************************************************************************************New Menu Design****/
+
+/****Benefits-page Customizations************************************************************************************************************/
+@media all {
+    .benefits-page ul .text-muted:hover,
+    .oncall-page ul .text-muted:hover {
+        color: white !important; /*since we have a gray-text on dark background, we need to up the contrast when the user hovers, to ensure readability*/
+    }
+
+    .benefits-page .treeview-animated-items a.closed.open,
+    .oncall-page .treeview-animated-items a.closed.open {
+        /*app specific override styling, that applies when you have opened a previously closed tree branch*/
+        /*Note: the closed class is left attached (means it is closeable, more semantically, but the open class is toggled by user actions*/
+        background-color: #2979ff; /*Material blue-A400*/
+        color: black;
+    }
+
+    .benefits-page .treeview-animated-list .treeview-animated-items a.closed:hover,
+    .benefits-page .treeview-animated-items a.closed.open:hover,
+    .oncall-page .treeview-animated-list .treeview-animated-items a.closed:hover,
+    .oncall-page .treeview-animated-items a.closed.open:hover {
+        /*app specific override styling, that applies when you have opened a previously closed tree branch*/
+        background-color: #75a7ff; /*Material blue-A400-light*/
+        color: black;
+    }
+
+    .benefits-page .treeview-animated-list .treeview-animated-items a.closed:hover span,
+    .benefits-page .treeview-animated-items a.closed.open:hover span,
+    .oncall-page .treeview-animated-list .treeview-animated-items a.closed:hover span,
+    .oncall-page .treeview-animated-items a.closed.open:hover span {
+        color: black; /*because otherwise the white on light color is hard to read*/
+    }
+
+    .benefits-page .treeview-animated-list .treeview-animated-items a.closed:hover path,
+    .benefits-page .treeview-animated-items a.closed.open:hover path,
+    .oncall-page .treeview-animated-list .treeview-animated-items a.closed:hover path,
+    .oncall-page .treeview-animated-items a.closed.open:hover path {
+        fill: black; /*same idea as text in a span, but specifically for svg icons*/
+    }
+
+
+    /*Original Colors on Employee Benefits (deprecated as we move toward a unified Modern Intranet design)*/
+    .teal-900 {
+        background-color: #004d40;
+        color: white; /*text color default, for readability*/
+    }
+
+    .text-teal-900 {
+        color: #004d40;
+    }
+
+    .teal-accent-200 {
+        background-color: #64ffda;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-teal-accent-200 {
+        color: #64ffda;
+    }
+
+    .teal-accent-400 {
+        background-color: #1de9b6;
+        color: black; /*text color default, for readability*/
+    }
+
+    .text-teal-accent-400 {
+        color: #1de9b6;
+    }
+}
+/************************************************************************************************************Benefits-page Customizations****/
+
+/*****Building Maintenance (buildingmaintenance) Customizations**********************************************************************************/
+@media all{
+/*also some shared styling with Spillman Sylog Search page herein*/
+.workorder-title {
+    color: #00c853; /*Green A700*/
+}
+
+    .workorder-title.emergency {
+        color: #f44336; /*Red 500*/
+    }
+
+.workorder-info {
+    border-top: 1px solid #616161;
+}
+
+    .workorder-info:hover { /*default for non-emergency*/
+        background-color: #00c853; /*Green A700*/
+        color: black;
+        cursor: pointer;
+    }
+
+    .workorder-info.emergency:hover {
+        background-color: #f44336; /*Red 500*/
+    }
+
+.workorder-wrapper {
+    background-color: #313131;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.buildingmaintenance-page .display-section, .spillman-page .display-section, .seniorwatch-page .display-section {
+    display: flex;
+    align-content: center; /*provides vertical centering*/
+    background-color: #eceff1; /*Blue-Grey 50*/
+    color: black; /*for readability*/
+    border-radius: 5px;
+}
+
+.buildingmaintenance-page .section-prepend, .spillman-page .section-prepend, .seniorwatch-page .section-prepend {
+    flex: 0 1 auto; /*fill the container by stretching*/
+    border-right: 1px solid #cfd8dc;
+    align-content: center;
+    /*padding-top: 0.4em; /*to provide approximate vertical centering*/
+}
+
+.buildingmaintenance-page .section-append, .spillman-page .section-append, .seniorwatch-page .section-append {
+    flex: 1 0 auto; /*fill the container by stretching*/
+    text-align: center;
+    background-color: white;
+    /*padding-top:0.4em;/*to provide approximate vertical centering*/
+}
+
+.buildingmaintenance-page .dates .section-append, .spillman-page .dates .section-append {
+    flex: 1 0 auto; /*fill the container by stretching*/
+    text-align: center;
+    /*background-color: red;*/
+    /*padding-top:0.4em;/*to provide approximate vertical centering*/
+}
+
+.buildingmaintenance-page .display-section.details-text { /*default for non-emergency*/
+    background-color: #00c853; /*Green A700*/
+    color: black;
+}
+
+    .buildingmaintenance-page .display-section.details-text.emergency {
+        background-color: #f44336; /*Red 500*/
+    }
+
+.buildingmaintenance-page .col-12.row.action-buttons-group, .spillman-page .col-12.row.action-buttons-group {
+    justify-content: space-around; /*gives nice spacing regardless of whether we have one or two action buttons*/
+}
+}
+/**********************************************************************************Building Maintenance (buildingmaintenance) Customizations*****/
+
+/*****Chaplain's Corner (chaplainCorner) Customizations**********************************************************************************/
+@media all {
+    .material-search-wrapper {
+        background-color: white;
+        border-radius: 1.5em;
+        height: 3em;
+        position: relative;
+        margin-top:1em;
+    }
+  .material-search-wrapper .md-form.search-field{
+      margin:0 2em 0 2em;
+      position:relative;
+      padding-top:0em;
+  }
+        .material-search-wrapper input {
+            display:inline-block;
+            width:calc(100% - 2em);
+            padding-left:1em;
+        }
+
+  .material-search-wrapper i{
+      color:black;
+  }
+}
+/**********************************************************************************Chaplain's Corner (chaplainCorner) Customizations*****/
+
+
+
+/*****Evidence FileShare (EVFS) Customizations***********************************************************************************************/
+/*some shared styling for the Forms page therein*/
+@media all {
+    /*Icons within navbar*/
+    .EVFS-page .nav-item.active .fa-home {
+        color: #004ecb; /*Blue A400-dark*/
+    }
+
+    .EVFS-page .nav-item.active .fa-upload {
+        color: #00c853;
+    }
+
+    .EVFS-page .nav-item.active .fa-trash-alt {
+        color: #e53935; /*Red 600*/
+    }
+
+    .EVFS-page .upload-zone.in, .forms-page .upload-zone.in {
+        background: #fff59d; /*Yellow 200*/
+        color: black;
+    }
+
+    .EVFS-page .upload-zone.hover, .forms-page .upload-zone.hover {
+        background: #5efc82; /*Green A700-light*/
+    }
+
+    .EVFS-page #progress .bar {
+        width: 0%;
+        background: #5efc82; /*Green A700-light*/
+        color: black;
+        height: 2em;
+        padding: 5px 0 5px 0;
+        white-space: nowrap; /*so that the progress % text doesn't wrap at low width*/
+    }
+
+    .EVFS-page label.custom-file-label { /*If the user uploads a bunch of files, we don't want the filenames to wrap down out of the label*/
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .EVFS-page .toast-wrapper {
+        position: fixed;
+        bottom: 3em;
+        right: 3em;
+        z-index: 100;
+    }
+}
+/***********************************************************************************************Evidence FileShare (EVFS) Customizations*****/
+
+/****Exemptions-page Customizations**********************************************************************************************************/
+@media all {
+    .exemptions-page .pagination li.paginate_button.page-item .page-link {
+        background-color: white;
+        color: black;
+    }
+
+        .exemptions-page .pagination li.paginate_button.page-item .page-link:hover {
+            background-color: #efefef;
+            color: black;
+        }
+
+    .exemptions-page .pagination li.paginate_button.page-item.active .page-link {
+        background-color: #4285f4;
+        color: white;
+    }
+
+    .exemptions-page .inmate-num {
+        font-size: 1.5rem;
+    }
+
+    .exemptions-page a.delete-btn i {
+        position: relative;
+        transition: left 0.5s ease-in; /*prepare for sliding left transition*/
+        left: 0;
+    }
+
+        .exemptions-page a.delete-btn i.slide-left {
+            left: -0.5rem;
+        }
+
+    .exemptions-page .delete-btn-text.hidden {
+        color: rgba(255,255,255,0); /*transparent white, and we will fade this in*/
+        transition: color 0.5s linear; /*prepare for fading in transition*/
+    }
+
+        .exemptions-page .delete-btn-text.hidden.shown, .exemptions-page .delete-btn-text.hidden.shown:hover {
+            color: rgba(255,255,255,1); /*fully opaque white, and we will fade this in*/
+        }
+
+    .exemptions-page .delete-btn-text.shown {
+        color: rgba(255,255,255,1); /*fully opaque white*/
+    }
+
+        .exemptions-page .delete-btn-text.shown:hover {
+            color: #ef9a9a; /*Material red 200*/
+        }
+}
+/**********************************************************************************************************Exemptions-page Customizations****/
+
+/*****Seniorwatch-page customizations********************************************************************************************************/
+@media all {
+    #senior-details-modal form.senior-details.inactive {
+    }
+
+    .show-all-contact-history:hover {
+        cursor: pointer; /*This is a list item, that we want to indicate is interactable*/
+    }
+}
+/********************************************************************************************************Seniorwatch-page customizations*****/
+
+/*****Spillman-page customizations***********************************************************************************************************/
+@media all {
+    .sylog-result {
+        border-bottom: 1px solid #616161;
+    }
+
+        .sylog-result:hover { /*default for non-emergency*/
+            background-color: #fff59d; /*Yellow 200*/
+            color: black;
+            cursor: text;
+        }
+
+
+    .searchresults-wrapper {
+        background-color: #313131;
+        border-radius: 1em;
+        overflow: hidden;
+    }
+}
+/***********************************************************************************************************Spillman-page customizations*****/
+
+/*****public-survey-page customizations***********************************************************************************************************/
+@media all {
+    .public-survey-page label.custom-control-label {
+        align-self: center; /*we want the radio input labels to show up in the middle of a row, not squished at the top (override MDB default)*/
+    }
+    .paypal-submit-trigger:hover {
+        cursor: pointer;
+    }
+}
+/***********************************************************************************************************public-survey-page customizations*****/
+
+/*****Civil Software customizations***********************************************************************************************************/
+@media all {
+
+
+    .levyApp-page .input-col-label { /*for labeling the col header on an input "table":*/
+        text-align: center;
+        border-bottom: 1px solid #eeeeee;
+        color: #eeeeee;
+
+    }
+
+    .levyApp-page hr.divider,
+    .civilApp-page hr.divider { /*for dividing sections*/
+        height: .25rem;
+        border-radius: 0.125rem;
+        margin: 0;
+        background: #eeeeee; /*Yellow-500*/
+        border: none;
+        margin-left: -15px;
+    }
+
+    .levyApp-page .tab-container, .civilApp-page .tab-container {
+        position: relative;
+        width: 100%;
+        color: white;
+    }
+
+    .levyApp-page .tab:hover,
+    .civilApp-page .tab:hover, 
+    .civilApp-page .name-served:hover{
+        color: #fff59d; /*material color: yellow-200*/
+        cursor: pointer;
+        background-color: #252525; /*height dp2*/
+    }
+
+    .levyApp-page .tab.active,
+    .civilApp-page .tab.active,
+    .civilApp-page .name-served.active {
+        color: #ffeb3b; /*material color: yellow-500*/
+        background-color: #2A2A2A; /*height dp4*/
+    }
+
+    .civilApp-page .names-section {
+        align-content: start; /*these were stretching to match the 8-col receipt section, undesirably*/
+    }
+
+    .civilApp-modals .historical-search-result:hover, .civilApp-modals .attorney-info:hover, .civilApp-modals .load-more:hover,
+    .civilApp-modals .autofill-option:hover { /*these exist in modals on the civilsoftware/apps/civil webapp*/
+        cursor: pointer; /*indicate actionable*/
+        background-color: #616161; /*slightly lighter grey than surrounding*/
+        color: #ffeb3b; /*yellow 500*/
+    }
+
+    .levyApp-page .tab-content,
+    .civilApp-page .tab-content {
+        display: none; /*default, unless the active tab*/
+    }
+
+        .levyApp-page .tab-content.active,
+        .civilApp-page .tab-content.active {
+            display: block;
+        }
+
+    /*position the tab underline accordingly for levy app -- 8 tabs*/
+    .levyApp-page .tab-container .tab{
+        display: inline-block;
+        width: 12.5%;
+        margin: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .levyApp-page .tab-1.active ~ hr.tab-underline {
+        margin-left: 0%;
+    }
+
+    .levyApp-page .tab-2.active ~ hr.tab-underline {
+        margin-left: 12.5%;
+    }
+
+    .levyApp-page .tab-3.active ~ hr.tab-underline {
+        margin-left: 25%;
+    }
+
+    .levyApp-page .tab-4.active ~ hr.tab-underline {
+        margin-left: 37.5%;
+    }
+
+    .levyApp-page .tab-5.active ~ hr.tab-underline {
+        margin-left: 50%;
+    }
+
+    .levyApp-page .tab-6.active ~ hr.tab-underline {
+        margin-left: 62.5%;
+    }
+
+    .levyApp-page .tab-7.active ~ hr.tab-underline {
+        margin-left: 75%;
+    }
+
+    .levyApp-page .tab-8.active ~ hr.tab-underline {
+        margin-left: 87.5%;
+    }
+
+    .levyApp-page hr.tab-underline {
+        height: .25rem;
+        border-radius: 0.05rem;
+        width: 12.5%;
+        margin: 0;
+        background: #ffeb3b; /*Yellow-500*/
+        border: none;
+        transition: .3s ease-in-out;
+    }
+
+    /*position the tab underline accordingly for civil app -- 3 tabs*/
+    .civilApp-page .tab-container .tab {
+        display: inline-block;
+        width: 33.333%;
+        margin: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .civilApp-page .tab-1.active ~ hr.tab-underline {
+        margin-left: 0%;
+    }
+
+    .civilApp-page .tab-2.active ~ hr.tab-underline {
+        margin-left: 33.333%;
+    }
+
+    .civilApp-page .tab-3.active ~ hr.tab-underline {
+        margin-left: 66.666%;
+    }
+
+    .civilApp-page hr.tab-underline {
+        height: .25rem;
+        border-radius: 0.05rem;
+        width: 33.333%;
+        margin: 0;
+        background: #ffeb3b; /*Yellow-500*/
+        border: none;
+        transition: .3s ease-in-out;
+    }
+
+}
+
+/*****Help FAB***********************************************************************************************************/
+.bounce-fab {
+    animation-name: bounce-fab;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+@keyframes bounce-fab {
+    0%   { bottom: 24px; transform: scale(1,1);}
+    10%  { bottom: 24px; transform: scale(1.1,.9);}
+    30%  { bottom: 36px; transform: scale(.9,1.1);}
+    50%  { bottom: 24px; transform: scale(1.05,.95);}
+    57%  { bottom: 28px; transform: scale(0.99,1.01);}
+    64%  { bottom: 24px; transform: scale(1.02,0.98);}
+    100% { bottom: 24px; transform: scale(1,1); }
+}
+
+.help-fab--trigger {
+    /*Positioned fixed in the bottom left*/
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    /*
+    bottom: 48px;
+    left: 48px;
+    transform: translate(-50%, 50%);
+    */
+    height: 48px;
+    width: 48px;
+    border-radius: 50%; /*circular*/
+    transition: 0.5s all ease-in-out;
+    z-index: 1000;
+}
+    /*Basic active state of the trigger button*/
+    .help-fab--trigger.active {
+        background-color: #eeeeee;
+        /*transitioning the size and the position simultaneously keeps it centered*/
+        height: 24px;
+        width: 24px;
+        bottom: 36px;
+        left: 36px;
+    }
+
+        .help-fab--trigger.active:hover { /*we need to style its hover state as well, because it still carries the .action-yellow styling otherwise*/
+            background-color: #f5f5f5;
+        }
+/*Main Trigger FAB icons*/
+.help-fab i { /*All icons are absolute centered inside of their parent*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/*The help-fab--initial-icon is visible before becoming .active, the cancel-icon after (swap)*/
+.help-fab--initial-icon, .help-fab--trigger.active .help-fab--cancel-icon {
+    opacity: 1;
+    transition: 0.1s all ease-in-out;
+}
+
+.help-fab--cancel-icon, .help-fab--trigger.active .help-fab--initial-icon {
+    opacity: 0;
+    transition: 0.1s all ease-in-out;
+}
+/*These sub-buttons are only visible when the .help-fab--trigger button is .active*/
+.help-fab--sub-button {
+    position: fixed;
+    left: 48px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+    /*state when hiding*/
+    opacity: 0;
+    height: 24px;
+    width: 24px;
+    z-index: 999; /*behind the trigger button*/
+}
+
+.help-fab--trigger.active ~ .help-fab--sub-button {
+    visibility: visible;
+    /*state when visible*/
+    opacity: 1;
+}
+
+/*The icons within the sub-button need to animate too*/
+.help-fab--sub-button i {
+    transition: 0.5s all ease-in-out;
+    opacity: 0;
+    font-size: 1em;
+}
+
+.help-fab--trigger.active ~ .help-fab--sub-button i {
+    opacity: 1;
+    font-size: 1.333em;
+}
+
+.help-fab--sub-button-1 {
+    /*base state, when hiding*/
+    bottom: 48px;
+}
+
+.help-fab--trigger.active ~ .help-fab--sub-button-1 {
+    bottom: 72px;
+    height: 48px;
+    width: 48px;
+}
+
+.help-fab--sub-button-2 {
+    /*base state, when hiding*/
+    bottom: 72px;
+}
+
+.help-fab--trigger.active ~ .help-fab--sub-button-2 {
+    bottom: 128px;
+    height: 44px;
+    width: 44px;
+}
+
+.help-fab--sub-button-3 {
+    /*base state, when hiding*/
+    bottom: 128px;
+}
+
+.help-fab--trigger.active ~ .help-fab--sub-button-3 {
+    bottom: 180px;
+    height: 40px;
+    width: 40px;
+}
+/***********************************************************************************************************Help FAB*****/
+
+/*****Universal Buttons***********************************************************************************************************/
+@media all {
+    .action-buttons-group { /*used to space out action buttons evenly at the bottom of a section*/
+        display: flex;
+        justify-content: space-around; /*gives nice spacing regardless of whether we have one or many action buttons*/
+    }
+        .action-buttons-group.justify-left {
+            justify-content: flex-start; /*buttons prefer the left side*/
+        }
+        .action-buttons-group.justify-right {
+            justify-content: flex-end; /*buttons prefer the right side*/
+        }
+
+    .round-btn--tiny {/*smaller than small*/
+        position: relative; 
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 0.75rem;
+        text-align: center;
+        /*4dp shadow*/ 
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+    .round-btn--small {
+        position: relative; 
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        /*4dp shadow*/ 
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .round-btn--small.position-rel, .round-btn--tiny.position-rel {
+        position: relative; /*Trying this out, for centering icons. Not making it the default until proof of concept works well*/
+    }
+        i.absolute-center {/*intended to position in center of a round button, the button must be position (eg position:relative) in order to work*/
+            top:50%;
+            left:50%;
+            position:absolute;
+            transform:translate(-50%,-50%);
+        }
+    .confirm-deletion-btn--tiny {
+        /*So that your associated text (which this grows to accomodate visibility of) doesn't wrap*/
+        white-space: nowrap; /*if you don't want something to wrap, forcing it to remain on one line (maybe to display a phone number, etc.)*/
+        flex-wrap: nowrap; /*if applied to a flexbox item*/
+        overflow-x: hidden;
+        overflow-y: hidden;
+        vertical-align: middle;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 0.75rem;
+        text-align: center;
+        /*4dp shadow*/ box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        transition: width ease-in-out 0.5s;
+    }
+
+    .confirm-deletion-btn--tiny.confirm {
+        width: 6rem;
+    }
+
+        .confirm-deletion-btn--tiny i {
+            /*the close-icon needs a bit of adjustment*/
+            margin: 0.25rem 0.4rem 0.25rem 0.4rem;
+        }
+    a.btn.oval, button.btn.oval {
+        /*these dimensions are designed to be friendly with mdb default styling of button.btn, but rounds the corners off into an oval*/
+        height: 46px;
+        border-radius: 23px;
+    }
+
+    a.btn.oval--slim, button.btn.oval--slim {
+        height: 2em;
+        border-radius: 1em;
+    }
+
+}
+/***********************************************************************************************************Universal Buttons*****/
+
+/*****Upload Zones**************************************************************************************/
+.upload-zone {
+    border: 1px dashed #7fa7ff;
+}
+
+.upload-zone.hover {
+    background-color: #7fa7ff;
+}
+
+.upload-zone #progress .bar {
+    background-color: #7fa7ff;/*shows progress of upload*/
+}
+
+.upload-zone .custom-file-label:hover{
+    cursor: pointer;/*If they hover over the file picker on upload input section*/
+}
+/**************************************************************************************Upload Zones*****/
+
+/*****Custom Radio & Checkboxes*************************************************************************/
+/* Direction for use:
+ * Add the .check-radio class to the input wrapper
+ * In the label content for the target checkbox, add a span around the label text with class 
+ * On that span, add a .checkbox or .radio class
+ * NOTE: Pick your input type for functionality, and add a label span class to style, independently!
+ * You can style radios as checkboxes, and checkboxes as radios, using this .check-radio
+ */
+
+ .check-radio input[type=radio]{
+    display: none;
+}
+
+.check-radio label {
+    position: relative;
+    margin-left: 45px;
+}
+
+.check-radio span::before,
+.check-radio span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.check-radio span.radio:hover, .check-radio span.checkbox:hover {
+cursor: pointer;
+}
+.check-radio span.radio::before {
+left: -52px;
+width: 45px;
+height: 25px;
+background-color: #616161;
+border-radius: 50px;
+}
+.check-radio span.radio::after {
+left: -49px;
+width: 17px;
+height: 17px;
+border-radius: 10px;
+background-color: #313131;
+transition: left .25s, background-color .25s;
+}
+/*Allow radios to be styled as checkboxes, and vice versa*/
+.check-radio input[type="radio"]:checked + label span.radio::after,
+.check-radio input[type="checkbox"]:checked + label span.radio::after
+{
+left: -27px;
+background-color: #ffeb3b;
+}
+
+.check-radio span.checkbox::before {
+width: 27px;
+height: 27px;
+border-radius: 5px;
+background-color: #fff;
+left: -35px;
+box-sizing: border-box;
+border: 1px solid transparent;
+transition: border-color .2s;
+}
+.dark .check-radio span.checkbox::before{
+    background-color: #313131;
+}
+
+.check-radio span.checkbox:hover::before {
+border: 1px solid #aad8ff;
+}
+.check-radio span.checkbox::after {
+content: '\f00c';
+font-family: 'Font Awesome\ 5 Free';
+font-weight: 900;
+left: -29px;
+top: 1px;
+color: transparent;
+transition: color .2s;
+}
+/*Allow radios to be styled as checkboxes, and vice versa*/
+.check-radio input[type="checkbox"]:checked + label span.checkbox::after,
+.check-radio input[type="radio"]:checked + label span.checkbox::after {
+color: #2979ff;
+}
+
+
+/*kanban vue cards*/
+.kanban {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+  .kanban__move-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    user-select: none;
+  }
+  .kanban__move-icon span {
+    margin-left: 10px;
+  }
+  .kanban__move-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .kanban__drop-preview {
+    position: relative;
+    margin: 10px;
+    background-color: #edf1f3;
+    border: 2px dashed rgba(0, 0, 0, 0.059);
+    border-radius: 4px;
+  }
+  .kanban__drop-preview::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #b0b0b0;
+    transform: translate(-50%, -50%);
+  }
+  .kanban__drop-preview::after {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    width: 20px;
+    height: 20px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+  .kanban__description {
+    display: flex;
+    align-items: center;
+  }
+  .kanban__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf5f7;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  .kanban__title {
+    margin: 0 0 0 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+  }
+  .kanban__quantity {
+    margin-top: 0;
+    font-size: small;
+    color: #b0b0b0;
+    text-align: right;
+  }
+  .kanban__quantity--inner-count {
+    margin: 1rem 1rem 0 1rem;
+    padding-top: 0.5rem;
+  }
+  .kanban__column {
+    flex: 1;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+    transition: height 0.5s ease;
+    border: 1px solid #e0e0e0;
+  }
+  .kanban__column:not(:first-of-type) {
+    margin-left: 15px;
+  }
+  .kanban__column--no-border {
+    border: none;
+  }
+  .kanban__header {
+    margin-bottom: 15px;
+    background-color: #fff;
+  }
+  .kanban__content {
+    position: relative;
+  }
+  .kanban__skeleton {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    padding-right: 15px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    overflow: auto;
+  }
+  .kanban__skeleton-container {
+    width: 100%;
+  }
+  .kanban__skeleton-column {
+    flex: 1;
+    height: calc(100% - 30px);
+    padding: 10px;
+    margin-left: 15px;
+    background-color: #e9e9e9;
+    border-radius: 6px;
+  }
+  .kanban__skeleton-card {
+    position: relative;
+    height: 100px;
+    padding: 15px;
+    margin-top: 16px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+  }
+  .kanban__skeleton-card--one {
+    position: absolute;
+    top: 8px;
+  }
+  .kanban__skeleton-card--two {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
+  .kanban__skeleton-card--three {
+    position: absolute;
+    top: 30px;
+  }
+  .kanban__skeleton-card--four {
+    position: absolute;
+    bottom: 2rem;
+  }
+  .kanban__skeleton-card--five {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+  }
+  
+  .item,
+  .draggable-item,
+  .draggable-item-horizontal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 8px;
+    cursor: pointer;
+    user-select: none;
+    background-color: white;
+    border: 1px solid transparent;
+    border-left: 5px solid #e0e0e0;
+    border-radius: 4px;
+    transition: border-color 0.2s linear;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+  .item .card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .item .card small {
+    color: #838383;
+  }
+  .item.open {
+    border-left: 5px solid #f3c1c1;
+  }
+  .item.executing {
+    border-left: 5px solid #c4ebaf;
+  }
+  .item.finished {
+    border-left: 5px solid #b3d5e9;
+  }
+  .item.paralised {
+    border-left: 5px solid #dc3545;
+  }
+  .item.review {
+    border-left: 5px solid #e0e0e0;
+  }
+  .badge {
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  .label {
+    color: #838383;
+    margin-bottom: 5px;
+  }
+  .kanban-action {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .kanban-button {
+    max-width: 130px;
+    pointer-events: none;
+    border: none;
+    color: #f7f7f7;
+    padding: 1px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100px;
+  }
+  
+  .kanban-button.open {
+    background-color: #f3c1c1;
+  }
+  .kanban-button.executing {
+    background-color: #c4ebaf;
+  }
+  .kanban-button.finished {
+    background-color: #b3d5e9;
+  }
+  .kanban-button.paralised {
+    background-color: #dc3545;
+  }
+  .kanban-button.review {
+    background-color: #e0e0e0;
+  }
+  
+  .kanban-cards {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }
+/*************************************************************************Custom Radio & Checkboxes*****/
