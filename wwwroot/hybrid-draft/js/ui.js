@@ -29,6 +29,7 @@ const ui = new Vue({
             ], 
 
             cards: [],
+            pack_cards: []
 
         }
     },
@@ -56,6 +57,14 @@ const ui = new Vue({
                 if(this.cards.length < 100) this.cards.push(res.data[card]['multiverse_ids'][0])
             }
             
+        },
+        add_to_pack(multiverse_id){
+            // add the card to the pack, init who owns it
+            this.pack_cards.push({
+                multiverse_id: multiverse_id,
+                owned_by: null,
+            })
+            console.log(this.pack_cards)
         }
     }
 

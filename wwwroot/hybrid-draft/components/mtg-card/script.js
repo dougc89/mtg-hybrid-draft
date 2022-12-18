@@ -44,6 +44,10 @@ export default Vue.component('mtg-card', {
         async get_scryfall_info(){
             let res = await $.get('https://api.scryfall.com/cards/search?q=multiverse_id%3A'+this.multiverse_id)       
             this.card_info = res.data[0]
+        },
+        add_to_pack(){
+            console.log('Adding to pack', this.card_info)
+            this.$emit('add_to_pack', this.multiverse_id)
         }
     }
 });

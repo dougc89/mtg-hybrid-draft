@@ -13,8 +13,20 @@
 
     <v-tabs-items v-model="tab" dark>
         <v-tab-item key="example_1">
+        <v-slide-group
+            multiple
+            show-arrows
+            >
+                <v-slide-item
+                    v-for='(card, index) in pack_cards'
+                    :key="index"
+                    v-slot="{ active, toggle }"
+                >
+                    <mtg-card  :multiverse_id='card.multiverse_id'></mtg-card>
+                </v-slide-item>
+        </v-slide-group>
             <v-row>
-            <mtg-card v-for='card in cards' :multiverse_id='card'></mtg-card>
+                <mtg-card v-for='card in cards' :multiverse_id='card' @add_to_pack='add_to_pack'></mtg-card>
             </v-row>
         </v-tab-item>
         <v-tab-item key="example_2">
