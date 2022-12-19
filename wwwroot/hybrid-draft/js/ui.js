@@ -28,8 +28,14 @@ const ui = new Vue({
                 // {title: 'Scheduling Group Members', href:'https://lcso.freshservice.com/a/solutions/articles/17000078522'},
             ], 
 
+            // search for cards names
+            search_text: null,
+            // toggle on/off to prevent oversending search queries while typing
+            search_typing: false, 
+
             cards: [],
-            pack_cards: []
+            pack_cards: [],
+
 
         }
     },
@@ -49,22 +55,25 @@ const ui = new Vue({
         this.get_cards()
     },
     methods: {
-        async get_cards(){
-
-            let res = await $.get('https://api.scryfall.com/cards/search?q=set%3ABRO')
-            for(let card in res.data){
-                console.log(res.data[card])
-                if(this.cards.length < 100) this.cards.push(res.data[card]['multiverse_ids'][0])
-            }
-            
+        async get_cards(search_name){
+            console.log('searching with name: ',search_name)
+            let name_qry =  search_name ? `+${search_name}` : ''
+            let res = await $.get('https://api.scryfall.com/cards/search?q=set%3ABRO'+name_qry)
+            this.cards = res.data
         },
         add_to_pack(multiverse_id){
             // add the card to the pack, init who owns it
-            this.pack_cards.push({
+            this.pack_cards.unshift({
                 multiverse_id: multiverse_id,
                 owned_by: null,
             })
             console.log(this.pack_cards)
+        },
+        search_with_delay(){
+            this.get_cards(this.search_text)
+            // this.search_typing = true
+            // setTimeout(function(self){ self.search_typing = false}, 500, this)
+            // setTimeout(function(self){ if(!self.search_typing){ self.get_cards(self.search_text)}else{console.log('still typing')}}, 1000, this)
         }
     }
 

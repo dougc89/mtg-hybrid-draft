@@ -3,6 +3,10 @@ export default Vue.component('mtg-card', {
     props: {
         multiverse_id: {
             default: '000000'
+        },
+        adding_to_pack: {
+            type: Boolean,
+            default: false
         }
     },
     data(){

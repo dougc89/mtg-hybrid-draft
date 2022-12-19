@@ -8,7 +8,8 @@
         <v-img :src='scryfall_img_path' height='353' width='253' contain class='card-edges'>
                 <v-app-bar
                 flat color="rgba(0, 0, 0, 0)" >
-                    <v-btn color='green' fab elevation='0' x-small class='card-actions--buffer' @click='add_to_pack'><v-icon>mdi-plus</v-icon></v-btn>
+                    <v-btn v-if='adding_to_pack'
+                    color='green' fab elevation='0' x-small class='card-actions--buffer' @click='add_to_pack'><v-icon>mdi-plus</v-icon></v-btn>
                     <v-spacer></v-spacer>
                 </v-app-bar>
             </v-img>

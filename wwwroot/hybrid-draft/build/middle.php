@@ -12,6 +12,7 @@
     <div class='mx-3 sub-content my-4'>
 
     <v-tabs-items v-model="tab" dark>
+
         <v-tab-item key="example_1">
         <v-slide-group
             multiple
@@ -19,16 +20,22 @@
             >
                 <v-slide-item
                     v-for='(card, index) in pack_cards'
-                    :key="index"
+                    :key="'pack_'+card.multiverse_id"
                     v-slot="{ active, toggle }"
                 >
                     <mtg-card  :multiverse_id='card.multiverse_id'></mtg-card>
                 </v-slide-item>
         </v-slide-group>
-            <v-row>
-                <mtg-card v-for='card in cards' :multiverse_id='card' @add_to_pack='add_to_pack'></mtg-card>
-            </v-row>
+        <v-row>
+            <v-col>
+                <v-text-field v-model='search_text' clearable @change='search_with_delay'></v-text-field>
+            </v-col>
+        </v-row>
+        <v-row>
+            <mtg-card adding_to_pack v-for='card in cards' :multiverse_id='card.multiverse_ids[0]' @add_to_pack='add_to_pack' :key="'card_search_'+card.multiverse_ids[0]"></mtg-card>
+        </v-row>
         </v-tab-item>
+
         <v-tab-item key="example_2">
 
         </v-tab-item>
