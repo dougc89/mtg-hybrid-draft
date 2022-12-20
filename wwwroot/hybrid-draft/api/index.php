@@ -14,7 +14,8 @@
     # build endpoints:
     # # # # # # # # # #
 
-    # example: $api->endpoints()->add('endpoint', new Resource($datasource))->accept(['GET']);
+    # example: 
+    $api->endpoints()->add('packs', new Packs())->accept(['GET', 'POST']);
 
 
     # # # # # # # # #
