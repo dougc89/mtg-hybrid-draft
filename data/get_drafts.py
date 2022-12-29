@@ -1,5 +1,5 @@
 import credentials, mongo, pprint
-from pymongo import ObjectId
+from bson.objectid import ObjectId
 
 db = mongo.database('hybrid-draft')
 drafts = db.database['drafts']

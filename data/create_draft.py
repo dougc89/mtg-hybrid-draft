@@ -1,16 +1,20 @@
-import credentials, mongo
+import argparse, local_db
+from bson.objectid import ObjectId
+from pprint import pprint
 
-# connect to mongo
-db = mongo.database('hybrid-draft')
+parser = argparse.ArgumentParser(description="Add a player to the draft.")
+parser.add_argument('-s', '--set', help="set for the target draft", required=True)
+parser.add_argument('-p', '--packs', help="number of packs", required=True)
+args = parser.parse_args()
 
-# create/connect to drafts table
-table = db.database['drafts']
+drafts = local_db.database('drafts')
 
 new_draft = {
-    'set': 'BRO',
-    'num_packs': 4,
+    '_id': ObjectId(),
+    'set': args.set,
+    'num_packs': args.packs,
     'players':[],
     'packs': []
 }
 
-table.insert_one(new_draft)
+drafts.insert_one(new_draft)

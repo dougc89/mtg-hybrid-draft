@@ -16,7 +16,9 @@ class database:
             )
 
         # Create a connection using MongoClient
+        print('connecting...')
         client = pymongo.MongoClient(CONNECTION_STRING)
+        print('connected.')
 
         # Create the database for our example (we will use the same database throughout the tutorial
         # print(client[database])
@@ -27,27 +29,6 @@ class database:
 
     
             
-# This is added so that many files can reuse the function get_database()
-if __name__ == "__main__":    
-    
-    # Get the database
-    db = database('ameritrade_dev')
-    # test_item = {
-    #     'symbol': 'TSLA',
-    #     'description': 'Tesla Motors'
-    # }
 
-    table = db.connection()['watchers']
-
-    # table.insert_one(test_item)
-
-    items = table.find({'symbol':'TSLA'})
-
-    pp = pprint.PrettyPrinter(indent=4)
-
-    for item in items:
-        # This does not give a very readable output
-        pp.pprint(item)
-        # table.update_one({'_id' : item['_id']}, {'$set': {'description':'The Garden Take 2'}})
 
 
