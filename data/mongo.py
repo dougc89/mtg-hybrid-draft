@@ -16,9 +16,9 @@ class database:
             )
 
         # Create a connection using MongoClient
-        print('connecting...')
+        # print('connecting...')
         client = pymongo.MongoClient(CONNECTION_STRING)
-        print('connected.')
+        # print('connected.')
 
         # Create the database for our example (we will use the same database throughout the tutorial
         # print(client[database])

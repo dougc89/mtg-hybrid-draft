@@ -1,1 +1,5 @@
+# local creds
 *credentials.py
+
+# python cache files
+*.pyc

@@ -12,13 +12,15 @@ args = parser.parse_args()
 db = mongo.database('hybrid-draft')
 
 # drafts collection
-drafts = db.database['drafts']
+drafts = db.connection()['drafts']
 
 draft_id = None
-if 'draft' in args:
+if args.draft:
+    print(args.draft)
     draft_id = args.draft
-elif 'set' in args:
-    items = drafts.find({'set':args.set})
+elif args.set:
+    print(args.set)
+    items = drafts.find({"set":args.set})
     pprint(items)
     for item in items:
         # found the draft id
