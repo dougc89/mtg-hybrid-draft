@@ -20,10 +20,10 @@
             >
                 <v-slide-item
                     v-for='(card, index) in pack_cards'
-                    :key="'pack_'+card.multiverse_id"
+                    :key="'pack_'+card+index"
                     v-slot="{ active, toggle }"
                 >
-                    <mtg-card  :multiverse_id='card.multiverse_id'></mtg-card>
+                    <mtg-card  :multiverse_id='card'></mtg-card>
                 </v-slide-item>
         </v-slide-group>
         <v-row>
@@ -32,7 +32,7 @@
             </v-col>
         </v-row>
         <v-row>
-            <mtg-card adding_to_pack v-for='card in cards' :multiverse_id='card.multiverse_ids[0]' @add_to_pack='add_to_pack' :key="'card_search_'+card.multiverse_ids[0]"></mtg-card>
+            <mtg-card adding_to_pack v-for='card in cards' :multiverse_id='card.multiverse_ids[0]' @add_to_pack='add_to_pack' :key="'card_search_'+Math.random()"></mtg-card>
         </v-row>
         </v-tab-item>
 

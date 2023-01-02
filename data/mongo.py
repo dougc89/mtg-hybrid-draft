@@ -3,7 +3,8 @@ import os, pymongo, credentials, pprint
 
 class database:
     # we will only interact with one database with this connection
-    database = None
+    collections = None
+    connection = None
 
     def __init__(this, database):
 
@@ -16,16 +17,15 @@ class database:
             )
 
         # Create a connection using MongoClient
-        # print('connecting...')
-        client = pymongo.MongoClient(CONNECTION_STRING)
+        # print('connecting...')        
+        this.connection = pymongo.MongoClient(CONNECTION_STRING)
+        # call this.connection.close when done using it
         # print('connected.')
 
         # Create the database for our example (we will use the same database throughout the tutorial
         # print(client[database])
-        this.database = client[database]
+        this.collections = this.connection[database]
 
-    def connection(this):
-        return this.database
 
     
             

@@ -52,21 +52,48 @@ const ui = new Vue({
         } 
 
         // call the init method
-        this.get_cards()
+        this.crack_pack('bro')
     },
     methods: {
-        async get_cards(search_name){
-            console.log('searching with name: ',search_name)
-            let name_qry =  search_name ? `+${search_name}` : ''
-            let res = await $.get('https://api.scryfall.com/cards/search?q=set%3ABRO'+name_qry)
+        async get_cards(set, search){
+            console.log('searching with name: ',search)
+            let name_qry =  search ? `+${search}` : ''
+            let res = await $.get('https://api.scryfall.com/cards/search?q=set%3A'+set+name_qry)
             this.cards = res.data
+        },
+        async crack_pack(set){
+            var pack_cards = []
+            var config = {'rarity:mythic': 0,
+            'rarity:rare': 1,
+            '-type:/Basic Land/+rarity:common': 10,
+            'rarity:uncommon': 3,
+            'type:/Basic Land/': 1,
+            }
+
+            if(Math.random() < 0.125){
+                // 1:8 chance to include mythic instead of rare
+                config['rarity:mythic'] = 1
+                config['rarity:rare'] = 0
+            }
+
+            console.log('config', config)
+
+            for(const key in config){
+                let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${key}`)
+                for(let i=0; i<config[key]; i++){
+                    // pick random cards from the results
+                    let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
+                    pack_cards.push(card_data.multiverse_ids[0])
+                }
+            }
+
+            // shuffle the cards 
+            pack_cards = pack_cards.sort((a, b) => 0.5 - Math.random())
+            this.pack_cards = pack_cards
         },
         add_to_pack(multiverse_id){
             // add the card to the pack, init who owns it
-            this.pack_cards.unshift({
-                multiverse_id: multiverse_id,
-                owned_by: null,
-            })
+            this.pack_cards.unshift(multiverse_id)
             console.log(this.pack_cards)
         },
         search_with_delay(){

@@ -1,10 +1,14 @@
 import credentials, mongo, pprint
 from bson.objectid import ObjectId
 
-db = mongo.database('hybrid-draft')
-drafts = db.database['drafts']
+try:
+    db = mongo.database('hybrid-draft')
+    drafts = db.collections['drafts']
 
-items = drafts.find({'set':'BRO'})
+    items = drafts.find({'set':'BRO'})
 
-for item in items:
-    pprint.pprint(item)
+    for item in items:
+        pprint.pprint(item)
+
+finally:
+    db.connection.close()
