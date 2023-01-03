@@ -63,12 +63,15 @@ const ui = new Vue({
         },
         async crack_pack(set){
             var pack_cards = []
-            var config = {'rarity:mythic': 0,
-            'rarity:rare': 1,
-            '-type:/Basic Land/+rarity:common': 10,
-            'rarity:uncommon': 3,
-            'type:/Basic Land/': 1,
-            }
+            // config might change for some sets, but this is the normal distribution
+            var config = {
+                'rarity:mythic': 0,
+                'rarity:rare': 1,
+                '-type:/Basic Land/+rarity:common': 10, // basic lands list as common on scryfall, we want non-basic commons
+                'rarity:uncommon': 3,
+                'type:/Basic Land/': 1,
+                'type:land+rarity:common': 0 
+                }
 
             if(Math.random() < 0.125){
                 // 1:8 chance to include mythic instead of rare
@@ -76,19 +79,31 @@ const ui = new Vue({
                 config['rarity:rare'] = 0
             }
 
+            if(Math.random() < 0.167){
+                //1:6 chance to replace the basic land with another common land (such as common dual land)
+                config['type:/Basic Land/'] = 0
+                config['type:land+rarity:common'] = 1
+            }
+
             console.log('config', config)
 
             for(const key in config){
-                let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${key}`)
-                for(let i=0; i<config[key]; i++){
-                    // pick random cards from the results
-                    let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
-                    pack_cards.push(card_data.multiverse_ids[0])
+                if(config[key] > 0){
+                    // get the cards matching this search query
+                    let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${key}`)
+                    // push the quantity in config into the pack cards, by random selection
+                    for(let i=0; i<config[key]; i++){
+                        // pick random cards from the results
+                        let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
+                        pack_cards.push(card_data.multiverse_ids[0])
+                    }
                 }
             }
 
             // shuffle the cards 
             pack_cards = pack_cards.sort((a, b) => 0.5 - Math.random())
+
+            // store then in rendered data
             this.pack_cards = pack_cards
         },
         add_to_pack(multiverse_id){
