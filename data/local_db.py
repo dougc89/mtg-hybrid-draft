@@ -26,8 +26,12 @@ class collection:
         # reset the result set
         this.result_set = []
 
-        # read all the documents in target collection directory
-        documents = os.listdir(this.collection_path)
+        # if the _id is specified, just get that specific document (as long as it exists)
+        if '_id' in search_filter and os.path.exists(os.path.join(this.collection_path, search_filter.get('_id'))):
+            documents = ["{}.json".format(search_filter.get('_id'))]
+        else:
+            # read all the documents in target collection directory
+            documents = os.listdir(this.collection_path)
         for document in documents:
             with open(os.path.join(this.collection_path, document), 'r') as f:
                 data = json.load(f)
