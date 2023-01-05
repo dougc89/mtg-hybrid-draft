@@ -95,7 +95,8 @@ const ui = new Vue({
                     for(let i=0; i<config[key]; i++){
                         // pick random cards from the results
                         let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
-                        pack_cards.push(card_data.multiverse_ids[0])
+                        // picks a random art version from multiverse id's associated
+                        pack_cards.push(card_data.multiverse_ids[Math.floor(Math.random()*card_data.multiverse_ids.length)])
                     }
                 }
             }

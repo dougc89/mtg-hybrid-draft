@@ -9,46 +9,49 @@ parser.add_argument('-i', '--id', help="_id for the player")
 parser.add_argument('-n', '--name', help="display name for the player", required = True)
 args = parser.parse_args()
 
-db = mongo.database('hybrid-draft')
+try:
+    db = mongo.database('hybrid-draft')
 
-# drafts collection
-drafts = db.connection()['drafts']
+    # drafts collection
+    drafts = db.collections['drafts']
 
-draft_id = None
-if args.draft:
-    print(args.draft)
-    draft_id = args.draft
-elif args.set:
-    print(args.set)
-    items = drafts.find({"set":args.set})
-    pprint(items)
-    for item in items:
-        # found the draft id
-        pprint(item)
-        draft_id = item.get('_id')
-        break
+    draft_id = None
+    if args.draft:
+        print(args.draft)
+        draft_id = args.draft
+    elif args.set:
+        print(args.set)
+        items = drafts.find({"set":args.set})
+        pprint(list(items))
+        for item in items:
+            # found the draft id
+            pprint(item)
+            draft_id = item.get('_id')
+            break
 
-else:
-    print('provide draft _id or set code to find the target draft.')
-    exit()
+    else:
+        print('provide draft _id or set code to find the target draft.')
+        exit()
 
-if not draft_id:
-    print('draft _id not found from set code.')
-    exit() 
+    if not draft_id:
+        print('draft _id not found from set code.')
+        exit() 
 
-new_player = {
-    'name': args.name
-}
-
-# set the option _id
-if 'id' in args:
-    new_player['_id'] = args.id
-
-added_player = drafts.update_one({'_id': ObjectId(draft_id)},
-{
-    '$push': {
-        'players': new_player
+    new_player = {
+        'name': args.name
     }
-})
 
-print(added_player)
+    # set the option _id
+    if 'id' in args:
+        new_player['_id'] = args.id
+
+    added_player = drafts.update_one({'_id': ObjectId(draft_id)},
+    {
+        '$push': {
+            'players': new_player
+        }
+    })
+
+    print(added_player)
+finally:
+    db.connection.close()
