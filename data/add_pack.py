@@ -1,38 +1,34 @@
-import json, argparse, hashlib, datetime
+import json, argparse, hashlib, datetime, local_db
+from bson.objectid import ObjectId
+from pprint import pprint
 
-parser = argparse.ArgumentParser(description="Let's send some emails.")
-parser.add_argument('-u', '--user', help="user id that is adding the pack")
+
+parser = argparse.ArgumentParser(description="Crack a new pack and add it to the draft.")
+parser.add_argument('-d', '--draft', help="draft id to add the pack to", required=True)
+parser.add_argument('-u', '--user', help="user id that is adding the pack", required=True)
+parser.add_argument('-c', '--cards', help="multiverse_ids in a json-encoded list", required=True)
 args = parser.parse_args()
 
 try:
-    if not args.user:
-        raise Exception("user not defined")
+    db = local_db.database('hybrid-draft')
+    packs = db.collections['packs']
+
     user = args.user
+    draft_id = args.draft
+    new_pack = {
+        'draft_id': draft_id,
+        'opened_by': user,
+        'assigned_to': user,
+        'cards': json.loads(args.cards)
+    }
 
+    inserted = packs.insert_one(new_pack)
 
-    # read the file
-    with open("c:\\github\\mtg-hybrid-draft\\data\\BRO.json", 'r') as f:
-        data = json.load(f)
-        packs = data.get('packs')
-        # count the number of packs that this user has already opened, to determine the round we are adding this pack to 
-        round = 1
-        for pack in packs:
-            if pack.get('opened_by') == user:
-                round += 1
-        
-        # add the new pack
-        new_pack = {
-            '_id': hashlib.sha1(str(datetime.datetime.now()).encode()).hexdigest(),
-            'opened_by': user,
-            'round': round,
-            'cards': []
-        }
-        packs.append(new_pack)
+    # output the inserted pack
+    pprint(inserted)
 
-    # write to the file
-    with open("c:\\github\\mtg-hybrid-draft\\data\\BRO.json", 'w') as f:
-        json.dump(data, f)
-
-    print(new_pack)
 except Exception as err:
-    print(err)
+    print({'error': err})
+
+finally:
+    exit()

@@ -57,3 +57,4 @@ class collection:
             # write the new file
             json.dump(document, f, indent=4)
     
+        return document
