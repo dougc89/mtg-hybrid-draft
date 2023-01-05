@@ -11,17 +11,21 @@ args = parser.parse_args()
 
 try:
     db = local_db.database('hybrid-draft')
+    drafts = db.collections['drafts']
     packs = db.collections['packs']
 
     user = args.user
     pack_id = args.pack_id
 
-    
+    # look up the ordered list of players in the draft, to know who gets the pack next
 
-    inserted = packs.insert_one(new_pack)
+    # look up the pack in question
 
-    # output the inserted pack
-    pprint(inserted)
+    # assign the card (only one, in the chance of double-copies in one pack) in question to the player who is picking it
+
+    # assign the pack to the next person in line, using the odd/even state of pack's round for next/previous
+
+    # output the updated pack
 
 except Exception as err:
     print({'error': err})
