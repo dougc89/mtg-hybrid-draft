@@ -39,36 +39,40 @@ try:
     # reduce the cards remaining count on the pack
     pack['cards_remaining'] = int(pack['cards_remaining']) - 1
 
-    # look up the ordered list of players in the draft, to know who gets the pack next
-    draft = drafts.find({'_id': pack.get('draft_id')})[0]
-
-    # find the player making the selection in the list of draft players, for their order
-    index = 0
-    for player in draft.get('players'):
-        if player.get('_id') == user:
-            break
-        # increment
-        index += 1
-    
-    # if we did not ever find the user in players, index will be out of range
-    if index > len(draft.get('players')) - 1:
-        raise Exception("{} not found in draft players".format(user))
-
-    # assign the pack to the next person in line, using the odd/even state of pack's round for next/previous
-    if int(pack.get('round')) % 2 == 0:
-        # even, so assign to previous player
-        assigned_index = index - 1
-        # go around the horn if we went outside range
-        if assigned_index < 0:
-            assigned_index = len(draft.get('players')) - 1
+    if pack['cards_remaining'] == 0:
+        # unset assigned to if all the cards in the pack have been picked
+        pack['assigned_to'] = None
     else:
-        # odd, so assign to next player
-        assigned_index = index + 1
-        if assigned_index > len(draft.get('players')) - 1:
-            # set to the first player, since we went outside range
-            assigned_index = 0
+        # look up the ordered list of players in the draft, to know who gets the pack next
+        draft = drafts.find({'_id': pack.get('draft_id')})[0]
 
-    pack['assigned_to'] = draft.get('players')[assigned_index].get('_id')
+        # find the player making the selection in the list of draft players, for their order
+        index = 0
+        for player in draft.get('players'):
+            if player.get('_id') == user:
+                break
+            # increment
+            index += 1
+        
+        # if we did not ever find the user in players, index will be out of range
+        if index > len(draft.get('players')) - 1:
+            raise Exception("{} not found in draft players".format(user))
+
+        # assign the pack to the next person in line, using the odd/even state of pack's round for next/previous
+        if int(pack.get('round')) % 2 == 0:
+            # even, so assign to previous player
+            assigned_index = index - 1
+            # go around the horn if we went outside range
+            if assigned_index < 0:
+                assigned_index = len(draft.get('players')) - 1
+        else:
+            # odd, so assign to next player
+            assigned_index = index + 1
+            if assigned_index > len(draft.get('players')) - 1:
+                # set to the first player, since we went outside range
+                assigned_index = 0
+
+        pack['assigned_to'] = draft.get('players')[assigned_index].get('_id')
 
     # update the pack, and output the updated pack
     packs.update({'_id': pack_id}, pack)
