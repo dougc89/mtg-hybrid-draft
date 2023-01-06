@@ -28,7 +28,7 @@ try:
     # look up other packs this player has opened for this draft
     packs_opened_by_user = packs.find({'draft_id': draft_id, 'opened_by': user})
 
-# they are only allowed to add a new one if the max has not been reached
+    # they are only allowed to add a new one if the max has not been reached
     if not len(packs_opened_by_user) < max_packs:
         raise Exception("Max packs of {} already reached. Cannot add a new one to this draft for this player.".format(max_packs))
 

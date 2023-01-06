@@ -15,19 +15,65 @@ try:
     packs = db.collections['packs']
 
     user = args.user
-    pack_id = args.pack_id
-
-    # look up the ordered list of players in the draft, to know who gets the pack next
+    pack_id = args.pack
 
     # look up the pack in question
+    pack = packs.find({'_id': pack_id})
+    if len(pack) < 1:
+        raise Exception('pack not found')
+    else:
+        # pick the first pack in the list
+        pack = pack[0]
 
     # assign the card (only one, in the chance of double-copies in one pack) in question to the player who is picking it
+    card_found = False
+    for card in pack.get('cards'):
+        if card.get('multiverse_id') == args.card and not card.get('owned_by'):
+            card_found = True
+            card['owned_by'] = user
+            break
+
+    if not card_found:
+        raise Exception("An available card with _id {} not found in pack.".format(args.card))
 
     # reduce the cards remaining count on the pack
+    pack['cards_remaining'] = int(pack['cards_remaining']) - 1
+
+    # look up the ordered list of players in the draft, to know who gets the pack next
+    draft = drafts.find({'_id': pack.get('draft_id')})[0]
+
+    # find the player making the selection in the list of draft players, for their order
+    index = 0
+    for player in draft.get('players'):
+        if player.get('_id') == user:
+            break
+        # increment
+        index += 1
+    
+    # if we did not ever find the user in players, index will be out of range
+    if index > len(draft.get('players')) - 1:
+        raise Exception("{} not found in draft players".format(user))
 
     # assign the pack to the next person in line, using the odd/even state of pack's round for next/previous
+    if int(pack.get('round')) % 2 == 0:
+        # even, so assign to previous player
+        assigned_index = index - 1
+        # go around the horn if we went outside range
+        if assigned_index < 0:
+            assigned_index = len(draft.get('players')) - 1
+    else:
+        # odd, so assign to next player
+        assigned_index = index + 1
+        if assigned_index > len(draft.get('players')) - 1:
+            # set to the first player, since we went outside range
+            assigned_index = 0
 
-    # output the updated pack
+    pack['assigned_to'] = draft.get('players')[assigned_index].get('_id')
+
+    # update the pack, and output the updated pack
+    packs.update({'_id': pack_id}, pack)
+
+    pprint(pack)
 
 except Exception as err:
     print({'error': err})

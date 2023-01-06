@@ -2,6 +2,19 @@
     "set": "BRO",
     "type": "proxy",
     "num_packs": "4",
-    "players": [],
+    "players": [
+        {
+            "name": "Doug",
+            "_id": "2790"
+        },
+        {
+            "name": "Rob",
+            "_id": "1816"
+        },
+        {
+            "name": "Austin L.",
+            "_id": "2979"
+        }
+    ],
     "_id": "63b64fd4889ea1980144bf62"
 }

@@ -62,3 +62,12 @@ class collection:
             json.dump(document, f, indent=4)
     
         return document
+
+    def update(this, filter, document):
+        # we are short-cutting to only update with a known _id
+        if '_id' in filter:
+            _id = filter.get('_id')
+
+        with open(os.path.join(this.collection_path, "{}.json".format(_id)), 'w') as f:
+            # write the new file
+            json.dump(document, f, indent=4)

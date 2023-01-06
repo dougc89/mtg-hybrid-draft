@@ -2,11 +2,12 @@
     "draft_id": "63b64fd4889ea1980144bf62",
     "opened_by": "2790",
     "round": 4,
-    "assigned_to": "2790",
+    "assigned_to": "2979",
+    "cards_remaining": 1,
     "cards": [
         {
             "multiverse_id": "1234a5",
-            "owned_by": null
+            "owned_by": "2790"
         },
         {
             "multiverse_id": "2b3456",

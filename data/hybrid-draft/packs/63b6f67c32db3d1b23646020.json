@@ -3,14 +3,15 @@
     "opened_by": "2790",
     "round": 3,
     "assigned_to": "2790",
+    "cards_remaining": 0,
     "cards": [
         {
             "multiverse_id": "1234a5",
-            "owned_by": null
+            "owned_by": "2979"
         },
         {
             "multiverse_id": "2b3456",
-            "owned_by": null
+            "owned_by": "2790"
         }
     ],
     "_id": "63b6f67c32db3d1b23646020"

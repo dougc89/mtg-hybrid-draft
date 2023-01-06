@@ -1,4 +1,4 @@
-import credentials, mongo, pymongo, argparse
+import credentials, mongo, pymongo, argparse, local_db
 from bson.objectid import ObjectId
 from pprint import pprint
 
@@ -10,7 +10,7 @@ parser.add_argument('-n', '--name', help="display name for the player", required
 args = parser.parse_args()
 
 try:
-    db = mongo.database('hybrid-draft')
+    db = local_db.database('hybrid-draft')
 
     # drafts collection
     drafts = db.collections['drafts']
@@ -44,14 +44,24 @@ try:
     # set the option _id
     if 'id' in args:
         new_player['_id'] = args.id
+    else:
+        new_player['_id'] = str(ObjectId())
 
-    added_player = drafts.update_one({'_id': ObjectId(draft_id)},
-    {
-        '$push': {
-            'players': new_player
-        }
-    })
+    # get the target draft
+    draft = drafts.find({'_id': draft_id})[0]
+    
+    # add the new player
+    draft.get('players').append(new_player)
 
-    print(added_player)
+    # write to the data store
+    drafts.update({'_id': draft_id}, draft)
+
+    # output the added player
+    print(new_player)
+
+except Exception as err:
+    print({'error': err})
+
 finally:
+    exit()
     db.connection.close()
