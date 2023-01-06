@@ -23,6 +23,8 @@ try:
 
     # assign the card (only one, in the chance of double-copies in one pack) in question to the player who is picking it
 
+    # reduce the cards remaining count on the pack
+
     # assign the pack to the next person in line, using the odd/even state of pack's round for next/previous
 
     # output the updated pack

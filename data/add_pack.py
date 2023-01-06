@@ -2,7 +2,6 @@ import json, argparse, hashlib, datetime, local_db
 from bson.objectid import ObjectId
 from pprint import pprint
 
-
 parser = argparse.ArgumentParser(description="Crack a new pack and add it to the draft.")
 parser.add_argument('-d', '--draft', help="draft id to add the pack to", required=True)
 parser.add_argument('-u', '--user', help="user id that is adding the pack", required=True)
@@ -34,13 +33,15 @@ try:
         raise Exception("Max packs of {} already reached. Cannot add a new one to this draft for this player.".format(max_packs))
 
     card_list = json.loads(args.cards)
-    if len(card_list) != 2:
-        raise Exception('There needs to be exactly 15 cards in the pack')
+
+    # if len(card_list) != 15:
+    #     raise Exception('There needs to be exactly 15 cards in the pack')
 
     new_pack = {
         'draft_id': draft_id,
         'opened_by': user,
         'round': len(packs_opened_by_user) + 1,
+        'cards_remaining': len(card_list),
         'assigned_to': user,
         'cards': list(map(lambda x: {'multiverse_id': x, 'owned_by': None}, card_list))
     }
