@@ -1,6 +1,6 @@
 <?php
 
-class Packs extends Resource{
+class Drafts extends Resource{
 
     # Pass the contruction up to the parent (Resource)
     function __construct($datasource = null){
@@ -8,36 +8,43 @@ class Packs extends Resource{
     }
 
     function get(){
-
         # map out expected/accepted fields
         $params = $this->request_params();
-        # $this->success(['params'=>$params]);
 
-        if(!isset($params['draft'])) $this->error(400, ['?draft={draft_id} is a required param']);
-        if(!isset($params['user'])) $this->error(400, ['?user={user_id} is a required param']);
-
-        $cmd = "py c:\\github\\mtg-hybrid-draft\\data\\get_packs.py -u {$params['user']} -d {$params['draft']} ";
-        $packs = shell_exec(escapeshellcmd($cmd));
+        // if(!isset($params['draft'])) $this->error(400, ['?draft={draft_id} is a required param']);
+        // if(!isset($params['user'])) $this->error(400, ['?user={user_id} is a required param']);
+        $cmd = "py c:\\github\\mtg-hybrid-draft\\data\\get_drafts.py ";
+        if(isset($params['set'])) $cmd .= "-s {$params['set']}";
+        $drafts = shell_exec(escapeshellcmd($cmd));
         # $new_pack = shell_exec('py -v 2>&1');
-        $this->success(['packs'=>json_decode($packs, true)]);
+        $this->success(['drafts'=>json_decode($drafts, true)]);
+
     }
 
     function post(){
+        
+        # check permissions:
+        if(!$this->access('admin')) $this->error(401, ['roles'=>$this->authentication->roles()]);
 
         # map out expected/accepted fields
         $field_map = [
-            'required'=>[
-                'draft_id'=>'_id for the target draft',
-                'user'=>'user id of person opening pack',
-                'cards'=>'list of multiverse_ids'], 
+            'required'=>[], 
             'optional'=>[]
         ];
 
+        # read the json fields incoming
         $vals = $this->request_fields($field_map);
 
-        $new_pack = shell_exec(escapeshellcmd("py c:\\github\\mtg-hybrid-draft\\data\\add_pack.py -u {$vals['user']} -d {$vals['draft_id']} -c ".json_encode($vals['cards'])));
-        # $new_pack = shell_exec('py -v 2>&1');
-        $this->success(['pack'=>json_decode($new_pack, true)]);
+        # write to the database
+        $inserted = $this->datasource->insert('add a new record', 'table_name', $vals);
+
+        # return the inserted
+        if($inserted){
+            $this->success(['inserted'=>$inserted]);
+        }else{
+            $this->error(500, ['error'=>'db insert failed']);
+        }
+
     }
 
     function patch(){

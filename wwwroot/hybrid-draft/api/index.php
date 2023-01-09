@@ -17,6 +17,8 @@
     # example: 
     $api->endpoints()->add('packs', new Packs())->accept(['GET', 'POST']);
 
+    $api->endpoints()->add('drafts', new Drafts())->accept(['GET']);
+
 
     # # # # # # # # #
     # set auth roles: 

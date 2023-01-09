@@ -52,7 +52,7 @@ try:
     pprint(inserted)
 
 except Exception as err:
-    print({'error': err})
+    print({'error': f"{err}"})
 
 finally:
     exit()

@@ -27,10 +27,10 @@
                 <mxCell id="25" value="num_packs" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" parent="24" vertex="1" connectable="0">
                     <mxGeometry width="90" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="1094" value="(array of obj) {_id, name}" style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;spacingLeft=90;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontSize=12;fillColor=none;fontColor=#000000;" vertex="1" parent="UNSVgzjggnh8WNsOpvjD-12">
+                <mxCell id="1094" value="(array of obj) {_id, name}" style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;spacingLeft=90;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontSize=12;fillColor=none;fontColor=#000000;" parent="UNSVgzjggnh8WNsOpvjD-12" vertex="1">
                     <mxGeometry y="112" width="470" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="1095" value="players" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" vertex="1" connectable="0" parent="1094">
+                <mxCell id="1095" value="players" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" parent="1094" vertex="1" connectable="0">
                     <mxGeometry width="90" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="1078" value="(str) &quot;proxy&quot; or &quot;paper&quot;" style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;spacingLeft=90;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontSize=12;fillColor=none;fontColor=#000000;" parent="UNSVgzjggnh8WNsOpvjD-12" vertex="1">
@@ -75,7 +75,7 @@
                 <mxCell id="1043" value="open a pack, adding exactly 15 cards." style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;align=left;verticalAlign=middle;fillColor=none;spacingLeft=121;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontStyle=0;fontSize=12;fontColor=#000000;" parent="1040" vertex="1">
                     <mxGeometry y="56" width="740" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="1044" value="POST" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" parent="1043" vertex="1" connectable="0">
+                <mxCell id="1044" value="POST" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#0000CC;fontStyle=1" parent="1043" vertex="1" connectable="0">
                     <mxGeometry width="110" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="1089" value="select a card from a pack, changing the cards available and the pack assignment" style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;align=left;verticalAlign=middle;fillColor=none;spacingLeft=121;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontStyle=0;fontSize=12;fontColor=#000000;" parent="1040" vertex="1">
@@ -136,10 +136,10 @@
                 <mxCell id="1088" value="assigned_to" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" parent="1087" vertex="1" connectable="0">
                     <mxGeometry width="90" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="1096" value="(int) for the round the pack was added (even/odd determines rotation)" style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;fillColor=none;spacingLeft=90;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontSize=12;fontColor=#000000;" vertex="1" parent="990">
+                <mxCell id="1096" value="(int) for the round the pack was added (even/odd determines rotation)" style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;fillColor=none;spacingLeft=90;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontSize=12;fontColor=#000000;" parent="990" vertex="1">
                     <mxGeometry y="138" width="470" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="1097" value="round" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" vertex="1" connectable="0" parent="1096">
+                <mxCell id="1097" value="round" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=right;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;fontSize=12;fontColor=#000000;fontStyle=1" parent="1096" vertex="1" connectable="0">
                     <mxGeometry width="90" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="1085" value="starts at 15, counts down." style="shape=partialRectangle;top=0;left=0;right=0;bottom=0;align=left;verticalAlign=top;fillColor=none;spacingLeft=130;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;dropTarget=0;fontSize=12;fontColor=#000000;" parent="990" vertex="1">

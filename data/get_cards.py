@@ -27,10 +27,10 @@ try:
 
 
     # output the inserted pack
-    pprint(player_cards)
+    print(json.dumps(player_cards))
 
 except Exception as err:
-    print({'error': err})
+    print(json.dumps({'error': err}))
 
 finally:
     exit()

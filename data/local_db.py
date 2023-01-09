@@ -9,7 +9,7 @@ class database:
     collections = {} 
     
     def __init__(this, database_name):
-        this.database_path = str(database_name)
+        this.database_path = os.path.join('c:\\github\\mtg-hybrid-draft\\data\\',str(database_name))
         for f in os.listdir(this.database_path):
             this.collections[f] = collection(os.path.join(this.database_path, f))
         # print(this.collections)
@@ -20,6 +20,7 @@ class collection:
     result_set = []
 
     def __init__(this, collection_path):
+        # print(collection_path)
         this.collection_path = collection_path
 
     def find(this, search_filter):
@@ -27,12 +28,13 @@ class collection:
         this.result_set = []
 
         # if the _id is specified, just get that specific document (as long as it exists)
-        if '_id' in search_filter and os.path.exists(os.path.join(this.collection_path, search_filter.get('_id'))):
+        if '_id' in search_filter and os.path.exists(os.path.join(this.collection_path, search_filter.get('_id'), ".json")):
             documents = ["{}.json".format(search_filter.get('_id'))]
         else:
             # read all the documents in target collection directory
             documents = os.listdir(this.collection_path)
         for document in documents:
+            # print(document)
             with open(os.path.join(this.collection_path, document), 'r') as f:
                 data = json.load(f)
             
@@ -45,6 +47,8 @@ class collection:
             # tested keys should be empty if all requested matches have been matched
             if not len(unmatched_keys):
                 this.result_set.append(data)
+            # else:
+            #     print("Unmatched", unmatched_keys, search_filter[unmatched_keys[0]])
 
         return this.result_set
         
