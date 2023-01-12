@@ -7,12 +7,15 @@
         v-model='tab'
         :tabs='tabs'
         :help_articles='help_articles' v-cloak
-        >APP NAME</app-navigation-bar>
+        >LCSO MTG Draft</app-navigation-bar>
 
     <div class='mx-3 sub-content my-4'>
 
     <v-tabs-items v-model="tab" dark>
-
+        <v-tab-item key="player_picker_tab">
+            <player-picker v-if='draft' :draft='draft' @confirm='select_player'></player-picker>
+            <p v-else>Getting draft info...</p>
+        </v-tab-item>
         <v-tab-item key="example_1">
         <v-slide-group
             multiple

@@ -15,8 +15,7 @@ const ui = new Vue({
     vuetify: new Vuetify({ theme: { dark: false } }),
     data: function(){
         return {
-            // index of the open tab (build/middle)
-            tab: 0,
+
 
             // tab titles (for app-navigation-bar)
             tabs: ['Example'],
@@ -36,7 +35,22 @@ const ui = new Vue({
             cards: [],
             pack_cards: [],
 
+            // info about the draft
+            draft: null,
 
+            // active player name and id
+            active_player: null,
+
+        }
+    },
+    computed:{
+        tab(){
+            if(!this.draft || !this.active_player){
+                // the first tab is for selecting a player
+                return 0
+            }else{
+                return 1
+            }
         }
     },
     mounted(){
@@ -52,8 +66,9 @@ const ui = new Vue({
         } 
 
         // call the init method
-        this.crack_pack('bro')
+        this.get_drafts(urlParams.get('set'))
     },
+
     methods: {
         async get_cards(set, search){
             console.log('searching with name: ',search)
@@ -117,6 +132,16 @@ const ui = new Vue({
             // this.search_typing = true
             // setTimeout(function(self){ self.search_typing = false}, 500, this)
             // setTimeout(function(self){ if(!self.search_typing){ self.get_cards(self.search_text)}else{console.log('still typing')}}, 1000, this)
+        },
+        async get_drafts(set_code){
+            let response = await $.get(`/hybrid-draft/api/drafts?set=${set_code}`)
+            console.log(response)
+            // use the first draft returned
+            this.draft = response.drafts[0]
+        },
+        select_player(player_info){
+            //  should auto-progress the tab from computed
+            this.active_player = player_info
         }
     }
 

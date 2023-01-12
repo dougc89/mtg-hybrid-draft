@@ -9,3 +9,5 @@ include_once(__DIR__.'/examples/example-modal/template.php');
 
 
 include_once(__DIR__.'/mtg-card/template.php');
+include_once(__DIR__.'/player-picker/template.php');
+include_once(__DIR__.'/player-confirmation/template.php');
