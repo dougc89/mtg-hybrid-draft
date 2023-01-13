@@ -18,7 +18,9 @@ const ui = new Vue({
 
 
             // tab titles (for app-navigation-bar)
-            tabs: ['Example'],
+            tabs: ['Player', 'Pack Opening', 'Card Selection'],
+            hidden_tabs: ['Player', 'Pack Opening', 'Card Selection'],
+            tab: 0,
 
             help_articles: [
                 // {title: 'Adding Notes to On-call group', href:'https://lcso.freshservice.com/a/solutions/articles/17000078517'}, // https://lcso.freshservice.com/a/solutions/articles/17000078522
@@ -32,26 +34,20 @@ const ui = new Vue({
             // toggle on/off to prevent oversending search queries while typing
             search_typing: false, 
 
-            cards: [],
-            pack_cards: [],
+            card_search: [], // results from scryfall
 
             // info about the draft
             draft: null,
 
             // active player name and id
             active_player: null,
+            player_cards: [],
+
 
         }
     },
     computed:{
-        tab(){
-            if(!this.draft || !this.active_player){
-                // the first tab is for selecting a player
-                return 0
-            }else{
-                return 1
-            }
-        }
+
     },
     mounted(){
         
@@ -70,11 +66,11 @@ const ui = new Vue({
     },
 
     methods: {
-        async get_cards(set, search){
+        async search_cards(set, search){
             console.log('searching with name: ',search)
             let name_qry =  search ? `+${search}` : ''
             let res = await $.get('https://api.scryfall.com/cards/search?q=set%3A'+set+name_qry)
-            this.cards = res.data
+            this.card_search = res.data
         },
         async crack_pack(set){
             var pack_cards = []
@@ -138,10 +134,40 @@ const ui = new Vue({
             console.log(response)
             // use the first draft returned
             this.draft = response.drafts[0]
+
+            // set the tab automatically
+            this.auto_tab()
         },
         select_player(player_info){
-            //  should auto-progress the tab from computed
+            
             this.active_player = player_info
+            this.get_player_cards()
+
+        },
+        async get_player_cards(){
+            console.log('getting cards for', this.active_player._id)
+            let response = await $.get(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/cards`)
+            console.log(response)
+            this.player_cards = response.cards
+            // should auto-progress the tab from computed
+            this.auto_tab()
+        },
+        auto_tab(){
+            if(!this.draft || !this.active_player){
+                // the first tab is for selecting a player
+                this.tab = 0
+            }else if(this.player_cards.length < 1 || this.player_cards.length % 15 == 0){
+                if(this.player_cards.length / 15 == this.draft.num_packs){
+                    // if the player has selected all the cards possible in the draft, send them to the card selection (which has no selection remaining)
+                    this.tab = 2
+                }else{              
+                    // pack opener  
+                    this.tab = 1
+                }
+            }else{
+                // card selection
+                this.tab = 2
+            }
         }
     }
 
