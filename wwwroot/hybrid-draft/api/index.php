@@ -26,11 +26,7 @@
     $pack_id = $packs->add('{id}', new Packs())->accept(['PATCH']); # for picking cards
 
     # cards by a player in the draft
-    $cards = $player->add('cards', new Packs())->accept(['GET']); # for listing cards owned by this player
-
-
-    # $api->endpoints()->add('drafts', new Drafts())->accept(['GET']);
-
+    $cards = $player->add('cards', new Cards())->accept(['GET']); # for listing cards owned by this player
 
     # # # # # # # # #
     # set auth roles: 
