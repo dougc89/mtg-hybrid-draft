@@ -41,7 +41,8 @@ const ui = new Vue({
 
             // active player name and id
             active_player: null,
-            player_cards: [],
+            player_packs: [], // packs "held" by this player
+            player_cards: [], // cards owned by this player
 
 
         }
@@ -142,6 +143,7 @@ const ui = new Vue({
             
             this.active_player = player_info
             this.get_player_cards()
+            this.get_player_packs()
 
         },
         async get_player_cards(){
@@ -151,6 +153,13 @@ const ui = new Vue({
             this.player_cards = response.cards
             // should auto-progress the tab from computed
             this.auto_tab()
+        },
+
+        async get_player_packs(){
+            console.log('getting packs for', this.active_player._id)
+            let response = await $.get(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`)
+            console.log(response)
+            this.player_packs = response.packs
         },
         auto_tab(){
             if(!this.draft || !this.active_player){
