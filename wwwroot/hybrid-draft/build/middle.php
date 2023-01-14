@@ -18,29 +18,27 @@
         </v-tab-item>
         <v-tab-item key="pack_opener_tab">
             Pack Opener
+            <v-btn @click='crack_pack'>Crack Pack</v-btn>
         </v-tab-item>
         <v-tab-item key="card_selection_tab"> Card Selection
-        <!-- <v-slide-group
+        <v-slide-group
                 multiple
                 show-arrows
+                v-if='player_packs.length > 0'
                 >
                     <v-slide-item
-                        v-for='(card, index) in pack_cards'
+                        v-for='(card, index) in player_packs[0].cards'
                         :key="'pack_'+card+index"
                         v-slot="{ active, toggle }"
                     >
-                        <mtg-card  :multiverse_id='card'></mtg-card>
+                        <mtg-card  :multiverse_id='card.multiverse_id'></mtg-card>
                     </v-slide-item>
             </v-slide-group>
-            <v-row>
-                <v-col>
-                    <v-text-field v-model='search_text' clearable @change='search_with_delay'></v-text-field>
-                </v-col>
+
+            <v-row v-if='player_cards.length > 0'>
+                <mtg-card adding_to_pack v-for='card in player_cards' :multiverse_id='card' :key="'player_cards_'+Math.random()"></mtg-card>
             </v-row>
-            <v-row>
-                <mtg-card adding_to_pack v-for='card in cards' :multiverse_id='card.multiverse_ids[0]' @add_to_pack='add_to_pack' :key="'card_search_'+Math.random()"></mtg-card>
-            </v-row>
-    -->
+
         </v-tab-item>
 
         <v-tab-item key="example_2">

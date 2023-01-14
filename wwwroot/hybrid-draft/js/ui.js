@@ -73,8 +73,10 @@ const ui = new Vue({
             let res = await $.get('https://api.scryfall.com/cards/search?q=set%3A'+set+name_qry)
             this.card_search = res.data
         },
-        async crack_pack(set){
+        async crack_pack(){
             var pack_cards = []
+            var set = this.draft.set // BRO, WAR, etc
+
             // config might change for some sets, but this is the normal distribution
             var config = {
                 'rarity:mythic': 0,
@@ -115,9 +117,15 @@ const ui = new Vue({
 
             // shuffle the cards 
             pack_cards = pack_cards.sort((a, b) => 0.5 - Math.random())
+            console.log('new pack', pack_cards)
 
-            // store then in rendered data
-            this.pack_cards = pack_cards
+            // send to db
+            let res = $.post(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`, JSON.stringify({'cards':pack_cards}))
+            console.log(res)
+
+            // refresh the player and their stuff
+            this.get_player_stuff()
+
         },
         add_to_pack(multiverse_id){
             // add the card to the pack, init who owns it
@@ -130,6 +138,7 @@ const ui = new Vue({
             // setTimeout(function(self){ self.search_typing = false}, 500, this)
             // setTimeout(function(self){ if(!self.search_typing){ self.get_cards(self.search_text)}else{console.log('still typing')}}, 1000, this)
         },
+
         async get_drafts(set_code){
             let response = await $.get(`/hybrid-draft/api/drafts?set=${set_code}`)
             console.log(response)
@@ -139,20 +148,29 @@ const ui = new Vue({
             // set the tab automatically
             this.auto_tab()
         },
-        select_player(player_info){
+
+        async select_player(player_info){
             
             this.active_player = player_info
-            this.get_player_cards()
-            this.get_player_packs()
+            this.get_player_stuff()
 
         },
+
+        async get_player_stuff(){
+            // get the cards and packs belonging to this player
+            this.get_player_cards()
+            await this.get_player_packs()
+            this.auto_tab()
+        },
+
+
         async get_player_cards(){
             console.log('getting cards for', this.active_player._id)
             let response = await $.get(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/cards`)
             console.log(response)
             this.player_cards = response.cards
             // should auto-progress the tab from computed
-            this.auto_tab()
+            
         },
 
         async get_player_packs(){
@@ -161,18 +179,14 @@ const ui = new Vue({
             console.log(response)
             this.player_packs = response.packs
         },
+
         auto_tab(){
             if(!this.draft || !this.active_player){
                 // the first tab is for selecting a player
                 this.tab = 0
-            }else if(this.player_cards.length < 1 || this.player_cards.length % 15 == 0){
-                if(this.player_cards.length / 15 == this.draft.num_packs){
-                    // if the player has selected all the cards possible in the draft, send them to the card selection (which has no selection remaining)
-                    this.tab = 2
-                }else{              
-                    // pack opener  
-                    this.tab = 1
-                }
+            }else if(this.player_packs.length < 1 && this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs){       
+                // pack opener  
+                this.tab = 1
             }else{
                 // card selection
                 this.tab = 2
