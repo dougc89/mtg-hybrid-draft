@@ -12,3 +12,6 @@
 .clickable:hover{
     opacity: 1;
 }
+.selected-card .mtg-card{
+    background-color: teal;
+}

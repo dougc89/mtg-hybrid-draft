@@ -7,7 +7,8 @@ export default Vue.component('card-selection', {
     data(){
         return {
             elevation: 1,
-            title: 'This is an example card.'
+            title: 'This is an example card.',
+            selected_card: null
         }
     }, 
     computed: {
@@ -21,14 +22,14 @@ export default Vue.component('card-selection', {
             // track state management in the state prop. you can also add other state listeners, but only one needs to be listed as immediate to init the component
             handler(val){
                 // perform init/state change 
-                this.hello()
+                // this.hello()
             },
             immediate: true
         },
     },
     methods: {            
-        selected_card(arg){
-            console.log('hello card', arg);
+        select_card(arg){
+            console.log('hello card', arg, this.selected_card);
         }
     }
 });

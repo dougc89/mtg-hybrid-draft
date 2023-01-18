@@ -52,6 +52,10 @@ export default Vue.component('mtg-card', {
         add_to_pack(){
             console.log('Adding to pack', this.card_info)
             this.$emit('add_to_pack', this.multiverse_id)
+        },
+        hello(){
+            console.log('hello')
+            this.$emit('select_card')
         }
     }
 });
