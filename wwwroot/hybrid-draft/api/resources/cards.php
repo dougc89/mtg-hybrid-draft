@@ -13,7 +13,7 @@ class Cards extends Resource{
         $req_path = $this->request_path(['drafts', 'draft_id', 'players', 'player_id', 'packs']);
 
         $draft_id = $req_path['draft_id'] ?? null;
-        $player_id = $req_path['draft_id'] ?? null;
+        $player_id = $req_path['player_id'] ?? null;
 
         if(!isset($draft_id) or !isset($player_id)) $this->error(400, ['req_path'=>['drafts', 'draft_id', 'players', 'player_id', 'packs']]);
 

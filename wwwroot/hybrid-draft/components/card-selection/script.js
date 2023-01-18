@@ -8,11 +8,19 @@ export default Vue.component('card-selection', {
         return {
             elevation: 1,
             title: 'This is an example card.',
-            selected_card: null
+            selected_card: null, // multiverse_id
+            selected_index: null,
+            card_chosen: false,
         }
     }, 
     computed: {
-
+        // player_pack(){
+        //     if(this.player_packs.length > 0){
+        //         return this.player_pack[0]
+        //     }else{
+        //         return {}
+        //     }
+        // }
     },
     mounted(){
 
@@ -28,8 +36,25 @@ export default Vue.component('card-selection', {
         },
     },
     methods: {            
-        select_card(arg){
-            console.log('hello card', arg, this.selected_card);
+        select_card(args){
+            console.log('selecting', args)
+            this.selected_card = args.multiverse_id
+            this.selected_index = args.index
+        },
+        async confirm_selection(){
+            //prevent duplications
+            if(!this.card_chosen){
+                this.card_chosen = true
+                let res = await $.patch(`/hybrid-draft/api/drafts/${this.player_packs[0].draft_id}/players/${this.player_packs[0].assigned_to}/packs/${this.player_packs[0]._id}`, 
+                                        JSON.stringify({card: this.selected_card}))
+                console.log(res)
+                this.$emit('card_chosen')
+                // rerender to reset // this.card_chosen = false
+            }
+        },
+        clear_selection(){
+            this.selected_card = null
+            this.selected_index = null       
         }
     }
 });

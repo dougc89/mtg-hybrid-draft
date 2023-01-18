@@ -22,7 +22,7 @@
             <v-form ref='form' @submit='save' onSubmit="return false;">
                 <v-row>
                     <v-col cols='12'>
-                        <v-text-field
+                        <v-text-field autofocus
                         label='Type your ID'
                         outlined
                         :rules='rules.req_match' 

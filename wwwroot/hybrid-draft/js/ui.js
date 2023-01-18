@@ -1,7 +1,29 @@
+function _ajax_request(url, data, callback, type, method) {
+    if ($.isFunction(data)) {
+        callback = data;
+        data = {};
+    }
+    return $.ajax({
+        type: method,
+        url: url,
+        data: data,
+        success: callback,
+        error: function(response){console.log('error status code:', response.status)},
+        dataType: type
+        });
+}
 
-/*Call factory functions from meta.js*/
-// we are not "navigating" by ajax anymore... load data and use vue to manipulate DOM // const navigation = NAVIGATION('.row.sub-content');
-
+$.extend({
+    put: function(url, data, callback, type) {
+        return _ajax_request(url, data, callback, type, 'PUT');
+    },
+    patch: function(url, data, callback, type) {
+        return _ajax_request(url, data, callback, type, 'PATCH');
+    },
+    delete: function(url, data, callback, type) {
+        return _ajax_request(url, data, callback, type, 'DELETE');
+    }
+});
 
 // meta components
 import {app_navigation} from '/meta/vue/components/app-navigation-bar.js'
@@ -44,7 +66,7 @@ const ui = new Vue({
             active_player: null,
             player_packs: [], // packs "held" by this player
             player_cards: [], // cards owned by this player
-
+            state: 0
 
         }
     },
@@ -167,6 +189,7 @@ const ui = new Vue({
             // get the cards and packs belonging to this player
             await this.get_player_cards()
             await this.get_player_packs()
+            this.state++
             this.auto_tab()
         },
 

@@ -1,3 +1,7 @@
+[v-cloak] {
+    /*hide view {{placeholders}} while loading*/
+    display: none;
+} 
 .card-edges{
     border-radius: 33px;
 }

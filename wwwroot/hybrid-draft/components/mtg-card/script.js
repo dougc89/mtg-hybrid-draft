@@ -7,7 +7,10 @@ export default Vue.component('mtg-card', {
         adding_to_pack: {
             type: Boolean,
             default: false
-        }
+        },
+        pack_index: {
+            default: -1
+        },
     },
     data(){
         return {
@@ -53,9 +56,9 @@ export default Vue.component('mtg-card', {
             console.log('Adding to pack', this.card_info)
             this.$emit('add_to_pack', this.multiverse_id)
         },
-        hello(){
-            console.log('hello')
-            this.$emit('select_card')
+        select(){
+            console.log('selecting', this.multiverse_id)
+            this.$emit('select_card', {index:this.pack_index, multiverse_id:this.multiverse_id})
         }
     }
 });

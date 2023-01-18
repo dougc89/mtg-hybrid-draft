@@ -3,7 +3,7 @@
     <v-card 
         class="mb-2 px-3 mtg-card" dark
         :elevation="elevation" 
-        min-width='253' max-width='255' rounded @click='hello'
+        min-width='253' max-width='255' rounded @click='select'
         >
         <v-img :src='scryfall_img_path' height='353' width='253' contain class='card-edges'>
                 <v-app-bar

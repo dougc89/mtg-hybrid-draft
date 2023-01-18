@@ -49,35 +49,27 @@ class Packs extends Resource{
 
     function patch(){
         
-        # check permissions:
-        if(!$this->access('admin')) $this->error(401, ['roles'=>$this->authentication->roles()]);
-
         # read request path for target
-        $id = $this->request_path(['path_to', 'id'])['id'];
+        $req_path = $this->request_path(['drafts', 'draft_id', 'players', 'player_id', 'packs', 'pack_id']);
+
+        $draft_id = $req_path['draft_id'] ?? null;
+        $player_id = $req_path['player_id'] ?? null;
+        $pack_id = $req_path['pack_id'] ?? null;
+
+        if(!isset($draft_id) or !isset($player_id) or !isset($pack_id)) $this->error(400, ['req_path'=>['drafts', 'draft_id', 'players', 'player_id', 'packs', 'pack_id']]);
 
         # map out expected/accepted fields
         $field_map = [
-            'required'=>[], 
+            'required'=>[
+                'card'=>'multiverse_id of selected card'], 
             'optional'=>[]
         ];
 
-        # read the json fields incoming
         $vals = $this->request_fields($field_map);
 
-        # filter by for target record
-        $where = " where id = :id ";
-        $where_vals = ['id'=> $id];
-
-        # write to the database
-        $updated = $this->datasource->update("update record #{$id}", 'table_name', $vals, $where, $where_vals);
-
-        # return the inserted
-        if($updated){
-            $this->success(['updated'=>$updated]);
-        }else{
-            $this->error(500, ['error'=>'db update failed']);
-        }
-
+        $cmd = "py c:\\github\\mtg-hybrid-draft\\data\\pick_card.py -u {$player_id} -p {$pack_id} -c {$vals['card']}";
+        $updated_pack = shell_exec(escapeshellcmd($cmd));
+        $this->success(['pack'=>json_decode($updated_pack, true), 'cmd'=>$cmd]);
     }
 
     function delete(){

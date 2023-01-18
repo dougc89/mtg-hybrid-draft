@@ -1,8 +1,9 @@
-import json, argparse, hashlib, datetime, local_db
+import json, argparse, hashlib, datetime, local_db, util
 from bson.objectid import ObjectId
 from pprint import pprint
 
-
+logger = util.create_logger("Hybrid Draft Log: Card Picker", "c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft.log", level = "DEBUG")
+    
 parser = argparse.ArgumentParser(description="Pick a card from the pack.")
 parser.add_argument('-p', '--pack', help="draft id to add the pack to", required=True)
 parser.add_argument('-u', '--user', help="user id that is picking the card", required=True)
@@ -10,6 +11,7 @@ parser.add_argument('-c', '--card', help="multiverse_id of the card to choose", 
 args = parser.parse_args()
 
 try:
+    logger.debug(json.dumps({'card':args.card, 'pack':args.pack, 'player': args.user}))
     db = local_db.database('hybrid-draft')
     drafts = db.collections['drafts']
     packs = db.collections['packs']
@@ -28,7 +30,7 @@ try:
     # assign the card (only one, in the chance of double-copies in one pack) in question to the player who is picking it
     card_found = False
     for card in pack.get('cards'):
-        if card.get('multiverse_id') == args.card and not card.get('owned_by'):
+        if str(card.get('multiverse_id')) == str(args.card) and not card.get('owned_by'):
             card_found = True
             card['owned_by'] = user
             break

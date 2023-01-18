@@ -11,7 +11,7 @@
 
     <div class='mx-3 sub-content my-4'>
 
-    <v-tabs-items v-model="tab" dark>
+    <v-tabs-items v-model="tab" dark v-cloak>
         <v-tab-item key="player_picker_tab">
             <player-picker v-if='draft' :draft='draft' @confirm='select_player'></player-picker>
             <p v-else class='h3 text-center'>Getting draft info...</p>
@@ -24,7 +24,7 @@
         
         <v-tab-item key="card_selection_tab"> 
             <p class='h3 text-center'>Card Selection</p>
-            <card-selection :player_packs='player_packs' v-if='player_packs.length > 0'></card-selection>
+            <card-selection :key="'selector_state_'+state" :player_packs='player_packs' v-if='player_packs.length > 0' @card_chosen='get_player_stuff'></card-selection>
             <p class='h6 text-center' v-else-if='draft && player_cards.length < draft.num_packs * 15'>Waiting on packs from other players...</p>
 
             <v-row v-if='player_cards.length > 0'>
