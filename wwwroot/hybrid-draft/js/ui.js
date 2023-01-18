@@ -63,7 +63,7 @@ const ui = new Vue({
         } 
 
         // call the init method
-        this.get_drafts(urlParams.get('set'))
+        this.get_drafts(urlParams.get('set').toUpperCase())
     },
 
     methods: {
@@ -158,7 +158,7 @@ const ui = new Vue({
 
         async get_player_stuff(){
             // get the cards and packs belonging to this player
-            this.get_player_cards()
+            await this.get_player_cards()
             await this.get_player_packs()
             this.auto_tab()
         },

@@ -19,13 +19,13 @@
         <!-- input form -->
         <v-card-text class='pb-2'>
 
-            <v-form ref='form'>
+            <v-form ref='form' @submit='save' onSubmit="return false;">
                 <v-row>
                     <v-col cols='12'>
                         <v-text-field
                         label='Type your ID'
                         outlined
-                        :rules='rules.req_match'
+                        :rules='rules.req_match' 
                         ></v-text-field>
                     </v-col>
                 </v-row>

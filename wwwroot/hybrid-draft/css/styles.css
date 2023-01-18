@@ -5,3 +5,10 @@
     margin-top: 80px;
     margin-left: 5px;
 }
+.clickable{
+    cursor:pointer;
+    opacity: 0.5;
+}
+.clickable:hover{
+    opacity: 1;
+}
