@@ -73,6 +73,12 @@ const ui = new Vue({
         }
     },
     computed:{
+        player_card_info(){
+            return this.player_cards.map( el => el = {
+                multiverse_id: el,
+                card_info: this.scryfall_info[el]
+            })//.sort((a,b) => (a.card_info.name > b.card_info.name))
+        }
 
     },
     mounted(){
@@ -228,7 +234,7 @@ const ui = new Vue({
                 // card selection
                 this.tab = 2
             }
-            
+
             // reset the auto pack
             await this.$nextTick()
             this.cracking_pack = false
@@ -240,6 +246,7 @@ const ui = new Vue({
         },
 
         auto_refresh_packs(){
+            // runs every 30 secs
             window.setInterval(function(self){
                 if(self.active_player && self.player_packs.length < 1){
                     console.log('autorefreshing packs...')
@@ -247,7 +254,7 @@ const ui = new Vue({
                 }else{
                     console.log('checked packs, not refreshing')
                 }
-            }, 3000, this)
+            }, 30000, this)
         }
 
     }

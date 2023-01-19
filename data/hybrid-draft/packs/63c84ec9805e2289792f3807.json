@@ -2,8 +2,8 @@
     "draft_id": "63b64fd4889ea1980144bf62",
     "opened_by": "2979",
     "round": 2,
-    "cards_remaining": 12,
-    "assigned_to": "2979",
+    "cards_remaining": 11,
+    "assigned_to": "1816",
     "cards": [
         {
             "multiverse_id": 583828,
@@ -31,7 +31,7 @@
         },
         {
             "multiverse_id": 583698,
-            "owned_by": null
+            "owned_by": "2979"
         },
         {
             "multiverse_id": 583701,

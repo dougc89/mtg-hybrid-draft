@@ -6,7 +6,7 @@
         home_url='/app_name'
         v-model='tab'
         :tabs='tabs'
-        :hidden_tabs=hidden_tabs'
+        :hidden_tabs='hidden_tabs'
         :help_articles='help_articles' v-cloak
         >LCSO MTG Draft</app-navigation-bar>
 
@@ -36,9 +36,9 @@
                 <p class='h3 text-center mt-4'>Cards You Own:</p>
                 <v-spacer></v-spacer>
             </v-row>
-            <v-row v-if='player_cards.length > 0'>
+            <v-row v-if='player_card_info.length > 0'>
                 
-                <mtg-card v-for='(card, index) in player_cards' :multiverse_id='card' :scryfall_info='scryfall_info' :key="'player_cards_'+card+index" @scryfall_api='track_scryfall_calls'></mtg-card>
+                <mtg-card v-for='(card, index) in player_card_info' :multiverse_id='card.multiverse_id' :scryfall_info='scryfall_info' :key="'player_cards_'+card.multiverse_id+index" @scryfall_api='track_scryfall_calls'></mtg-card>
             </v-row>
 
         </v-tab-item>
