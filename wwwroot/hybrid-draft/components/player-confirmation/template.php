@@ -36,13 +36,13 @@
         <!-- action buttons -->
         <v-card-actions class='pb-4'>
 
-            <v-btn @click='save' large color='primary'>
-                Save
+            <v-btn @click='save' large color='primary' width='33%'>
+                
             </v-btn>
 
             <v-spacer></v-spacer>
 
-            <v-btn @click='close' large>
+            <v-btn @click='close' large text width='33%'>
                 Close
             </v-btn>
 

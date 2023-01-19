@@ -19,7 +19,7 @@
 
         <v-tab-item key="pack_opener_tab">
             <p class='h3 text-center'>Crack a pack!</p>
-            <v-img @click='crack_pack' v-if='draft' :src="'/hybrid-draft/packaging/'+draft.set+'.png'" class='clickable'></v-img>
+            <v-img @click='crack_pack' contain height='450px' v-if='draft' :src="'/hybrid-draft/packaging/'+draft.set+'.png'" class='clickable'></v-img>
         </v-tab-item>
         
         <v-tab-item key="card_selection_tab"> 

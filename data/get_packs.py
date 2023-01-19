@@ -25,7 +25,7 @@ try:
     # print("{} packs found.".format(len(draft_packs)))
 
     # order the packs by the number of cards remaining, desc.
-    results = sorted(draft_packs, key=itemgetter('cards_remaining'), reverse = True)
+    results = sorted(draft_packs, key=lambda p: (p['round'], -p['cards_remaining']))
     logger.debug(json.dumps(results))
     print(json.dumps(results))
 

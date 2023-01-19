@@ -214,7 +214,7 @@ const ui = new Vue({
             if(!this.draft || !this.active_player){
                 // the first tab is for selecting a player
                 this.tab = 0
-            }else if(this.player_packs.length < 1 && this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs){       
+            }else if(this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs && !(this.player_packs.length > 0 && this.player_packs[0].cards_remaining == 15)){       
                 // pack opener  
                 this.tab = 1
             }else{

@@ -1,11 +1,10 @@
 <script type='text/x-template' id='player-picker-template'>
 <v-card 
     class="mb-2 px-3" dark
-    :elevation="elevation" outlined>
-    <v-row>
+    :elevation="elevation" outlined min-height='200'>
         <!-- Title in text style -->
-            <v-card-title>
-                Which player are you?
+            <v-card-title width='100%'>
+                <p class='text-center'>Which player are you?</p>
             </v-card-title>
 
         <!-- Title in toolbar style
@@ -20,9 +19,13 @@
         -->
 
         <v-card-text class='py-0'>
-            <v-btn v-for='player in draft.players' :key="'player_btn_'+player._id" @click='prepick_player(player)'>{{player.name}}</v-btn>
+            <v-row>
+                <v-col v-for='player in draft.players' :key="'player_btn_'+player._id">
+                    <v-btn  color='teal' rounded large width='150px'
+                    @click='prepick_player(player)'>{{player.name}}</v-btn>
+                </v-col>
+            <v-row>
         </v-card-text>
-    </v-row>
     <player-confirmation :show_modal='confirming_player' :player='prepicked_player' @confirm='confirm_player' @close='confirming_player = false'></player-confirmation>
 </v-card>
 </script>
