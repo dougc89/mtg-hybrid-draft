@@ -11,6 +11,7 @@ export default Vue.component('card-selection', {
             selected_card: null, // multiverse_id
             selected_index: null,
             card_chosen: false,
+            scryfall_info: {}
         }
     }, 
     computed: {
@@ -55,6 +56,9 @@ export default Vue.component('card-selection', {
         clear_selection(){
             this.selected_card = null
             this.selected_index = null       
+        },
+        scryfall_call(){
+            this.$emit('scryfall_call')
         }
     }
 });

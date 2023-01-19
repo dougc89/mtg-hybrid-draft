@@ -24,11 +24,13 @@
         
         <v-tab-item key="card_selection_tab"> 
             <p class='h3 text-center'>Card Selection</p>
-            <card-selection :key="'selector_state_'+state" :player_packs='player_packs' v-if='player_packs.length > 0' @card_chosen='get_player_stuff'></card-selection>
+            <card-selection :key="'selector_state_'+state" :player_packs='player_packs' :scryfall_info='scryfall_info'
+            v-if='player_packs.length > 0' @card_chosen='get_player_stuff' @scryfall_call='track_scryfall_calls'
+            ></card-selection>
             <p class='h6 text-center' v-else-if='draft && player_cards.length < draft.num_packs * 15'>Waiting on packs from other players...</p>
 
             <v-row v-if='player_cards.length > 0'>
-                <mtg-card v-for='card in player_cards' :multiverse_id='card' :key="'player_cards_'+Math.random()"></mtg-card>
+                <mtg-card v-for='card in player_cards' :multiverse_id='card' :scryfall_info='scryfall_info' :key="'player_cards_'+Math.random()" @scryfall_api='track_scryfall_calls'></mtg-card>
             </v-row>
 
         </v-tab-item>

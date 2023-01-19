@@ -11,6 +11,7 @@ export default Vue.component('mtg-card', {
         pack_index: {
             default: -1
         },
+        scryfall_info: {}
     },
     data(){
         return {
@@ -19,8 +20,8 @@ export default Vue.component('mtg-card', {
             card_info: {
                 multiverse_ids: ['000000'],
                 image_uris: {
-                    small: 'https://cards.scryfall.io/small/front/3/8/38a62bb2-bc33-44d4-9a7e-92c9ea7d3c2c.jpg?1670537256',
-                    normal: 'https://cards.scryfall.io/normal/front/3/8/38a62bb2-bc33-44d4-9a7e-92c9ea7d3c2c.jpg?1670537256'
+                    small: '/hybrid-draft/packaging/cardbackreal.jpg',
+                    normal: '/hybrid-draft/packaging/cardbackreal.jpg'
                 }
             }
         }
@@ -49,8 +50,15 @@ export default Vue.component('mtg-card', {
     },
     methods: {            
         async get_scryfall_info(){
-            let res = await $.get('https://api.scryfall.com/cards/search?q=multiverse_id%3A'+this.multiverse_id)       
-            this.card_info = res.data[0]
+            if(this.scryfall_info[this.multiverse_id]){
+                return this.scryfall_info[this.multiverse_id]
+            }else{
+                let res = await $.get('https://api.scryfall.com/cards/search?q=multiverse_id:'+this.multiverse_id)       
+                this.card_info = res.data[0]
+                
+                // pass the info up for storage
+                this.$emit('scryfall_api', {multiverse_id: this.multiverse_id, card_info: this.card_info})
+            }
         },
         add_to_pack(){
             console.log('Adding to pack', this.card_info)

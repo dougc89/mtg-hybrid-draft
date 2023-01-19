@@ -66,8 +66,10 @@ const ui = new Vue({
             active_player: null,
             player_packs: [], // packs "held" by this player
             player_cards: [], // cards owned by this player
-            state: 0
-
+            state: 0,
+            scryfall_calls: 0,
+            // track responses from api to minimize traffic load
+            scryfall_info: {},
         }
     },
     computed:{
@@ -221,6 +223,11 @@ const ui = new Vue({
                 // card selection
                 this.tab = 2
             }
+        },
+
+        track_scryfall_calls(args){
+            this.scryfall_info[args.multiverse_id] = args.card_info
+            this.scryfall_calls++
         }
     }
 
