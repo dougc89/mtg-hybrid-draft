@@ -1,70 +1,70 @@
 {
     "draft_id": "63b64fd4889ea1980144bf62",
     "opened_by": "2979",
-    "round": 2,
-    "cards_remaining": 12,
+    "round": 3,
+    "cards_remaining": 15,
     "assigned_to": "2979",
     "cards": [
         {
-            "multiverse_id": 583828,
+            "multiverse_id": 583663,
             "owned_by": null
         },
         {
-            "multiverse_id": 583736,
-            "owned_by": "2979"
-        },
-        {
-            "multiverse_id": 583650,
-            "owned_by": "1816"
-        },
-        {
-            "multiverse_id": 583662,
-            "owned_by": "2790"
-        },
-        {
-            "multiverse_id": 583809,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583751,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583698,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583701,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583622,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583769,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583683,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583734,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 583643,
-            "owned_by": null
-        },
-        {
-            "multiverse_id": 586353,
+            "multiverse_id": 583717,
             "owned_by": null
         },
         {
             "multiverse_id": 583778,
             "owned_by": null
+        },
+        {
+            "multiverse_id": 583607,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583626,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583609,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583836,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583691,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583823,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583681,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583645,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583631,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583781,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 586357,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 583700,
+            "owned_by": null
         }
     ],
-    "_id": "63c84ec9805e2289792f3807"
+    "_id": "63c94a62d06d3c627b9c6860"
 }

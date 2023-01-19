@@ -24,7 +24,7 @@
                     <v-btn  color='teal' rounded large width='150px'
                     @click='prepick_player(player)'>{{player.name}}</v-btn>
                 </v-col>
-            <v-row>
+            </v-row>
         </v-card-text>
     <player-confirmation :show_modal='confirming_player' :player='prepicked_player' @confirm='confirm_player' @close='confirming_player = false'></player-confirmation>
 </v-card>

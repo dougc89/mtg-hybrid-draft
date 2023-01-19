@@ -15,21 +15,18 @@ export default Vue.component('mtg-card', {
     },
     data(){
         return {
-            elevation: 1,
+            elevation: 0,
             title: 'This is an example card.',
             card_info: {
                 multiverse_ids: ['000000'],
                 image_uris: {
-                    small: '/hybrid-draft/packaging/cardbackreal.jpg',
-                    normal: '/hybrid-draft/packaging/cardbackreal.jpg'
+                    small: '/hybrid-draft/packaging/cardback.png',
+                    normal: '/hybrid-draft/packaging/cardback.png'
                 }
             }
         }
     }, 
     computed: {
-        gatherer_img_path(){
-            return `https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${this.multiverse_id}&type=card`
-        },
         scryfall_img_path(){
             return this.card_info.image_uris.normal
         }
@@ -51,7 +48,7 @@ export default Vue.component('mtg-card', {
     methods: {            
         async get_scryfall_info(){
             if(this.scryfall_info[this.multiverse_id]){
-                return this.scryfall_info[this.multiverse_id]
+                this.card_info = this.scryfall_info[this.multiverse_id]
             }else{
                 let res = await $.get('https://api.scryfall.com/cards/search?q=multiverse_id:'+this.multiverse_id)       
                 this.card_info = res.data[0]

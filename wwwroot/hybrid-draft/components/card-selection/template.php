@@ -1,11 +1,11 @@
 <script type='text/x-template' id='card-selection-template'>
 <v-card 
     class="mb-2 px-3" dark
-    :elevation="elevation" outlined height='450'>
+    :elevation="elevation" outlined height='500'>
+    <p class='h3 text-center mt-4'>Card Selection</p>
     <v-slide-group
         v-model='selected_index'
-        show-arrows v-if='!this.card_chosen'
-        v-if='player_packs.length > 0' center-active active-class='selected-card' @change='select_card'
+        show-arrows v-if='!this.card_chosen && player_packs.length > 0' center-active active-class='selected-card' @change='select_card'
         >
             <v-slide-item
                 v-for='(card, index) in player_packs[0].cards'

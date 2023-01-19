@@ -89,6 +89,7 @@ const ui = new Vue({
 
         // call the init method
         this.get_drafts(urlParams.get('set').toUpperCase())
+
     },
 
     methods: {
@@ -99,6 +100,7 @@ const ui = new Vue({
             this.card_search = res.data
         },
         async crack_pack(){
+            await this.$nextTick()
             if(this.cracking_pack){
                 // prevent duplicates
                 console.log('cracking pack already...')
@@ -155,7 +157,7 @@ const ui = new Vue({
 
                 // refresh the player and their stuff
                 this.get_player_stuff()
-                this.cracking_pack = false
+
             }
         },
         add_to_pack(multiverse_id){
@@ -185,6 +187,9 @@ const ui = new Vue({
             this.active_player = player_info
             this.get_player_stuff()
 
+            // start the autorefresh cycle
+            this.auto_refresh_packs()
+
         },
 
         async get_player_stuff(){
@@ -212,23 +217,39 @@ const ui = new Vue({
             this.player_packs = response.packs
         },
 
-        auto_tab(){
+        async auto_tab(){
             if(!this.draft || !this.active_player){
                 // the first tab is for selecting a player
                 this.tab = 0
-            }else if(this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs && !(this.player_packs.length > 0 && this.player_packs[0].cards_remaining == 15)){       
+            }else if(this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs && !(this.player_packs.length > 0 && this.player_packs.find(el => el.cards_remaining == 15))){       
                 // pack opener  
                 this.tab = 1
             }else{
                 // card selection
                 this.tab = 2
             }
+            
+            // reset the auto pack
+            await this.$nextTick()
+            this.cracking_pack = false
         },
 
         track_scryfall_calls(args){
             this.scryfall_info[args.multiverse_id] = args.card_info
             this.scryfall_calls++
+        },
+
+        auto_refresh_packs(){
+            window.setInterval(function(self){
+                if(self.active_player && self.player_packs.length < 1){
+                    console.log('autorefreshing packs...')
+                    self.get_player_packs()
+                }else{
+                    console.log('checked packs, not refreshing')
+                }
+            }, 3000, this)
         }
+
     }
 
 });

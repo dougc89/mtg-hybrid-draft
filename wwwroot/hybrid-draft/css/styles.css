@@ -2,9 +2,9 @@
     /*hide view {{placeholders}} while loading*/
     display: none;
 } 
-.card-edges{
-    border-radius: 33px;
-}
+/*.card-edges{
+   border-radius: 33px;
+}*/
 .card-actions--buffer{
     margin-top: 80px;
     margin-left: 5px;

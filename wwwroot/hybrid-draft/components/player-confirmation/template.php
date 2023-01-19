@@ -37,7 +37,7 @@
         <v-card-actions class='pb-4'>
 
             <v-btn @click='save' large color='primary' width='33%'>
-                
+                Confirm
             </v-btn>
 
             <v-spacer></v-spacer>
