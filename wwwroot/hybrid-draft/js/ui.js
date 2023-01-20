@@ -130,7 +130,19 @@ const ui = new Vue({
                 var config = {
                     'rarity:mythic': 0,
                     'rarity:rare': 1,
-                    '-type:/Basic Land/+rarity:common': 10, // basic lands list as common on scryfall, we want non-basic commons
+                    // at most mono-colored commons (include colorless)
+                    '-type:/Basic Land/+rarity:common+color<=U': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color<=B': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color<=G': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color<=W': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color<=R': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    // at least each of the 5 colors
+                    '-type:/Basic Land/+rarity:common+color>=U': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color>=B': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color>=G': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color>=W': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    '-type:/Basic Land/+rarity:common+color>=R': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    
                     'rarity:uncommon': 3,
                     'type:/Basic Land/': 1,
                     'type:land+rarity:common': 0 

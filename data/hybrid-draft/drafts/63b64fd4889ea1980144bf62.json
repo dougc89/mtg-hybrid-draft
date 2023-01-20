@@ -1,7 +1,7 @@
 {
     "set": "BRO",
     "type": "proxy",
-    "num_packs": "4",
+    "num_packs": "2",
     "players": [
         {
             "name": "Doug",
