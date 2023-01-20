@@ -64,7 +64,7 @@ export default Vue.component('player-confirmation', {
         },
 
         enter(){
-            console.log('hit enter')
+            // console.log('hit enter')
         },
 
         close(){

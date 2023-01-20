@@ -58,11 +58,11 @@ export default Vue.component('mtg-card', {
             }
         },
         add_to_pack(){
-            console.log('Adding to pack', this.card_info)
+            // console.log('Adding to pack', this.card_info)
             this.$emit('add_to_pack', this.multiverse_id)
         },
         select(){
-            console.log('selecting', this.multiverse_id)
+            // console.log('selecting', this.multiverse_id)
             this.$emit('select_card', {index:this.pack_index, multiverse_id:this.multiverse_id})
         }
     }

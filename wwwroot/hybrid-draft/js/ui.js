@@ -8,7 +8,8 @@ function _ajax_request(url, data, callback, type, method) {
         url: url,
         data: data,
         success: callback,
-        error: function(response){console.log('error status code:', response.status)},
+        error: function(response){
+            console.log('error status code:', response.status)},
         dataType: type
         });
 }
@@ -110,7 +111,7 @@ const ui = new Vue({
 
     methods: {
         async search_cards(set, search){
-            console.log('searching with name: ',search)
+            // console.log('searching with name: ',search)
             let name_qry =  search ? `+${search}` : ''
             let res = await $.get('https://api.scryfall.com/cards/search?q=set%3A'+set+name_qry)
             this.card_search = res.data
@@ -119,7 +120,7 @@ const ui = new Vue({
             await this.$nextTick()
             if(this.cracking_pack){
                 // prevent duplicates
-                console.log('cracking pack already...')
+                // console.log('cracking pack already...')
             }else{
                 this.cracking_pack = true
                 var pack_cards = []
@@ -147,7 +148,7 @@ const ui = new Vue({
                     config['type:land+rarity:common'] = 1
                 }
 
-                console.log('config', config)
+                // console.log('config', config)
 
                 for(const key in config){
                     if(config[key] > 0){
@@ -165,11 +166,11 @@ const ui = new Vue({
 
                 // shuffle the cards 
                 pack_cards = pack_cards.sort((a, b) => 0.5 - Math.random())
-                console.log('new pack', pack_cards)
+                // console.log('new pack', pack_cards)
 
                 // send to db
                 let res = $.post(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`, JSON.stringify({'cards':pack_cards}))
-                console.log(res)
+                // console.log(res)
 
                 // refresh the player and their stuff
                 this.get_player_stuff()
@@ -179,18 +180,18 @@ const ui = new Vue({
         add_to_pack(multiverse_id){
             // add the card to the pack, init who owns it
             this.pack_cards.unshift(multiverse_id)
-            console.log(this.pack_cards)
+            // console.log(this.pack_cards)
         },
         search_with_delay(){
             this.get_cards(this.search_text)
             // this.search_typing = true
             // setTimeout(function(self){ self.search_typing = false}, 500, this)
-            // setTimeout(function(self){ if(!self.search_typing){ self.get_cards(self.search_text)}else{console.log('still typing')}}, 1000, this)
+            // setTimeout(function(self){ if(!self.search_typing){ self.get_cards(self.search_text)}else{// console.log('still typing')}}, 1000, this)
         },
 
         async get_drafts(set_code){
             let response = await $.get(`/hybrid-draft/api/drafts?set=${set_code}`)
-            console.log(response)
+            // console.log(response)
             // use the first draft returned
             this.draft = response.drafts[0]
 
@@ -218,18 +219,18 @@ const ui = new Vue({
 
 
         async get_player_cards(){
-            console.log('getting cards for', this.active_player._id)
+            // console.log('getting cards for', this.active_player._id)
             let response = await $.get(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/cards`)
-            console.log(response)
+            // console.log(response)
             this.player_cards = response.cards
             // should auto-progress the tab from computed
             
         },
 
         async get_player_packs(){
-            console.log('getting packs for', this.active_player._id)
+            // console.log('getting packs for', this.active_player._id)
             let response = await $.get(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`)
-            console.log(response)
+            // console.log(response)
             this.player_packs = response.packs
         },
 
@@ -259,16 +260,16 @@ const ui = new Vue({
             // runs every 30 secs
             window.setInterval(function(self){
                 if(self.active_player && self.player_packs.length < 1){
-                    console.log('autorefreshing packs...')
+                    // console.log('autorefreshing packs...')
                     self.get_player_packs()
                 }else{
-                    console.log('checked packs, not refreshing')
+                    // console.log('checked packs, not refreshing')
                 }
             }, 30000, this)
         },
 
         async copy_card_list(){
-            console.log('copy card list for printing/import')
+            // console.log('copy card list for printing/import')
             let temp_card_list = {}
             for(const el of this.player_card_info){
                 // consolidate copies counter
@@ -290,8 +291,8 @@ const ui = new Vue({
             for (const el of Object.values(temp_card_list)){
                 string_list += `${el.copies} ${el.name} \n`
             }
-            console.log(string_list)
-            // console.log(Navigator.clipboard)
+            // console.log(string_list)
+            // // console.log(Navigator.clipboard)
             this.card_list_text = string_list
             // show them the toast that it was copied
             this.copy_toast = true

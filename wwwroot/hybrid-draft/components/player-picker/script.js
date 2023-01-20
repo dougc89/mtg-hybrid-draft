@@ -37,12 +37,12 @@ export default Vue.component('player-picker', {
     },
     methods: {            
         prepick_player(player_info){
-            console.log('pre-picking', player_info)
+            // console.log('pre-picking', player_info)
             this.prepicked_player = player_info
             this.confirming_player = true
         },
         confirm_player(){
-            console.log('confirming', this.prepicked_player)
+            // console.log('confirming', this.prepicked_player)
             this.$emit('confirm', this.prepicked_player)
         }
     }

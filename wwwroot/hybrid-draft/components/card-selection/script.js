@@ -38,7 +38,7 @@ export default Vue.component('card-selection', {
     },
     methods: {            
         select_card(args){
-            console.log('selecting', args)
+            // console.log('selecting', args)
             this.selected_card = args.multiverse_id
             this.selected_index = args.index
         },
@@ -48,7 +48,7 @@ export default Vue.component('card-selection', {
                 this.card_chosen = true
                 let res = await $.patch(`/hybrid-draft/api/drafts/${this.player_packs[0].draft_id}/players/${this.player_packs[0].assigned_to}/packs/${this.player_packs[0]._id}`, 
                                         JSON.stringify({card: this.selected_card}))
-                console.log(res)
+                // console.log(res)
                 this.$emit('card_chosen')
                 // rerender to reset // this.card_chosen = false
             }
@@ -58,7 +58,7 @@ export default Vue.component('card-selection', {
             this.selected_index = null       
         },
         scryfall_call(args){
-            // console.log('card selection seeing scryfall callback', args)
+            // // console.log('card selection seeing scryfall callback', args)
             this.$emit('scryfall_call', args)
         }
     }
