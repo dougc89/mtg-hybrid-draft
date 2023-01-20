@@ -57,8 +57,9 @@ export default Vue.component('card-selection', {
             this.selected_card = null
             this.selected_index = null       
         },
-        scryfall_call(){
-            this.$emit('scryfall_call')
+        scryfall_call(args){
+            // console.log('card selection seeing scryfall callback', args)
+            this.$emit('scryfall_call', args)
         }
     }
 });

@@ -66,20 +66,30 @@ const ui = new Vue({
             active_player: null,
             player_packs: [], // packs "held" by this player
             player_cards: [], // cards owned by this player
+            card_list_text: null, // for copy/paste << http (only, not https) does not trust clipboard access for navigator.clipboard.writeText
+            
             state: 0,
             scryfall_calls: 0,
             // track responses from api to minimize traffic load
             scryfall_info: {},
+            player_card_info: [],
+            copy_toast: false,
         }
     },
     computed:{
-        player_card_info(){
-            return this.player_cards.map( el => el = {
-                multiverse_id: el,
-                card_info: this.scryfall_info[el]
-            })//.sort((a,b) => (a.card_info.name > b.card_info.name))
-        }
 
+
+    },
+    watch:{
+        scryfall_calls: {
+            handler(val){
+                // compute player card info again, since a change occured in scryfall info collection
+                this.player_card_info = this.player_cards.map( el => el = {
+                        multiverse_id: el,
+                        card_info: this.scryfall_info[el]
+                    })//.sort((a,b) => (a && b && a.card_info.name > b.card_info.name))
+            }
+        },
     },
     mounted(){
         
@@ -255,6 +265,36 @@ const ui = new Vue({
                     console.log('checked packs, not refreshing')
                 }
             }, 30000, this)
+        },
+
+        async copy_card_list(){
+            console.log('copy card list for printing/import')
+            let temp_card_list = {}
+            for(const el of this.player_card_info){
+                // consolidate copies counter
+                
+                if(temp_card_list[el.multiverse_id]){
+                    // if we already have a copy of this card, increment copies counter
+                    temp_card_list[el.multiverse_id].copies++
+                }else{
+                    // init the card 
+                    temp_card_list[el.multiverse_id] = {
+                        copies: 1,
+                        name: el.card_info.name
+                    }
+                }
+
+            }
+
+            let string_list = ''
+            for (const el of Object.values(temp_card_list)){
+                string_list += `${el.copies} ${el.name} \n`
+            }
+            console.log(string_list)
+            // console.log(Navigator.clipboard)
+            this.card_list_text = string_list
+            // show them the toast that it was copied
+            this.copy_toast = true
         }
 
     }

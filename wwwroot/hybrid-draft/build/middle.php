@@ -3,7 +3,6 @@
     <v-app class="app-container card dark pb-5">
 
     <app-navigation-bar
-        home_url='/app_name'
         v-model='tab'
         :tabs='tabs'
         :hidden_tabs='hidden_tabs'
@@ -30,16 +29,28 @@
             v-if='player_packs.length > 0' @card_chosen='get_player_stuff' @scryfall_call='track_scryfall_calls'
             ></card-selection>
             <p class='h6 text-center' v-else-if='draft && player_cards.length < draft.num_packs * 15'>Waiting on packs from other players...</p>
-
-            <v-row v-if='player_cards.length > 0'>
-                <v-spacer></v-spacer>
-                <p class='h3 text-center mt-4'>Cards You Own:</p>
-                <v-spacer></v-spacer>
-            </v-row>
-            <v-row v-if='player_card_info.length > 0'>
-                
-                <mtg-card v-for='(card, index) in player_card_info' :multiverse_id='card.multiverse_id' :scryfall_info='scryfall_info' :key="'player_cards_'+card.multiverse_id+index" @scryfall_api='track_scryfall_calls'></mtg-card>
-            </v-row>
+            
+            <div v-if='player_cards.length > 0'>
+                <v-row >
+                    <v-spacer></v-spacer>
+                    <p class='h3 text-center mt-4'>Cards You Own:</p>
+                    <v-spacer></v-spacer>
+                </v-row>
+                <v-row class='my-5'>
+                    <v-spacer></v-spacer>
+                    <v-btn color='teal' rounded x-large width='300px'
+                    @click='copy_card_list'><v-icon>mdi-content-copy</v-icon> Card List</v-btn>
+                    <v-spacer></v-spacer>
+                </v-row>
+                <v-row >
+                    <mtg-card v-for='(card, index) in player_cards' :multiverse_id='card' :scryfall_info='scryfall_info' :key="'player_cards_'+card+index" @scryfall_api='track_scryfall_calls'></mtg-card>
+                </v-row>
+                <copy-cardlist-modal :show_modal='copy_toast'
+                :card_list='card_list_text' color='teal' @close='copy_toast = false'
+                >
+                <v-icon>mdi-content-copy</v-icon>Deck list copied to clipboard...
+                </copy-cardlist-modal
+            </div>
 
         </v-tab-item>
 

@@ -1,7 +1,7 @@
 <script type='text/x-template' id='card-selection-template'>
 <v-card 
     class="mb-2 px-3" dark
-    :elevation="elevation" outlined height='500'>
+    :elevation="elevation" height='500'>
     <p class='h3 text-center mt-4'>Card Selection</p>
     <v-slide-group
         v-model='selected_index'
@@ -13,7 +13,7 @@
                 v-slot="{ active, toggle }"
             >
                 <mtg-card :multiverse_id='card.multiverse_id' :pack_index='index' v-if='!card.owned_by' :scryfall_info='scryfall_info'
-                @select_card='select_card' :class="{'selected-card': active, clickable: !active}" @scryfall_call='scryfall_call'></mtg-card>
+                @select_card='select_card' :class="{'selected-card': active, clickable: !active}" @scryfall_api='scryfall_call'></mtg-card>
             </v-slide-item>
     </v-slide-group>
     <v-row v-if='selected_card && !this.card_chosen' class='mt-1'>

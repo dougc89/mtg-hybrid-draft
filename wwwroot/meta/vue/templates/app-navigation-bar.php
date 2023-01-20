@@ -5,9 +5,6 @@
     color="blue-grey darken-3"
     dark flat tile v-cloak
     >
-    <v-app-bar-nav-icon :href='home_url' >
-        <v-icon>mdi-home</v-icon>
-    </v-app-bar-nav-icon>
 
     <div class='h5 mt-2 mr-4 ml-2 text-no-wrap'>
         <slot></slot>

@@ -21,7 +21,7 @@
         <v-card-text class='py-0'>
             <v-row>
                 <v-col v-for='player in draft.players' :key="'player_btn_'+player._id">
-                    <v-btn  color='teal' rounded large width='150px'
+                    <v-btn  color='teal' rounded x-large width='150px'
                     @click='prepick_player(player)'>{{player.name}}</v-btn>
                 </v-col>
             </v-row>
