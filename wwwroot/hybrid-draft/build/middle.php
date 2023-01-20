@@ -29,6 +29,7 @@
             v-if='player_packs.length > 0' @card_chosen='get_player_stuff' @scryfall_call='track_scryfall_calls'
             ></card-selection>
             <p class='h6 text-center' v-else-if='draft && player_cards.length < draft.num_packs * 15'>Waiting on packs from other players...</p>
+            <p class='h4 text-center' color='teal' v-else>Draft Complete</p>
             
             <div v-if='player_cards.length > 0'>
                 <v-row >
@@ -49,7 +50,7 @@
                 :card_list='card_list_text' color='teal' @close='copy_toast = false'
                 >
                 <v-icon>mdi-content-copy</v-icon>Deck list copied to clipboard...
-                </copy-cardlist-modal
+</copy-cardlist-modal>
             </div>
 
         </v-tab-item>

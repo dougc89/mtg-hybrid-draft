@@ -27,7 +27,7 @@ export default Vue.component('copy-cardlist-modal', {
     computed: {
         title(){
             // title of modal
-            return "Copy the card list below"
+            return "Copy the card list below for imports/printing:"
         }
     },
     mounted(){

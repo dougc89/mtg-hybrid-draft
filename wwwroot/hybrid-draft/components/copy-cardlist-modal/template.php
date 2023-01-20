@@ -1,7 +1,7 @@
 <script type='text/x-template' id='copy-cardlist-modal-template'>
     
 <v-dialog v-model='show_modal' max-width='600'>
-    <v-card>
+    <v-card dark>
         <v-card-title>
             {{title}} 
             <v-spacer></v-spacer> 
@@ -19,7 +19,7 @@
         <!-- input form -->
         <v-card-text class='pb-2'>
             <v-textarea
-            label='Copy Card List'
+            label='Card List'
             outlined
             :value='card_list'
             ></v-textarea>
@@ -28,15 +28,13 @@
         <!-- action buttons -->
         <v-card-actions class='pb-4'>
 
-            <v-btn @click='save' large color='primary'>
-                Save
+            <v-spacer></v-spacer>
+
+            <v-btn @click='close' large text >
+                Close
             </v-btn>
 
             <v-spacer></v-spacer>
-
-            <v-btn @click='close' large>
-                Close
-            </v-btn>
 
         </v-card-actions>    
 
