@@ -1,0 +1,20 @@
+{
+    "set": "STX",
+    "type": "proxy",
+    "num_packs": "2",
+    "players": [
+        {
+            "name": "Rob",
+            "_id": "1816"
+        },
+        {
+            "name": "Austin L.",
+            "_id": "2979"
+        },
+        {
+            "name": "Doug",
+            "_id": "2790"
+        }
+    ],
+    "_id": "63ce92ee29ea50afe210dc20"
+}

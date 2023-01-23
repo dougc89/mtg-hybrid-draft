@@ -277,7 +277,7 @@ const ui = new Vue({
                 }else{
                     // console.log('checked packs, not refreshing')
                 }
-            }, 30000, this)
+            }, 3000, this)
         },
 
         async copy_card_list(){

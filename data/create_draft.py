@@ -24,13 +24,11 @@ try:
         'players':[]
     }
 
-    pprint(new_draft)
-
     drafts = db.collections['drafts']
     
     # drafts.find({'_id': '5'})
 
-    drafts.insert_one(new_draft)
+    pprint(drafts.insert_one(new_draft))
 
 except Exception as err:
     print(err)
