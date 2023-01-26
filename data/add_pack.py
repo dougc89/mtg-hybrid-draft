@@ -32,7 +32,9 @@ try:
     if not len(packs_opened_by_user) < max_packs:
         raise Exception("Max packs of {} already reached. Cannot add a new one to this draft for this player.".format(max_packs))
 
-    card_list = json.loads(args.cards)
+
+    with open(f"c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft\\pack_cards_temp\\{args.cards}") as f:
+        card_list = json.load(f)
 
     # if len(card_list) != 15:
     #     raise Exception('There needs to be exactly 15 cards in the pack')

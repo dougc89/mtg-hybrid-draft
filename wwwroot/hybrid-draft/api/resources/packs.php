@@ -41,10 +41,12 @@ class Packs extends Resource{
         ];
 
         $vals = $this->request_fields($field_map);
-
-        $new_pack = shell_exec(escapeshellcmd("py c:\\github\\mtg-hybrid-draft\\data\\add_pack.py -u {$player_id} -d {$draft_id} -c ".json_encode($vals['cards'])));
+        $temp_id = sha1(time());
+        file_put_contents("c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft\\pack_cards_temp\\{$temp_id}", json_encode($vals['cards']));
+        $cmd = escapeshellcmd("py c:\\github\\mtg-hybrid-draft\\data\\add_pack.py -u {$player_id} -d {$draft_id} -c {$temp_id}");
+        $new_pack = shell_exec($cmd);
         # $new_pack = shell_exec('py -v 2>&1');
-        $this->success(['pack'=>json_decode($new_pack, true)]);
+        $this->success(['pack'=>json_decode($new_pack, true), 'cmd'=>$cmd, 'cmd_length', strlen($cmd)]);
     }
 
     function patch(){

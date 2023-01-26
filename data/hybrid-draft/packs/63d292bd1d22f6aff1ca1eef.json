@@ -1,0 +1,70 @@
+{
+    "draft_id": "63d1a100f2a53cc7df8cd44c",
+    "opened_by": "2790",
+    "round": 1,
+    "cards_remaining": 14,
+    "assigned_to": "2952",
+    "cards": [
+        {
+            "multiverse_id": "6b71fd8f-e688-4210-bc5b-a3f19b5b3497",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "157cf43c-f7f2-4362-bfc8-11682e94b747",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "daa20112-2955-439d-8802-3a228ba0832e",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "8f0b3308-9c0b-4461-9094-38deec20e1bc",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "aace4c44-7250-414b-aac4-df042a1e2e1d",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "f05078dd-b928-4b3f-9636-f299ebac180b",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "578e35b9-7252-4767-a1f3-aecd71256515",
+            "owned_by": "2790"
+        },
+        {
+            "multiverse_id": "dac28e27-78aa-48b1-96fa-edca1fbcfb77",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "66270dd2-9139-4329-9621-852962836688",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "6389c242-2139-4f12-af30-2b080a1c5e83",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "f932ddd3-beb4-4dc8-8c15-e1c9c2276986",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "db14da86-6721-4e22-9b61-4a5680d4e5a3",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "66270dd2-9139-4329-9621-852962836688",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "3557e601-9b71-4ce9-9047-1a8baa72e574",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "83dfb2a5-cd5c-46c6-9bb8-7c5d00f3e003",
+            "owned_by": null
+        }
+    ],
+    "_id": "63d292bd1d22f6aff1ca1eef"
+}

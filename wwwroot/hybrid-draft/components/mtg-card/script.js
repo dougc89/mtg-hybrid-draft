@@ -50,8 +50,8 @@ export default Vue.component('mtg-card', {
             if(this.scryfall_info[this.multiverse_id]){
                 this.card_info = this.scryfall_info[this.multiverse_id]
             }else{
-                let res = await $.get('https://api.scryfall.com/cards/search?q=multiverse_id:'+this.multiverse_id)       
-                this.card_info = res.data[0]
+                let res = await $.get('https://api.scryfall.com/cards/'+this.multiverse_id)       
+                this.card_info = res
                 
                 // pass the info up for storage
                 this.$emit('scryfall_api', {multiverse_id: this.multiverse_id, card_info: this.card_info})

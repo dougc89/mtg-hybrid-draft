@@ -166,12 +166,13 @@ const ui = new Vue({
                     if(config[key] > 0){
                         // get the cards matching this search query
                         let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${key}`)
+                        // console.log('compare', cards.total_cards, cards.data.length)
                         // push the quantity in config into the pack cards, by random selection
                         for(let i=0; i<config[key]; i++){
                             // pick random cards from the results
                             let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
                             // picks a random art version from multiverse id's associated
-                            pack_cards.push(card_data.multiverse_ids[Math.floor(Math.random()*card_data.multiverse_ids.length)])
+                            pack_cards.push(card_data.id) // multiverse_ids[Math.floor(Math.random()*card_data.multiverse_ids.length)])
                         }
                     }
                 }
@@ -181,8 +182,9 @@ const ui = new Vue({
                 // console.log('new pack', pack_cards)
 
                 // send to db
-                let res = $.post(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`, JSON.stringify({'cards':pack_cards}))
-                // console.log(res)
+                console.log('pack cards', pack_cards)
+                let res = await $.post(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`, JSON.stringify({'cards':pack_cards}))
+                console.log(res)
 
                 // refresh the player and their stuff
                 this.get_player_stuff()

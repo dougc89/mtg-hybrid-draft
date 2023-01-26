@@ -1,0 +1,70 @@
+{
+    "draft_id": "63ce92ee29ea50afe210dc20",
+    "opened_by": "1816",
+    "round": 1,
+    "cards_remaining": 13,
+    "assigned_to": "2790",
+    "cards": [
+        {
+            "multiverse_id": 513763,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513744,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513702,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513746,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513550,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513616,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513680,
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": 513606,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513496,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513707,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513698,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513529,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513696,
+            "owned_by": null
+        },
+        {
+            "multiverse_id": 513706,
+            "owned_by": "1816"
+        },
+        {
+            "multiverse_id": 516682,
+            "owned_by": null
+        }
+    ],
+    "_id": "63ceb9e977e2f6131a45507f"
+}
