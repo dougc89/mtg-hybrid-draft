@@ -237,6 +237,7 @@ const ui = new Vue({
             let response = await $.get(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/cards`)
             // console.log(response)
             this.player_cards = response.cards
+            this.scryfall_calls++
             // should auto-progress the tab from computed
             
         },

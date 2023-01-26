@@ -1,0 +1,70 @@
+{
+    "draft_id": "63d1a100f2a53cc7df8cd44c",
+    "opened_by": "3503",
+    "round": 1,
+    "cards_remaining": 14,
+    "assigned_to": "1816",
+    "cards": [
+        {
+            "multiverse_id": "9f9e911e-7e12-4d99-806c-5cfba19ea8f3",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "28934cf3-c1e0-49c9-93ce-fd60b1881884",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "0ec44465-68d4-4dca-a313-7f2ab0ce2e63",
+            "owned_by": "3503"
+        },
+        {
+            "multiverse_id": "45db6b46-c4b4-4684-8a49-53a64ffc82f2",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "c7ce5296-f28f-4105-9c79-b9c63ea720e7",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "dac28e27-78aa-48b1-96fa-edca1fbcfb77",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "66270dd2-9139-4329-9621-852962836688",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "0b2a32c9-f0ae-4ae4-a5c5-72bea05018fb",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "c16f96f5-a2a6-4ac4-bdae-326cee92bf2e",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "1f9d8d87-e32f-4ad9-8d72-d1b88cd14510",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "cdbbcbe1-5317-455e-8d71-a4e2ad0addfc",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "7b43ba43-f7ae-4e00-b797-2360c3ccd839",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "1073aee2-aea6-473d-97c6-248778d79d80",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "98c2b2af-739f-413c-8c36-da6f78df0acb",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "aace4c44-7250-414b-aac4-df042a1e2e1d",
+            "owned_by": null
+        }
+    ],
+    "_id": "63d295422ceff99f44309f38"
+}

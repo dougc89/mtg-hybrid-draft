@@ -40,7 +40,7 @@
                 <v-row class='my-5'>
                     <v-spacer></v-spacer>
                     <v-btn color='teal' rounded x-large width='300px'
-                    @click='copy_card_list'><v-icon>mdi-content-copy</v-icon> Card List</v-btn>
+                    @click='copy_card_list'><v-icon>mdi-content-copy</v-icon> Card List ({{player_cards.length}})</v-btn>
                     <v-spacer></v-spacer>
                 </v-row>
                 <v-row >
