@@ -170,9 +170,23 @@ const ui = new Vue({
                         // push the quantity in config into the pack cards, by random selection
                         for(let i=0; i<config[key]; i++){
                             // pick random cards from the results
-                            let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
-                            // picks a random art version from multiverse id's associated
-                            pack_cards.push(card_data.id) // multiverse_ids[Math.floor(Math.random()*card_data.multiverse_ids.length)])
+                            let card_added = false
+                            let cards_attempted = 0
+                            while(!card_added){
+                                // track how many we try to put in the pack
+                                cards_attempted++
+                                let card_data = cards.data[Math.floor(Math.random()*cards.data.length)]
+                                // checks that the card isn't already in the pack
+                                if(pack_cards.find(x => x == card_data.id) && cards_attempted < cards.data.length){
+                                    // skip this card and try again
+                                    // console.log('duplicate prevented', card_data)
+                                    continue
+                                }else{
+                                    // add the pack and close the while loop
+                                    pack_cards.push(card_data.id) // multiverse_ids[Math.floor(Math.random()*card_data.multiverse_ids.length)])
+                                    card_added = true
+                                }
+                            }
                         }
                     }
                 }

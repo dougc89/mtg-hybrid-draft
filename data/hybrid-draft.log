@@ -6346,3 +6346,429 @@
 2023-01-26 10:09:12 Hybrid Draft Log DEBUG: []
 2023-01-26 10:09:15 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
 2023-01-26 10:09:15 Hybrid Draft Log DEBUG: []
+2023-01-26 10:09:18 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 10:09:18 Hybrid Draft Log DEBUG: []
+2023-01-26 10:09:21 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 10:09:21 Hybrid Draft Log DEBUG: []
+2023-01-26 15:17:31 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 15:17:31 Hybrid Draft Log DEBUG: []
+2023-01-26 15:17:33 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 15:17:33 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "157cf43c-f7f2-4362-bfc8-11682e94b747", "owned_by": null}, {"multiverse_id": "2bb29a69-3e42-4268-8026-f01072d7b56c", "owned_by": null}, {"multiverse_id": "cdbbcbe1-5317-455e-8d71-a4e2ad0addfc", "owned_by": null}, {"multiverse_id": "98c2b2af-739f-413c-8c36-da6f78df0acb", "owned_by": null}, {"multiverse_id": "6389c242-2139-4f12-af30-2b080a1c5e83", "owned_by": null}, {"multiverse_id": "45db6b46-c4b4-4684-8a49-53a64ffc82f2", "owned_by": null}, {"multiverse_id": "f442442d-2e5d-4913-82d8-bab2f31541f8", "owned_by": null}, {"multiverse_id": "98c2b2af-739f-413c-8c36-da6f78df0acb", "owned_by": null}, {"multiverse_id": "f442442d-2e5d-4913-82d8-bab2f31541f8", "owned_by": null}, {"multiverse_id": "73d74045-cc9b-4b01-bc5f-0f2eb4b01580", "owned_by": null}, {"multiverse_id": "1b49ec35-2c4f-4144-85fe-226f7cb67266", "owned_by": null}, {"multiverse_id": "b3cf4c4f-bda6-454c-991d-429c0dca0e85", "owned_by": null}, {"multiverse_id": "c16f96f5-a2a6-4ac4-bdae-326cee92bf2e", "owned_by": null}, {"multiverse_id": "64e6a8d1-ae75-45bd-af62-9a622620cb5c", "owned_by": null}, {"multiverse_id": "bad0e96a-b4cc-4439-aab9-731a1036145d", "owned_by": null}], "_id": "63d2dfddfd78f3c414c75d2e"}]
+2023-01-26 15:17:58 Hybrid Draft Log: Card Picker DEBUG: {"card": "64e6a8d1-ae75-45bd-af62-9a622620cb5c", "pack": "63d2dfddfd78f3c414c75d2e", "player": "2790"}
+2023-01-26 15:17:58 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 15:17:58 Hybrid Draft Log DEBUG: []
+2023-01-26 15:18:01 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 15:18:01 Hybrid Draft Log DEBUG: []
+2023-01-26 15:18:04 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 15:18:04 Hybrid Draft Log DEBUG: []
+2023-01-26 15:18:10 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "1816"}
+2023-01-26 15:18:10 Hybrid Draft Log DEBUG: []
+2023-01-26 15:18:11 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "1816"}
+2023-01-26 15:18:11 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "1816", "round": 1, "cards_remaining": 15, "assigned_to": "1816", "cards": [{"multiverse_id": "c7b362a5-382a-4016-b4f2-aa7b683354c4", "owned_by": null}, {"multiverse_id": "fa641d46-d002-4903-af72-e96971f558bc", "owned_by": null}, {"multiverse_id": "c66988ca-29d5-45ea-8d68-c8e0e4c3ffb1", "owned_by": null}, {"multiverse_id": "98c2b2af-739f-413c-8c36-da6f78df0acb", "owned_by": null}, {"multiverse_id": "0173b7b4-2832-4943-ba45-8ba498d7a056", "owned_by": null}, {"multiverse_id": "8ee69a1f-aeed-4eb4-8987-fa720fc99715", "owned_by": null}, {"multiverse_id": "01d6ba55-7bc0-41c6-84be-8cd528e46a05", "owned_by": null}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "0ec44465-68d4-4dca-a313-7f2ab0ce2e63", "owned_by": null}, {"multiverse_id": "bad0e96a-b4cc-4439-aab9-731a1036145d", "owned_by": null}, {"multiverse_id": "7b43ba43-f7ae-4e00-b797-2360c3ccd839", "owned_by": null}, {"multiverse_id": "65b26f68-3a25-4c4e-bc76-a199ab479a50", "owned_by": null}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "2e6af42f-35ec-432f-9879-2a0fb938a9f6", "owned_by": null}, {"multiverse_id": "9255cd01-a611-4fec-b9ec-b271687740ba", "owned_by": null}], "_id": "63d2e003a0865bcc04862be7"}]
+2023-01-26 15:18:34 Hybrid Draft Log: Card Picker DEBUG: {"card": "65b26f68-3a25-4c4e-bc76-a199ab479a50", "pack": "63d2e003a0865bcc04862be7", "player": "1816"}
+2023-01-26 15:18:34 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "1816"}
+2023-01-26 15:18:34 Hybrid Draft Log DEBUG: []
+2023-01-26 15:18:39 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2979"}
+2023-01-26 15:18:39 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "1816", "round": 1, "cards_remaining": 14, "assigned_to": "2979", "cards": [{"multiverse_id": "c7b362a5-382a-4016-b4f2-aa7b683354c4", "owned_by": null}, {"multiverse_id": "fa641d46-d002-4903-af72-e96971f558bc", "owned_by": null}, {"multiverse_id": "c66988ca-29d5-45ea-8d68-c8e0e4c3ffb1", "owned_by": null}, {"multiverse_id": "98c2b2af-739f-413c-8c36-da6f78df0acb", "owned_by": null}, {"multiverse_id": "0173b7b4-2832-4943-ba45-8ba498d7a056", "owned_by": null}, {"multiverse_id": "8ee69a1f-aeed-4eb4-8987-fa720fc99715", "owned_by": null}, {"multiverse_id": "01d6ba55-7bc0-41c6-84be-8cd528e46a05", "owned_by": null}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "0ec44465-68d4-4dca-a313-7f2ab0ce2e63", "owned_by": null}, {"multiverse_id": "bad0e96a-b4cc-4439-aab9-731a1036145d", "owned_by": null}, {"multiverse_id": "7b43ba43-f7ae-4e00-b797-2360c3ccd839", "owned_by": null}, {"multiverse_id": "65b26f68-3a25-4c4e-bc76-a199ab479a50", "owned_by": "1816"}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "2e6af42f-35ec-432f-9879-2a0fb938a9f6", "owned_by": null}, {"multiverse_id": "9255cd01-a611-4fec-b9ec-b271687740ba", "owned_by": null}], "_id": "63d2e003a0865bcc04862be7"}]
+2023-01-26 15:18:41 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2979"}
+2023-01-26 15:18:41 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "2979", "round": 1, "cards_remaining": 15, "assigned_to": "2979", "cards": [{"multiverse_id": "dac28e27-78aa-48b1-96fa-edca1fbcfb77", "owned_by": null}, {"multiverse_id": "56444440-a9e6-4583-a289-9f0571a98093", "owned_by": null}, {"multiverse_id": "dac28e27-78aa-48b1-96fa-edca1fbcfb77", "owned_by": null}, {"multiverse_id": "8ee69a1f-aeed-4eb4-8987-fa720fc99715", "owned_by": null}, {"multiverse_id": "947a1e44-3485-4e24-a34d-6c318584743c", "owned_by": null}, {"multiverse_id": "19d469f1-2219-4466-9f8a-769ee43e28db", "owned_by": null}, {"multiverse_id": "8de80f71-82b5-499c-afc0-6bbae6b896ad", "owned_by": null}, {"multiverse_id": "73d74045-cc9b-4b01-bc5f-0f2eb4b01580", "owned_by": null}, {"multiverse_id": "4a37aa46-bcf3-48a5-9f74-05e4878ad96f", "owned_by": null}, {"multiverse_id": "b9cba67a-b714-49b0-9797-24aca283f162", "owned_by": null}, {"multiverse_id": "5e7eef9e-68ae-4743-ad89-64f6fafbe365", "owned_by": null}, {"multiverse_id": "d485c620-f1fb-4715-b7c5-d2d56588308d", "owned_by": null}, {"multiverse_id": "66270dd2-9139-4329-9621-852962836688", "owned_by": null}, {"multiverse_id": "78b0f36b-7d8c-4e77-adc2-a4dad93a81d5", "owned_by": null}, {"multiverse_id": "cdbbcbe1-5317-455e-8d71-a4e2ad0addfc", "owned_by": null}], "_id": "63d2e020877b6dd89a9c8366"}, {"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "1816", "round": 1, "cards_remaining": 14, "assigned_to": "2979", "cards": [{"multiverse_id": "c7b362a5-382a-4016-b4f2-aa7b683354c4", "owned_by": null}, {"multiverse_id": "fa641d46-d002-4903-af72-e96971f558bc", "owned_by": null}, {"multiverse_id": "c66988ca-29d5-45ea-8d68-c8e0e4c3ffb1", "owned_by": null}, {"multiverse_id": "98c2b2af-739f-413c-8c36-da6f78df0acb", "owned_by": null}, {"multiverse_id": "0173b7b4-2832-4943-ba45-8ba498d7a056", "owned_by": null}, {"multiverse_id": "8ee69a1f-aeed-4eb4-8987-fa720fc99715", "owned_by": null}, {"multiverse_id": "01d6ba55-7bc0-41c6-84be-8cd528e46a05", "owned_by": null}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "0ec44465-68d4-4dca-a313-7f2ab0ce2e63", "owned_by": null}, {"multiverse_id": "bad0e96a-b4cc-4439-aab9-731a1036145d", "owned_by": null}, {"multiverse_id": "7b43ba43-f7ae-4e00-b797-2360c3ccd839", "owned_by": null}, {"multiverse_id": "65b26f68-3a25-4c4e-bc76-a199ab479a50", "owned_by": "1816"}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "2e6af42f-35ec-432f-9879-2a0fb938a9f6", "owned_by": null}, {"multiverse_id": "9255cd01-a611-4fec-b9ec-b271687740ba", "owned_by": null}], "_id": "63d2e003a0865bcc04862be7"}]
+2023-01-26 15:19:39 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:19:39 Hybrid Draft Log DEBUG: []
+2023-01-26 15:19:41 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:19:41 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "3503", "round": 1, "cards_remaining": 15, "assigned_to": "3503", "cards": [{"multiverse_id": "f05078dd-b928-4b3f-9636-f299ebac180b", "owned_by": null}, {"multiverse_id": "01d6ba55-7bc0-41c6-84be-8cd528e46a05", "owned_by": null}, {"multiverse_id": "6389c242-2139-4f12-af30-2b080a1c5e83", "owned_by": null}, {"multiverse_id": "9f9e911e-7e12-4d99-806c-5cfba19ea8f3", "owned_by": null}, {"multiverse_id": "b5adb509-6ad3-4838-925d-1cafa926b83a", "owned_by": null}, {"multiverse_id": "a9225cc3-90f0-448f-a8d9-7c6c2796d077", "owned_by": null}, {"multiverse_id": "157cf43c-f7f2-4362-bfc8-11682e94b747", "owned_by": null}, {"multiverse_id": "1b49ec35-2c4f-4144-85fe-226f7cb67266", "owned_by": null}, {"multiverse_id": "3a836e6b-6854-4f6f-bc78-2da1fd4dd224", "owned_by": null}, {"multiverse_id": "ba9d9d26-0c76-4a09-aa25-b32854e70c0b", "owned_by": null}, {"multiverse_id": "272c9888-ef13-4d47-a4bc-f5239b357a1b", "owned_by": null}, {"multiverse_id": "947a1e44-3485-4e24-a34d-6c318584743c", "owned_by": null}, {"multiverse_id": "6389c242-2139-4f12-af30-2b080a1c5e83", "owned_by": null}, {"multiverse_id": "b3cf4c4f-bda6-454c-991d-429c0dca0e85", "owned_by": null}, {"multiverse_id": "72af72d2-5995-4cad-82f1-e2d0c465d6f1", "owned_by": null}], "_id": "63d2e05d85d912fbd3a41809"}]
+2023-01-26 15:20:34 Hybrid Draft Log: Card Picker DEBUG: {"card": "157cf43c-f7f2-4362-bfc8-11682e94b747", "pack": "63d2e05d85d912fbd3a41809", "player": "3503"}
+2023-01-26 15:20:34 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:34 Hybrid Draft Log DEBUG: []
+2023-01-26 15:20:36 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:36 Hybrid Draft Log DEBUG: []
+2023-01-26 15:20:39 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:39 Hybrid Draft Log DEBUG: []
+2023-01-26 15:20:42 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:42 Hybrid Draft Log DEBUG: []
+2023-01-26 15:20:45 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:45 Hybrid Draft Log DEBUG: []
+2023-01-26 15:20:48 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:48 Hybrid Draft Log DEBUG: []
+2023-01-26 15:20:51 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "3503"}
+2023-01-26 15:20:51 Hybrid Draft Log DEBUG: []
+2023-01-26 15:21:39 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 15:21:39 Hybrid Draft Log DEBUG: []
+2023-01-26 15:21:42 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 15:21:42 Hybrid Draft Log DEBUG: []
+2023-01-26 15:21:44 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 15:21:44 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": null}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": null}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:03 Hybrid Draft Log: Card Picker DEBUG: {"card": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "pack": "63d2e0d8a665513a1cee5aa6", "player": "2790"}
+2023-01-26 15:22:03 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 15:22:03 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:06 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 15:22:06 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "1816"}
+2023-01-26 15:22:11 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 14, "assigned_to": "1816", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": null}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:13 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "1816"}
+2023-01-26 15:22:13 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "1816", "round": 1, "cards_remaining": 15, "assigned_to": "1816", "cards": [{"multiverse_id": "2bb84e72-0231-461a-a230-d8afa6e54289", "owned_by": null}, {"multiverse_id": "b30457c3-57df-4720-8b45-962f16316d17", "owned_by": null}, {"multiverse_id": "8c540e42-22e2-4127-bbd9-2e9200023fec", "owned_by": null}, {"multiverse_id": "8348f73d-4226-4296-9d51-a2c497ee8270", "owned_by": null}, {"multiverse_id": "a1e088de-e99f-4706-89e0-a7efdaf9403a", "owned_by": null}, {"multiverse_id": "bcf491db-d12b-4c58-9c05-085cac34a73e", "owned_by": null}, {"multiverse_id": "48f97974-bb65-46b0-a710-12fa4b9343ac", "owned_by": null}, {"multiverse_id": "28e3bf5a-0a90-46d3-bcfe-9a47df41b72b", "owned_by": null}, {"multiverse_id": "37096c19-32c9-448a-94e9-f5fe2d74e3a3", "owned_by": null}, {"multiverse_id": "b22586ce-efcc-4b20-83f9-c23b8eeaa88c", "owned_by": null}, {"multiverse_id": "2a64e330-1257-4ec3-9a75-889cdcac3ade", "owned_by": null}, {"multiverse_id": "d462d30c-9060-46d6-b5b3-cac476ee2ce1", "owned_by": null}, {"multiverse_id": "2fa2fa48-ddb7-45f0-b183-4186df98f7cc", "owned_by": null}, {"multiverse_id": "d96761b2-eb9c-4963-a496-ba53a01f4b17", "owned_by": null}, {"multiverse_id": "eee75629-86b4-40b0-884a-22646ebf6e27", "owned_by": null}], "_id": "63d2e0f5b4570c612e7f0984"}, {"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 14, "assigned_to": "1816", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": null}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:17 Hybrid Draft Log: Card Picker DEBUG: {"card": "a1e088de-e99f-4706-89e0-a7efdaf9403a", "pack": "63d2e0f5b4570c612e7f0984", "player": "1816"}
+2023-01-26 15:22:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "1816"}
+2023-01-26 15:22:17 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 14, "assigned_to": "1816", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": null}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:20 Hybrid Draft Log: Card Picker DEBUG: {"card": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "pack": "63d2e0d8a665513a1cee5aa6", "player": "1816"}
+2023-01-26 15:22:21 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "1816"}
+2023-01-26 15:22:21 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "1816"}
+2023-01-26 15:22:23 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:27 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:27 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "1816", "round": 1, "cards_remaining": 14, "assigned_to": "2979", "cards": [{"multiverse_id": "2bb84e72-0231-461a-a230-d8afa6e54289", "owned_by": null}, {"multiverse_id": "b30457c3-57df-4720-8b45-962f16316d17", "owned_by": null}, {"multiverse_id": "8c540e42-22e2-4127-bbd9-2e9200023fec", "owned_by": null}, {"multiverse_id": "8348f73d-4226-4296-9d51-a2c497ee8270", "owned_by": null}, {"multiverse_id": "a1e088de-e99f-4706-89e0-a7efdaf9403a", "owned_by": "1816"}, {"multiverse_id": "bcf491db-d12b-4c58-9c05-085cac34a73e", "owned_by": null}, {"multiverse_id": "48f97974-bb65-46b0-a710-12fa4b9343ac", "owned_by": null}, {"multiverse_id": "28e3bf5a-0a90-46d3-bcfe-9a47df41b72b", "owned_by": null}, {"multiverse_id": "37096c19-32c9-448a-94e9-f5fe2d74e3a3", "owned_by": null}, {"multiverse_id": "b22586ce-efcc-4b20-83f9-c23b8eeaa88c", "owned_by": null}, {"multiverse_id": "2a64e330-1257-4ec3-9a75-889cdcac3ade", "owned_by": null}, {"multiverse_id": "d462d30c-9060-46d6-b5b3-cac476ee2ce1", "owned_by": null}, {"multiverse_id": "2fa2fa48-ddb7-45f0-b183-4186df98f7cc", "owned_by": null}, {"multiverse_id": "d96761b2-eb9c-4963-a496-ba53a01f4b17", "owned_by": null}, {"multiverse_id": "eee75629-86b4-40b0-884a-22646ebf6e27", "owned_by": null}], "_id": "63d2e0f5b4570c612e7f0984"}, {"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 13, "assigned_to": "2979", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": "1816"}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:29 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2979", "round": 1, "cards_remaining": 15, "assigned_to": "2979", "cards": [{"multiverse_id": "38eca0ae-d400-4afb-9a45-7100f4cd7149", "owned_by": null}, {"multiverse_id": "94778e17-87c4-4765-b2f0-40455069f2c4", "owned_by": null}, {"multiverse_id": "9d927dfd-ae66-4235-a61b-39c85d0c1222", "owned_by": null}, {"multiverse_id": "d5ae38a2-2f95-4750-9b59-53eb1771e5ab", "owned_by": null}, {"multiverse_id": "5ab5cb30-3ced-4450-a3c4-b519f3762620", "owned_by": null}, {"multiverse_id": "5c8b2f2b-6f19-47f7-bb65-00665989bc30", "owned_by": null}, {"multiverse_id": "c1c42d56-5b0e-4624-8831-77280f8d56cf", "owned_by": null}, {"multiverse_id": "1c90f777-2f98-4010-80a3-5fe395747e5f", "owned_by": null}, {"multiverse_id": "a842a945-21d9-432c-b970-6da65b16f309", "owned_by": null}, {"multiverse_id": "ebdbcb87-c6ea-477f-a560-c175d99e21b8", "owned_by": null}, {"multiverse_id": "5a7329cd-95af-4d71-984f-f5f28982520c", "owned_by": null}, {"multiverse_id": "171edf80-ffc1-4894-9be5-c3e93a96f734", "owned_by": null}, {"multiverse_id": "48f97974-bb65-46b0-a710-12fa4b9343ac", "owned_by": null}, {"multiverse_id": "ec94d440-3922-4588-bf7b-d8670f81ef4e", "owned_by": null}, {"multiverse_id": "4a7e030c-98d1-452c-8020-cd92a3ef02c3", "owned_by": null}], "_id": "63d2e1058099bd3f4b66381d"}, {"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "1816", "round": 1, "cards_remaining": 14, "assigned_to": "2979", "cards": [{"multiverse_id": "2bb84e72-0231-461a-a230-d8afa6e54289", "owned_by": null}, {"multiverse_id": "b30457c3-57df-4720-8b45-962f16316d17", "owned_by": null}, {"multiverse_id": "8c540e42-22e2-4127-bbd9-2e9200023fec", "owned_by": null}, {"multiverse_id": "8348f73d-4226-4296-9d51-a2c497ee8270", "owned_by": null}, {"multiverse_id": "a1e088de-e99f-4706-89e0-a7efdaf9403a", "owned_by": "1816"}, {"multiverse_id": "bcf491db-d12b-4c58-9c05-085cac34a73e", "owned_by": null}, {"multiverse_id": "48f97974-bb65-46b0-a710-12fa4b9343ac", "owned_by": null}, {"multiverse_id": "28e3bf5a-0a90-46d3-bcfe-9a47df41b72b", "owned_by": null}, {"multiverse_id": "37096c19-32c9-448a-94e9-f5fe2d74e3a3", "owned_by": null}, {"multiverse_id": "b22586ce-efcc-4b20-83f9-c23b8eeaa88c", "owned_by": null}, {"multiverse_id": "2a64e330-1257-4ec3-9a75-889cdcac3ade", "owned_by": null}, {"multiverse_id": "d462d30c-9060-46d6-b5b3-cac476ee2ce1", "owned_by": null}, {"multiverse_id": "2fa2fa48-ddb7-45f0-b183-4186df98f7cc", "owned_by": null}, {"multiverse_id": "d96761b2-eb9c-4963-a496-ba53a01f4b17", "owned_by": null}, {"multiverse_id": "eee75629-86b4-40b0-884a-22646ebf6e27", "owned_by": null}], "_id": "63d2e0f5b4570c612e7f0984"}, {"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 13, "assigned_to": "2979", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": "1816"}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:37 Hybrid Draft Log: Card Picker DEBUG: {"card": "5a7329cd-95af-4d71-984f-f5f28982520c", "pack": "63d2e1058099bd3f4b66381d", "player": "2979"}
+2023-01-26 15:22:37 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:37 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "1816", "round": 1, "cards_remaining": 14, "assigned_to": "2979", "cards": [{"multiverse_id": "2bb84e72-0231-461a-a230-d8afa6e54289", "owned_by": null}, {"multiverse_id": "b30457c3-57df-4720-8b45-962f16316d17", "owned_by": null}, {"multiverse_id": "8c540e42-22e2-4127-bbd9-2e9200023fec", "owned_by": null}, {"multiverse_id": "8348f73d-4226-4296-9d51-a2c497ee8270", "owned_by": null}, {"multiverse_id": "a1e088de-e99f-4706-89e0-a7efdaf9403a", "owned_by": "1816"}, {"multiverse_id": "bcf491db-d12b-4c58-9c05-085cac34a73e", "owned_by": null}, {"multiverse_id": "48f97974-bb65-46b0-a710-12fa4b9343ac", "owned_by": null}, {"multiverse_id": "28e3bf5a-0a90-46d3-bcfe-9a47df41b72b", "owned_by": null}, {"multiverse_id": "37096c19-32c9-448a-94e9-f5fe2d74e3a3", "owned_by": null}, {"multiverse_id": "b22586ce-efcc-4b20-83f9-c23b8eeaa88c", "owned_by": null}, {"multiverse_id": "2a64e330-1257-4ec3-9a75-889cdcac3ade", "owned_by": null}, {"multiverse_id": "d462d30c-9060-46d6-b5b3-cac476ee2ce1", "owned_by": null}, {"multiverse_id": "2fa2fa48-ddb7-45f0-b183-4186df98f7cc", "owned_by": null}, {"multiverse_id": "d96761b2-eb9c-4963-a496-ba53a01f4b17", "owned_by": null}, {"multiverse_id": "eee75629-86b4-40b0-884a-22646ebf6e27", "owned_by": null}], "_id": "63d2e0f5b4570c612e7f0984"}, {"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 13, "assigned_to": "2979", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": "1816"}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:39 Hybrid Draft Log: Card Picker DEBUG: {"card": "8c540e42-22e2-4127-bbd9-2e9200023fec", "pack": "63d2e0f5b4570c612e7f0984", "player": "2979"}
+2023-01-26 15:22:40 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:40 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 13, "assigned_to": "2979", "cards": [{"multiverse_id": "acbd975d-52f8-4fba-bf97-b8837413edd8", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "f50b0449-8ff7-4549-893b-aeca93720c64", "owned_by": null}, {"multiverse_id": "34e09173-a92d-4cc3-9d02-bf18ab0850ec", "owned_by": "1816"}, {"multiverse_id": "919a32a6-b66d-4a75-a02f-fa1c4c87b738", "owned_by": null}, {"multiverse_id": "2fee3328-75c2-4d13-86e1-bf3a40fbf538", "owned_by": null}, {"multiverse_id": "f5d02416-8578-40a5-bf31-d1ef9b8764f1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "owned_by": null}, {"multiverse_id": "e4abf2fb-f78a-4e75-b46f-524d3d7405db", "owned_by": null}, {"multiverse_id": "6759acb8-82c0-479f-86f3-f22ca7a2006c", "owned_by": null}, {"multiverse_id": "99965310-e4bd-40d9-80f5-3fd1754c61c5", "owned_by": null}, {"multiverse_id": "9998f898-1f08-481b-8505-b890f0fec5e0", "owned_by": null}, {"multiverse_id": "a169612e-f5de-4653-bc31-9ede8c5bdc75", "owned_by": "2790"}, {"multiverse_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85", "owned_by": null}], "_id": "63d2e0d8a665513a1cee5aa6"}]
+2023-01-26 15:22:50 Hybrid Draft Log: Card Picker DEBUG: {"card": "486a0745-7360-4cc9-9cc2-30c0eda6e00c", "pack": "63d2e0d8a665513a1cee5aa6", "player": "2979"}
+2023-01-26 15:22:50 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:50 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:51 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:51 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:54 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:54 Hybrid Draft Log DEBUG: []
+2023-01-26 15:22:57 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:22:57 Hybrid Draft Log DEBUG: []
+2023-01-26 15:23:00 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:23:00 Hybrid Draft Log DEBUG: []
+2023-01-26 15:23:03 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:23:03 Hybrid Draft Log DEBUG: []
+2023-01-26 15:23:06 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 15:23:06 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:09 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 22:51:09 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:12 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 22:51:12 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:16 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 22:51:16 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:19 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 22:51:19 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:22 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2979"}
+2023-01-26 22:51:22 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:30 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 22:51:30 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:33 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 22:51:33 Hybrid Draft Log DEBUG: []
+2023-01-26 22:51:36 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-26 22:51:36 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "59faa45d-868b-4bc7-934c-0e077642e129", "owned_by": null}, {"multiverse_id": "5db83275-bfd2-42c2-8d0f-e8a9b4f60e78", "owned_by": null}, {"multiverse_id": "f21b9c48-6eca-4677-961b-614f5ec594ce", "owned_by": null}, {"multiverse_id": "d08eadf5-a86d-4e8d-b65d-79b4f88477b9", "owned_by": null}, {"multiverse_id": "d5ae38a2-2f95-4750-9b59-53eb1771e5ab", "owned_by": null}, {"multiverse_id": "aa1b987a-a3b9-4cd1-85b0-e58df4130934", "owned_by": null}, {"multiverse_id": "d462d30c-9060-46d6-b5b3-cac476ee2ce1", "owned_by": null}, {"multiverse_id": "71a49b18-a339-401c-ab77-fcd04772cf69", "owned_by": null}, {"multiverse_id": "171edf80-ffc1-4894-9be5-c3e93a96f734", "owned_by": null}, {"multiverse_id": "1c2852c9-d566-4824-836a-2f4c7a5148a1", "owned_by": null}, {"multiverse_id": "eda82e38-c1d4-4019-8f79-f91602d941b0", "owned_by": null}, {"multiverse_id": "23d4b90c-95b1-4828-bc08-7067da0d5364", "owned_by": null}, {"multiverse_id": "c7745439-f40b-4647-8bff-53751d511bbd", "owned_by": null}, {"multiverse_id": "22de1edc-ec67-4694-ab88-2a679c8a450f", "owned_by": null}, {"multiverse_id": "28e3bf5a-0a90-46d3-bcfe-9a47df41b72b", "owned_by": null}], "_id": "63d34a475db82d2b5239ac05"}]
+2023-01-26 22:58:01 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 22:58:01 Hybrid Draft Log DEBUG: []
+2023-01-26 22:58:04 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 22:58:04 Hybrid Draft Log DEBUG: []
+2023-01-26 22:58:06 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-26 22:58:06 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "58d287e8-5297-415a-97d5-02002470c52b", "owned_by": null}, {"multiverse_id": "29d2c689-af37-433a-a012-e8d384702811", "owned_by": null}, {"multiverse_id": "8c938a0f-531c-4293-a89c-c7440d5acc5d", "owned_by": null}, {"multiverse_id": "29c91aad-bf33-448e-b122-65940fb2e33b", "owned_by": null}, {"multiverse_id": "0173b7b4-2832-4943-ba45-8ba498d7a056", "owned_by": null}, {"multiverse_id": "8e2f0ae2-db68-4338-93f9-9d9268cec41e", "owned_by": null}, {"multiverse_id": "75a4a340-453b-471a-82ba-48ebf20b271a", "owned_by": null}, {"multiverse_id": "7177431e-5cc4-4ecd-8848-f51903289072", "owned_by": null}, {"multiverse_id": "0409bacf-b728-473d-bf9b-41fdf364e783", "owned_by": null}, {"multiverse_id": "d485c620-f1fb-4715-b7c5-d2d56588308d", "owned_by": null}, {"multiverse_id": "b3ef034f-37e5-4baa-a7a9-5fd0de792535", "owned_by": null}, {"multiverse_id": "7b43ba43-f7ae-4e00-b797-2360c3ccd839", "owned_by": null}, {"multiverse_id": "7f04c2e5-9100-439a-9aa4-28d388518e4a", "owned_by": null}, {"multiverse_id": "aa625ab0-1e79-4497-a5da-98fe1abfd024", "owned_by": null}, {"multiverse_id": "c5efd9b5-05e5-440f-b28c-658e461cf644", "owned_by": null}], "_id": "63d34bcd53bf984c327d5ecd"}]
+2023-01-27 12:11:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:11:43 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:43 Hybrid Draft Log DEBUG: []
+2023-01-27 12:11:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:46 Hybrid Draft Log DEBUG: []
+2023-01-27 12:11:49 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:49 Hybrid Draft Log DEBUG: []
+2023-01-27 12:11:52 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:52 Hybrid Draft Log DEBUG: []
+2023-01-27 12:11:55 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:55 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "5ab5cb30-3ced-4450-a3c4-b519f3762620", "owned_by": null}, {"multiverse_id": "2a64e330-1257-4ec3-9a75-889cdcac3ade", "owned_by": null}, {"multiverse_id": "2fa2fa48-ddb7-45f0-b183-4186df98f7cc", "owned_by": null}, {"multiverse_id": "35ba6c05-a4c2-422b-a4cb-852b3aef77a5", "owned_by": null}, {"multiverse_id": "e8a36d1f-f6cc-4962-9ad6-589f7b3e5f95", "owned_by": null}, {"multiverse_id": "cc2a81fb-5045-4b7b-8cfb-b90c4f4a1f51", "owned_by": null}, {"multiverse_id": "aaa9c6f1-3938-448b-bdc3-22420c5984d3", "owned_by": null}, {"multiverse_id": "aa1b987a-a3b9-4cd1-85b0-e58df4130934", "owned_by": null}, {"multiverse_id": "bbd6a95a-11b9-43aa-b293-20a3102bae71", "owned_by": null}, {"multiverse_id": "d5ae38a2-2f95-4750-9b59-53eb1771e5ab", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "bd77c575-93a4-44ec-8940-adcbfc6e7a84", "owned_by": null}, {"multiverse_id": "ccd88d6c-7d3a-45b1-85b4-b390d60cae14", "owned_by": null}, {"multiverse_id": "b0eab397-25a6-4377-8e12-e8acef9675cf", "owned_by": null}, {"multiverse_id": "1eb02f00-c188-4193-a049-d26f7643e5da", "owned_by": null}], "_id": "63d405db483c4d38f4830c1c"}]
+2023-01-27 12:11:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:11:56 Hybrid Draft Log DEBUG: [{"draft_id": "63b64fd4889ea1980144bf62", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "5ab5cb30-3ced-4450-a3c4-b519f3762620", "owned_by": null}, {"multiverse_id": "2a64e330-1257-4ec3-9a75-889cdcac3ade", "owned_by": null}, {"multiverse_id": "2fa2fa48-ddb7-45f0-b183-4186df98f7cc", "owned_by": null}, {"multiverse_id": "35ba6c05-a4c2-422b-a4cb-852b3aef77a5", "owned_by": null}, {"multiverse_id": "e8a36d1f-f6cc-4962-9ad6-589f7b3e5f95", "owned_by": null}, {"multiverse_id": "cc2a81fb-5045-4b7b-8cfb-b90c4f4a1f51", "owned_by": null}, {"multiverse_id": "aaa9c6f1-3938-448b-bdc3-22420c5984d3", "owned_by": null}, {"multiverse_id": "aa1b987a-a3b9-4cd1-85b0-e58df4130934", "owned_by": null}, {"multiverse_id": "bbd6a95a-11b9-43aa-b293-20a3102bae71", "owned_by": null}, {"multiverse_id": "d5ae38a2-2f95-4750-9b59-53eb1771e5ab", "owned_by": null}, {"multiverse_id": "95083e1d-faf5-40e4-9be5-909cd01cc2b5", "owned_by": null}, {"multiverse_id": "bd77c575-93a4-44ec-8940-adcbfc6e7a84", "owned_by": null}, {"multiverse_id": "ccd88d6c-7d3a-45b1-85b4-b390d60cae14", "owned_by": null}, {"multiverse_id": "b0eab397-25a6-4377-8e12-e8acef9675cf", "owned_by": null}, {"multiverse_id": "1eb02f00-c188-4193-a049-d26f7643e5da", "owned_by": null}], "_id": "63d405db483c4d38f4830c1c"}]
+2023-01-27 12:13:09 Hybrid Draft Log: Card Picker DEBUG: {"card": "5ab5cb30-3ced-4450-a3c4-b519f3762620", "pack": "63d405db483c4d38f4830c1c", "player": "2790"}
+2023-01-27 12:13:09 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:09 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:10 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:10 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:13 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:13 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:16 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:16 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:19 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:19 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:23 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:26 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:26 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:29 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:32 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:32 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:35 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:35 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:38 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:38 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:43 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:43 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:46 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:49 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:49 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:53 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:56 Hybrid Draft Log DEBUG: []
+2023-01-27 12:13:59 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:13:59 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:02 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:02 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:05 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:05 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:08 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:08 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:11 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:14 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:14 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:17 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:20 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:20 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:22 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:22 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:25 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:25 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:28 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:28 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:31 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:31 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:34 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:34 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:37 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:37 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:40 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:40 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:43 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:43 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:47 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:47 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:50 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:50 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:53 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:56 Hybrid Draft Log DEBUG: []
+2023-01-27 12:14:59 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:14:59 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:02 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:02 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:05 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:05 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:08 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:08 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:11 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:14 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:14 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:17 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:20 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:20 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:23 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:26 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:26 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:29 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:32 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:32 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:35 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:35 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:38 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:38 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:44 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:44 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:47 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:47 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:50 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:50 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:53 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:56 Hybrid Draft Log DEBUG: []
+2023-01-27 12:15:59 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:15:59 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:02 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:02 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:05 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:05 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:08 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:08 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:11 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:14 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:14 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:17 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:20 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:20 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:23 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:26 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:26 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:29 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:32 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:32 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:35 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:35 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:38 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:38 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:44 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:44 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:47 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:47 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:50 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:50 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:53 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:56 Hybrid Draft Log DEBUG: []
+2023-01-27 12:16:59 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:16:59 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:02 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:02 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:05 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:05 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:08 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:08 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:11 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:14 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:14 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:17 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:20 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:20 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:23 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:26 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:26 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:29 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:32 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:32 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:35 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:35 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:38 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:38 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:44 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:44 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:47 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:47 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:50 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:50 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:53 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:56 Hybrid Draft Log DEBUG: []
+2023-01-27 12:17:59 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:17:59 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:02 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:02 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:05 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:05 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:08 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:08 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:11 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:14 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:14 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:17 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:20 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:20 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:23 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:26 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:26 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:29 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:32 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:32 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:35 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:35 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:38 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:38 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:44 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:44 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:47 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:47 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:50 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:50 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:53 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:56 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:56 Hybrid Draft Log DEBUG: []
+2023-01-27 12:18:59 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:18:59 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:02 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:02 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:05 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:05 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:08 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:08 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:11 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:11 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:14 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:14 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:17 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:17 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:20 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:20 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:23 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:23 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:26 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:26 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:29 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:29 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:32 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:32 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:35 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:35 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:38 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:38 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:41 Hybrid Draft Log DEBUG: []
+2023-01-27 12:19:44 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:19:44 Hybrid Draft Log DEBUG: []
+2023-01-27 12:20:45 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:20:45 Hybrid Draft Log DEBUG: []
+2023-01-27 12:21:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:21:46 Hybrid Draft Log DEBUG: []
+2023-01-27 12:22:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:22:46 Hybrid Draft Log DEBUG: []
+2023-01-27 12:23:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:23:46 Hybrid Draft Log DEBUG: []
+2023-01-27 12:24:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:24:46 Hybrid Draft Log DEBUG: []
+2023-01-27 12:25:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 12:25:46 Hybrid Draft Log DEBUG: []
+2023-01-27 13:01:41 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 13:01:41 Hybrid Draft Log DEBUG: []
+2023-01-27 13:01:46 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 13:01:46 Hybrid Draft Log DEBUG: []
+2023-01-27 13:01:53 Hybrid Draft Log DEBUG: {"draft_id": "63b64fd4889ea1980144bf62", "assigned_to": "2790"}
+2023-01-27 13:01:53 Hybrid Draft Log DEBUG: []
+2023-01-29 22:02:48 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-29 22:02:48 Hybrid Draft Log DEBUG: []
+2023-01-29 22:02:50 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-29 22:02:50 Hybrid Draft Log DEBUG: []
+2023-01-29 22:02:53 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-29 22:02:53 Hybrid Draft Log DEBUG: []
+2023-01-29 22:02:55 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-29 22:02:55 Hybrid Draft Log DEBUG: [{"draft_id": "63d1a100f2a53cc7df8cd44c", "opened_by": "2790", "round": 1, "cards_remaining": 15, "assigned_to": "2790", "cards": [{"multiverse_id": "c1171899-07d8-4e60-a79b-f162f59dc3ce", "owned_by": null}, {"multiverse_id": "f7155c42-a824-4bbe-9f7a-fa01e7625fd6", "owned_by": null}, {"multiverse_id": "3006ea5a-5391-41eb-b0c8-092741dca2eb", "owned_by": null}, {"multiverse_id": "947a1e44-3485-4e24-a34d-6c318584743c", "owned_by": null}, {"multiverse_id": "0380a4c9-a5d3-465f-8584-e546b54f91e0", "owned_by": null}, {"multiverse_id": "43c9005c-0574-4b75-8dbf-0a6641c3ae33", "owned_by": null}, {"multiverse_id": "f442442d-2e5d-4913-82d8-bab2f31541f8", "owned_by": null}, {"multiverse_id": "c16f96f5-a2a6-4ac4-bdae-326cee92bf2e", "owned_by": null}, {"multiverse_id": "81ef3cfa-63e6-4450-af65-da7f05d13cf3", "owned_by": null}, {"multiverse_id": "dd9df44a-a0ab-435f-914c-aa11cd88f4ec", "owned_by": null}, {"multiverse_id": "fa641d46-d002-4903-af72-e96971f558bc", "owned_by": null}, {"multiverse_id": "56bfdd21-4d46-4ec2-ba25-f16b6993f1a8", "owned_by": null}, {"multiverse_id": "19d469f1-2219-4466-9f8a-769ee43e28db", "owned_by": null}, {"multiverse_id": "f0d392b2-1dac-432d-930c-66b238f7512b", "owned_by": null}, {"multiverse_id": "6b71fd8f-e688-4210-bc5b-a3f19b5b3497", "owned_by": null}], "_id": "63d7335eed9e9746979b7f10"}]
+2023-01-29 22:05:37 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-29 22:05:37 Hybrid Draft Log DEBUG: []
+2023-01-29 22:05:39 Hybrid Draft Log DEBUG: {"draft_id": "63d1a100f2a53cc7df8cd44c", "assigned_to": "2790"}
+2023-01-29 22:05:39 Hybrid Draft Log DEBUG: []
