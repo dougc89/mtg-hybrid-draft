@@ -219,7 +219,7 @@ const ui = new Vue({
 
         async get_drafts(set_code){
             let response = await $.get(`/hybrid-draft/api/drafts?set=${set_code}`)
-            // console.log(response)
+            console.log(response)
             // use the first draft returned
             this.draft = response.drafts[0]
 

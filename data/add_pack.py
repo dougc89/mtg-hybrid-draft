@@ -1,4 +1,4 @@
-import json, argparse, hashlib, datetime, local_db
+import json, argparse, hashlib, datetime, local_db, os
 from bson.objectid import ObjectId
 from pprint import pprint
 
@@ -36,8 +36,8 @@ try:
     with open(f"c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft\\pack_cards_temp\\{args.cards}") as f:
         card_list = json.load(f)
 
-    # if len(card_list) != 15:
-    #     raise Exception('There needs to be exactly 15 cards in the pack')
+    if len(card_list) != 15:
+        raise Exception('There needs to be exactly 15 cards in the pack')
 
     new_pack = {
         'draft_id': draft_id,
@@ -49,6 +49,9 @@ try:
     }
 
     inserted = packs.insert_one(new_pack)
+
+    # remove the temp file with the raw card id list
+    os.remove(f"c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft\\pack_cards_temp\\{args.cards}")
 
     # output the inserted pack
     pprint(inserted)

@@ -22,7 +22,7 @@
             <v-row>
                 <v-col v-for='player in draft.players' :key="'player_btn_'+player._id">
                     <v-btn  color='teal' rounded x-large width='150px'
-                    @click='prepick_player(player)'>{{player.name}}</v-btn>
+                    @click='prepick_player(player)'>{{player.name}} <span v-if='player.assigned_packs > 0'>({{player.assigned_packs}})</span></v-btn>
                 </v-col>
             </v-row>
         </v-card-text>
