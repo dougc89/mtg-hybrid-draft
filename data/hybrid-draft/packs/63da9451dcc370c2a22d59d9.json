@@ -1,0 +1,70 @@
+{
+    "draft_id": "63d1a100f2a53cc7df8cd44c",
+    "opened_by": "2979",
+    "round": 3,
+    "cards_remaining": 0,
+    "assigned_to": null,
+    "cards": [
+        {
+            "multiverse_id": "b00ea7bb-705b-4669-bb2a-560bed04b14a",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "65a2fcc9-2317-48a1-a5eb-234fb3300364",
+            "owned_by": "3503"
+        },
+        {
+            "multiverse_id": "a6147bdc-4e02-48be-9ab9-c212f70d9194",
+            "owned_by": "2495"
+        },
+        {
+            "multiverse_id": "67f0a63e-0866-423e-b917-fc7c71063021",
+            "owned_by": "1816"
+        },
+        {
+            "multiverse_id": "01d6ba55-7bc0-41c6-84be-8cd528e46a05",
+            "owned_by": "2495"
+        },
+        {
+            "multiverse_id": "0da03224-c1af-438f-96c2-b0e41e1070b7",
+            "owned_by": "2790"
+        },
+        {
+            "multiverse_id": "611497d2-83df-4c69-bbeb-6a807c686bc4",
+            "owned_by": "3503"
+        },
+        {
+            "multiverse_id": "2bb29a69-3e42-4268-8026-f01072d7b56c",
+            "owned_by": "2952"
+        },
+        {
+            "multiverse_id": "544a707d-4090-4a74-91aa-60fbd8a4ae96",
+            "owned_by": "2952"
+        },
+        {
+            "multiverse_id": "f7dc55a8-290f-4666-90ce-aa632e87c5e7",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "a5424859-628a-4c19-acd0-0c63c21c8338",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "f0d392b2-1dac-432d-930c-66b238f7512b",
+            "owned_by": "1816"
+        },
+        {
+            "multiverse_id": "fa641d46-d002-4903-af72-e96971f558bc",
+            "owned_by": "2790"
+        },
+        {
+            "multiverse_id": "0ec44465-68d4-4dca-a313-7f2ab0ce2e63",
+            "owned_by": "2790"
+        },
+        {
+            "multiverse_id": "f8855fbf-4f1e-4c44-9653-bbbfc3f2fafd",
+            "owned_by": "2495"
+        }
+    ],
+    "_id": "63da9451dcc370c2a22d59d9"
+}

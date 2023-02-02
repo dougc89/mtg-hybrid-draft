@@ -2,20 +2,20 @@
     "draft_id": "63d1a100f2a53cc7df8cd44c",
     "opened_by": "2952",
     "round": 2,
-    "cards_remaining": 10,
-    "assigned_to": "3503",
+    "cards_remaining": 0,
+    "assigned_to": null,
     "cards": [
         {
             "multiverse_id": "3056ac38-7630-4301-88bb-a012a5b186ed",
-            "owned_by": null
+            "owned_by": "2790"
         },
         {
             "multiverse_id": "d485c620-f1fb-4715-b7c5-d2d56588308d",
-            "owned_by": null
+            "owned_by": "2495"
         },
         {
             "multiverse_id": "63517062-77da-4b60-aa24-f91553a81bed",
-            "owned_by": null
+            "owned_by": "3503"
         },
         {
             "multiverse_id": "3b92f866-2522-4f2a-a5ca-7d01ad79b927",
@@ -31,15 +31,15 @@
         },
         {
             "multiverse_id": "f05078dd-b928-4b3f-9636-f299ebac180b",
-            "owned_by": null
+            "owned_by": "3503"
         },
         {
             "multiverse_id": "dfb81cb1-ac56-4803-a962-359854a447df",
-            "owned_by": null
+            "owned_by": "2979"
         },
         {
             "multiverse_id": "3a2aeaeb-7853-4588-8a5e-cfd997ba8515",
-            "owned_by": null
+            "owned_by": "2952"
         },
         {
             "multiverse_id": "65b26f68-3a25-4c4e-bc76-a199ab479a50",
@@ -47,11 +47,11 @@
         },
         {
             "multiverse_id": "96ae13df-670e-49a0-99b0-baf908ac9eb4",
-            "owned_by": null
+            "owned_by": "2952"
         },
         {
             "multiverse_id": "58d287e8-5297-415a-97d5-02002470c52b",
-            "owned_by": null
+            "owned_by": "1816"
         },
         {
             "multiverse_id": "78493579-1fad-4664-96d7-195bf59ceef2",
@@ -59,11 +59,11 @@
         },
         {
             "multiverse_id": "6b71fd8f-e688-4210-bc5b-a3f19b5b3497",
-            "owned_by": null
+            "owned_by": "2495"
         },
         {
             "multiverse_id": "de1d02d1-91dc-47d6-bdbe-87602428abfb",
-            "owned_by": null
+            "owned_by": "2790"
         }
     ],
     "_id": "63d95d44c567b89972399485"

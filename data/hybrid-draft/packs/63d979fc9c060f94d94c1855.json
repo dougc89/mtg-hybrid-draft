@@ -2,12 +2,12 @@
     "draft_id": "63d1a100f2a53cc7df8cd44c",
     "opened_by": "2495",
     "round": 2,
-    "cards_remaining": 9,
-    "assigned_to": "2495",
+    "cards_remaining": 0,
+    "assigned_to": null,
     "cards": [
         {
             "multiverse_id": "8c6b818f-6912-4ea1-a35a-c8cd7ee9aead",
-            "owned_by": null
+            "owned_by": "2979"
         },
         {
             "multiverse_id": "bbc4b5ca-557e-4465-9725-9e7a15590258",
@@ -15,11 +15,11 @@
         },
         {
             "multiverse_id": "7cc4246b-ff59-44b2-acff-c0bb6e4cd6ac",
-            "owned_by": null
+            "owned_by": "3503"
         },
         {
             "multiverse_id": "f7427def-c4b2-475a-8dc9-7e89409d9abb",
-            "owned_by": null
+            "owned_by": "2495"
         },
         {
             "multiverse_id": "4c4a3119-c70a-46ff-8ede-6356f2b7bc13",
@@ -31,19 +31,19 @@
         },
         {
             "multiverse_id": "9f9e911e-7e12-4d99-806c-5cfba19ea8f3",
-            "owned_by": null
+            "owned_by": "1816"
         },
         {
             "multiverse_id": "e3f571b5-ce50-4856-a151-fe6610d27bca",
-            "owned_by": null
+            "owned_by": "2790"
         },
         {
             "multiverse_id": "01d6ba55-7bc0-41c6-84be-8cd528e46a05",
-            "owned_by": null
+            "owned_by": "2979"
         },
         {
             "multiverse_id": "56444440-a9e6-4583-a289-9f0571a98093",
-            "owned_by": null
+            "owned_by": "2495"
         },
         {
             "multiverse_id": "2c83600d-ea4d-4219-8dbb-34c4215a2005",
@@ -51,7 +51,7 @@
         },
         {
             "multiverse_id": "71c1a1d0-5616-42f8-a59c-42c1ccd48d26",
-            "owned_by": null
+            "owned_by": "2952"
         },
         {
             "multiverse_id": "e555abb1-ffd4-4143-9be8-ec8a758f5c2a",
@@ -63,7 +63,7 @@
         },
         {
             "multiverse_id": "a94378a2-cbde-4adf-b889-43e90fc6ba28",
-            "owned_by": null
+            "owned_by": "1816"
         }
     ],
     "_id": "63d979fc9c060f94d94c1855"
