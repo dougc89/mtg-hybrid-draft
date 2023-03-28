@@ -1,0 +1,70 @@
+{
+    "draft_id": "6421f6cbd1b1ea85240c377c",
+    "opened_by": "1816",
+    "round": 2,
+    "cards_remaining": 14,
+    "assigned_to": "2979",
+    "cards": [
+        {
+            "multiverse_id": "cb471f90-46f2-4037-87fc-f523fc9d004f",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "153f545d-bdbf-42c7-837a-a7076bbe5027",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "606b1148-4aa6-4d78-bedd-e31573282921",
+            "owned_by": "1816"
+        },
+        {
+            "multiverse_id": "5f48622a-abf3-407f-921f-77c29d59ba8e",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "35f68eb3-9b40-4967-a52e-f95aec6e3fbf",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "38367ee5-154b-44cb-8974-422038d039df",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "9cebee20-869e-45ed-9ddc-843faf4032ad",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "68284193-a38e-40d2-8d15-92d223756751",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "73a9c49f-fcd3-4572-bac7-6eb06fdc0815",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "607b1066-1ca0-45e1-a55c-30aed77cc8dc",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "20ff3289-00fb-4e91-b34f-6255e9de8e9e",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "57d5e536-7774-4949-8127-727ae4d8fc80",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "61b39ef1-29d4-4c8d-aece-a3f1ce008e2d",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "6b215b6a-82e3-4ce8-b288-d7341761cad0",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "6b75855c-88dc-4491-8045-080debfeb7b5",
+            "owned_by": null
+        }
+    ],
+    "_id": "642351fbd1b1ea67bc2c036c"
+}

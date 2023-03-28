@@ -35,6 +35,15 @@ export default Vue.component('mtg-card', {
         gatherer_img_path(){
             return `https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${this.card_info.multiverse_ids[this.display_face]}&type=card`
         },
+        best_card_img(){
+            if(this.card_info.multiverse_ids[this.display_face]){
+                 return this.gatherer_img_path
+            }else if(this.scryfall_img_path){
+                return this.scryfall_img_path
+            }else{
+                return '/hybrid-draft/packaging/cardback.png'
+            }
+        },
         multiface_card(){
             // convert to bool, if there are multiple card faces to display
             return (this.card_info.multiverse_ids.length > 1)
