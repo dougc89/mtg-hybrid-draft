@@ -182,7 +182,7 @@ const ui = new Vue({
                         },
                         // common non-basic land: [10]
                         {
-                            uri: 'type:land+rarity:common-type:basic',
+                            uri: 'type:land+rarity:common+-type:basic',
                             quantity: 1
                         }
                     ]
