@@ -29,24 +29,24 @@ export default Vue.component('mtg-card', {
         }
     }, 
     computed: {
-        scryfall_img_path(){
-            return this.card_info.image_uris.normal
-        },
-        gatherer_img_path(){
-            return `https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${this.card_info.multiverse_ids[this.display_face]}&type=card`
-        },
+        // scryfall_img_path(){
+        //     return this.card_info.image_uris.normal
+        // },
+        // gatherer_img_path(){
+        //     // return `https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${this.card_info.multiverse_ids[this.display_face]}&type=card`
+        // },
         best_card_img(){
-            if(this.card_info.multiverse_ids[this.display_face]){
-                 return this.gatherer_img_path
-            }else if(this.scryfall_img_path){
-                return this.scryfall_img_path
+            if(this.card_info.card_faces && this.card_info.card_faces[this.display_face].image_uris.normal){
+                 return this.card_info.card_faces[this.display_face].image_uris.normal
+            }else if(this.card_info.image_uris.normal){
+                return this.card_info.image_uris.normal
             }else{
                 return '/hybrid-draft/packaging/cardback.png'
             }
         },
         multiface_card(){
             // convert to bool, if there are multiple card faces to display
-            return (this.card_info.multiverse_ids.length > 1)
+            return (this.card_info.card_faces && this.card_info.card_faces.length > 1)
         },
 
     },

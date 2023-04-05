@@ -129,80 +129,61 @@ const ui = new Vue({
                 // config might change for some sets, but this is the normal distribution
                 if(set == 'MOM'){
                     var config = [
-                        //mythic: [0]
+                        // special (battle) [0]
+                        {
+                            uri: 'type:battle',
+                            quantity: 1
+                        },
+                        //mythic: [1]
                         {
                             uri: 'rarity:mythic',
                             quantity: 0
                         },
-                        //rare: [1]
+                        //rare: [2]
                         {
                             uri: 'rarity:rare',
                             quantity: 1
                         },
-                        // uncommon: [2]
+                        // uncommon: [3]
                         {
                             uri: 'rarity:uncommon',
                             quantity: 3
                         },
-                        // common_creature_w: [3]
+
+                        // common (generic): [4]
                         {
-                            uri: '-type:/Basic Land/+rarity:common+color=W+type:creature',
+                            uri: '-type:land+rarity:common',
+                            quantity: 5
+                        },
+                        // common_creature_w: [5]
+                        {
+                            uri: '-type:land+rarity:common+color=W',
                             quantity: 1  
                         },
-                        //common_creature_u: [4]
+                        //common_creature_u: [6]
                         {
-                            uri: '-type:/Basic Land/+rarity:common+color=U+type:creature',
+                            uri: '-type:land+rarity:common+color=U',
                             quantity: 1  
                         },
-                        //common_creature_b: [5]
+                        //common_creature_b: [7]
                         {
-                            uri: '-type:/Basic Land/+rarity:common+color=B+type:creature',
+                            uri: '-type:land+rarity:common+color=B',
                             quantity: 1  
                         },
-                        // common_creature_r: [6]
+                        // common_creature_r: [8]
                         {
-                            uri: '-type:/Basic Land/+rarity:common+color=R+type:creature',
+                            uri: '-type:land+rarity:common+color=R',
                             quantity: 1  
                         },
-                        //common_creature_g: [7]
+                        //common_creature_g: [9]
                         {
-                            uri: '-type:/Basic Land/+rarity:common+color=G+type:creature',
+                            uri: '-type:land+rarity:common+color=G',
                             quantity: 1  
                         },
-                        // common_multi_w: [8]
+                        // common non-basic land: [10]
                         {
-                            uri: '-type:/Basic Land/+rarity:common+color>=W',
-                            quantity: 1  
-                        },
-                        //common_multi_u: [9]
-                        {
-                            uri: '-type:/Basic Land/+rarity:common+color>=U',
-                            quantity: 1  
-                        },
-                        // common_multi_b: [10]
-                        {
-                            uri: '-type:/Basic Land/+rarity:common+color>=B',
-                            quantity: 1  
-                        },
-                        // common_multi_r: [11]
-                        {
-                            uri: '-type:/Basic Land/+rarity:common+color>=R',
-                            quantity: 1  
-                        },
-                        // common_multi_g: [12]
-                        {
-                            uri: '-type:/Basic Land/+rarity:common+color>=G',
-                            quantity: 1  
-                        },
-                        // basic land: [13]
-                        {
-                            uri: 'type:/Basic Land/',
+                            uri: 'type:land+rarity:common-type:basic',
                             quantity: 1
-                        },
-                        // common non-basic land: [14]
-                        {
-                            uri: 'type:land+rarity:common-type:/Basic Land/',
-                            quantity: 0
                         }
                     ]
                 }else{
@@ -231,19 +212,14 @@ const ui = new Vue({
 
                 if(Math.random() < 0.125){
                     // 1:8 chance to include mythic instead of rare
-                    config[0].quantity = 1
-                    config[1].quantity = 0
-                }
-
-                if(Math.random() < 0.167){
-                    //1:6 chance to replace the basic land with another common land (such as common dual land)
-                    config[13].quantity = 0
-                    config[14].quantity = 1
+                    config[1].quantity = 1
+                    config[2].quantity = 0
                 }
 
                 // console.log('config', config)
 
-                for(const card of config){
+
+                for(const [index, card] of config.entries()){
                     if(card.quantity > 0){
                         // get the cards matching this search query
                         let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${card.uri}`)
@@ -266,9 +242,26 @@ const ui = new Vue({
                                     // add the pack and close the while loop
                                     pack_cards.push(card_data.id) // multiverse_ids[Math.floor(Math.random()*card_data.multiverse_ids.length)])
                                     card_added = true
+
+                                    // adjust the quantity of other rarity if the special card was selected
+                                    if(index < 1){
+                                        if(card_data.rarity == 'mythic' || card_data.rarity == 'rare'){
+                                            // set both rare and mythic as consumed by this choice
+                                            config[1].quantity = 0
+                                            config[2].quantity = 0
+                                        }else if(card_data.rarity == 'uncommon'){
+                                            // reduce uncommon selection by 1
+                                            config[3].quantity--
+                                        }else{
+                                            // reduce common selection by 1
+                                            config[4].quantity--
+                                        }
+                                    }
+
                                 }
                             }
                         }
+
                     }
                 }
 
@@ -277,9 +270,9 @@ const ui = new Vue({
                 // console.log('new pack', pack_cards)
 
                 // send to db
-                console.log('pack cards', pack_cards)
+                // console.log('pack cards', pack_cards)
                 let res = await $.post(`/hybrid-draft/api/drafts/${this.draft._id}/players/${this.active_player._id}/packs`, JSON.stringify({'cards':pack_cards}))
-                console.log(res)
+                // console.log(res)
 
                 // refresh the player and their stuff
                 this.get_player_stuff()
