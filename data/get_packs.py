@@ -4,7 +4,7 @@ from operator import itemgetter
 from pprint import pprint
 
 try:
-    logger = util.create_logger("Hybrid Draft Log", "c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft.log", level = "DEBUG")
+    logger = util.create_logger("Hybrid Draft Log", "c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft.log", level = "INFO")
     parser = argparse.ArgumentParser(description="Get a list of all the cards owned by a player in the draft.")
     parser.add_argument('-d', '--draft', help="draft id to add the pack to", required=True)
     parser.add_argument('-u', '--user', help="user id of the player", required=True)
