@@ -26,7 +26,7 @@
         <v-tab-item key="card_selection_tab"> 
             
             <card-selection :key="'selector_state_'+state" :player_packs='player_packs' :scryfall_info='scryfall_info'
-            v-if='player_packs.length > 0' @card_chosen='get_player_stuff' @scryfall_call='track_scryfall_calls'
+            v-if='player_packs.length > 0 && (player_packs[0].round - 1) == Math.floor(player_cards.length/15)' @card_chosen='get_player_stuff' @scryfall_call='track_scryfall_calls'
             ></card-selection>
             <p class='h6 text-center' v-else-if='draft && player_cards.length < draft.num_packs * 15'>Waiting on packs from other players...</p>
             <p class='h4 text-center' color='teal' v-else>Draft Complete</p>

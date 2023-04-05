@@ -1,0 +1,20 @@
+{
+    "set": "MID",
+    "type": "proxy",
+    "num_packs": "4",
+    "players": [
+        {
+            "name": "doug",
+            "_id": "2790"
+        },
+        {
+            "name": "Austin L.",
+            "_id": "2979"
+        },
+        {
+            "name": "Rob",
+            "_id": "1816"
+        }
+    ],
+    "_id": "6421f6cbd1b1ea85240c377c"
+}

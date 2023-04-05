@@ -23,13 +23,31 @@ export default Vue.component('mtg-card', {
                     small: '/hybrid-draft/packaging/cardback.png',
                     normal: '/hybrid-draft/packaging/cardback.png'
                 }
-            }
+            },
+            // the index of which card face to display
+            display_face: 0
         }
     }, 
     computed: {
         scryfall_img_path(){
             return this.card_info.image_uris.normal
-        }
+        },
+        gatherer_img_path(){
+            return `https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${this.card_info.multiverse_ids[this.display_face]}&type=card`
+        },
+        best_card_img(){
+            if(this.card_info.multiverse_ids[this.display_face]){
+                 return this.gatherer_img_path
+            }else if(this.scryfall_img_path){
+                return this.scryfall_img_path
+            }else{
+                return '/hybrid-draft/packaging/cardback.png'
+            }
+        },
+        multiface_card(){
+            // convert to bool, if there are multiple card faces to display
+            return (this.card_info.multiverse_ids.length > 1)
+        },
 
     },
     mounted(){
@@ -64,6 +82,10 @@ export default Vue.component('mtg-card', {
         select(){
             // console.log('selecting', this.multiverse_id)
             this.$emit('select_card', {index:this.pack_index, multiverse_id:this.multiverse_id})
+        },
+        swap_card_face(){
+            // toggle between 0 and 1
+            this.display_face = (this.display_face + 1) % 2
         }
     }
 });

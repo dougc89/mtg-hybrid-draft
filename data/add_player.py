@@ -1,4 +1,4 @@
-import credentials, mongo, pymongo, argparse, local_db
+import argparse, local_db
 from bson.objectid import ObjectId
 from pprint import pprint
 

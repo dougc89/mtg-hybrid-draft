@@ -127,48 +127,129 @@ const ui = new Vue({
                 var set = this.draft.set // BRO, WAR, etc
 
                 // config might change for some sets, but this is the normal distribution
-                var config = {
-                    'rarity:mythic': 0,
-                    'rarity:rare': 1,
-                    // at most mono-colored commons (include colorless)
-                    '-type:/Basic Land/+rarity:common+color<=U': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color<=B': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color<=G': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color<=W': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color<=R': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    // at least each of the 5 colors
-                    '-type:/Basic Land/+rarity:common+color>=U': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color>=B': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color>=G': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color>=W': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    '-type:/Basic Land/+rarity:common+color>=R': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    
-                    'rarity:uncommon': 3,
-                    'type:/Basic Land/': 1,
-                    'type:land+rarity:common': 0 
-                    }
+                if(set == 'MOM'){
+                    var config = [
+                        //mythic: [0]
+                        {
+                            uri: 'rarity:mythic',
+                            quantity: 0
+                        },
+                        //rare: [1]
+                        {
+                            uri: 'rarity:rare',
+                            quantity: 1
+                        },
+                        // uncommon: [2]
+                        {
+                            uri: 'rarity:uncommon',
+                            quantity: 3
+                        },
+                        // common_creature_w: [3]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color=W+type:creature',
+                            quantity: 1  
+                        },
+                        //common_creature_u: [4]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color=U+type:creature',
+                            quantity: 1  
+                        },
+                        //common_creature_b: [5]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color=B+type:creature',
+                            quantity: 1  
+                        },
+                        // common_creature_r: [6]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color=R+type:creature',
+                            quantity: 1  
+                        },
+                        //common_creature_g: [7]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color=G+type:creature',
+                            quantity: 1  
+                        },
+                        // common_multi_w: [8]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color>=W',
+                            quantity: 1  
+                        },
+                        //common_multi_u: [9]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color>=U',
+                            quantity: 1  
+                        },
+                        // common_multi_b: [10]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color>=B',
+                            quantity: 1  
+                        },
+                        // common_multi_r: [11]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color>=R',
+                            quantity: 1  
+                        },
+                        // common_multi_g: [12]
+                        {
+                            uri: '-type:/Basic Land/+rarity:common+color>=G',
+                            quantity: 1  
+                        },
+                        // basic land: [13]
+                        {
+                            uri: 'type:/Basic Land/',
+                            quantity: 1
+                        },
+                        // common non-basic land: [14]
+                        {
+                            uri: 'type:land+rarity:common-type:/Basic Land/',
+                            quantity: 0
+                        }
+                    ]
+                }else{
+                    // var config = {
+                    //     'rarity:mythic': 0,
+                    //     'rarity:rare': 1,
+                    //     // at most mono-colored commons (include colorless)
+                    //     '-type:/Basic Land/+rarity:common+color=U+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color=B+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color=G+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color=W+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color=R+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
+
+                    //     // at least each of the 5 colors
+                    //     '-type:/Basic Land/+rarity:common+color>=U': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color>=B': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color>=G': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color>=W': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    //     '-type:/Basic Land/+rarity:common+color>=R': 1, // basic lands list as common on scryfall, we want non-basic commons
+                        
+                    //     'rarity:uncommon': 3,
+                    //     'type:/Basic Land/': 1,
+                    //     'type:land+rarity:common-type:/Basic Land/': 0 
+                    //     }
+                }
 
                 if(Math.random() < 0.125){
                     // 1:8 chance to include mythic instead of rare
-                    config['rarity:mythic'] = 1
-                    config['rarity:rare'] = 0
+                    config[0].quantity = 1
+                    config[1].quantity = 0
                 }
 
                 if(Math.random() < 0.167){
                     //1:6 chance to replace the basic land with another common land (such as common dual land)
-                    config['type:/Basic Land/'] = 0
-                    config['type:land+rarity:common'] = 1
+                    config[13].quantity = 0
+                    config[14].quantity = 1
                 }
 
                 // console.log('config', config)
 
-                for(const key in config){
-                    if(config[key] > 0){
+                for(const card of config){
+                    if(card.quantity > 0){
                         // get the cards matching this search query
-                        let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${key}`)
+                        let cards = await $.get(`https://api.scryfall.com/cards/search?q=set%3A${set}+${card.uri}`)
                         // console.log('compare', cards.total_cards, cards.data.length)
                         // push the quantity in config into the pack cards, by random selection
-                        for(let i=0; i<config[key]; i++){
+                        for(let i=0; i<card.quantity; i++){
                             // pick random cards from the results
                             let card_added = false
                             let cards_attempted = 0
@@ -192,7 +273,7 @@ const ui = new Vue({
                 }
 
                 // shuffle the cards 
-                pack_cards = pack_cards.sort((a, b) => 0.5 - Math.random())
+                // pack_cards = pack_cards.sort((a, b) => 0.5 - Math.random())
                 // console.log('new pack', pack_cards)
 
                 // send to db
