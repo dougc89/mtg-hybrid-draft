@@ -1,0 +1,70 @@
+{
+    "draft_id": "642c8b78d1b1ea6890273349",
+    "opened_by": "2952",
+    "round": 3,
+    "cards_remaining": 13,
+    "assigned_to": "1816",
+    "cards": [
+        {
+            "multiverse_id": "92f5b177-b0c6-4573-b860-f75dad1941bd",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "54aa2d03-7713-44d4-8fca-45c6f77b174b",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "83ca46ac-0698-4651-940d-3fd20c266b74",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "76b5e289-6bc4-48ee-8d5b-6989bab9f901",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "2731e181-f59c-446c-bb86-8f93bfbb10e9",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "4ef82b33-82ba-4521-846b-e651764ef46d",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "e08ed414-77bf-402a-82a8-9d4e1bd627a1",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "69490262-afc2-4692-8fac-b771a972c8f8",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "e446a380-0316-46f7-8ac9-22bce773b35f",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "6fc278d1-2ea4-4fbc-95cd-a9cd48c3c630",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "3934d535-740d-471a-bbf1-c3b26b1cd596",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "91fd7350-cc97-4c35-a072-2c826984293c",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "ee7a4ccb-c0c9-491f-9475-e78895fa9d03",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "5f73cd60-cd89-4c7a-85a6-e0ae34ca101b",
+            "owned_by": "2952"
+        },
+        {
+            "multiverse_id": "85930f68-6f53-4921-9556-2887ac3abfd2",
+            "owned_by": null
+        }
+    ],
+    "_id": "644692fad1b1ea34c07ba572"
+}

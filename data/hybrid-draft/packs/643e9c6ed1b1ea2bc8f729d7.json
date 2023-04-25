@@ -2,12 +2,12 @@
     "draft_id": "642c8b78d1b1ea6890273349",
     "opened_by": "2979",
     "round": 1,
-    "cards_remaining": 3,
-    "assigned_to": "2495",
+    "cards_remaining": 0,
+    "assigned_to": null,
     "cards": [
         {
             "multiverse_id": "318c363b-61cc-4e2f-8f86-a4287539ea07",
-            "owned_by": null
+            "owned_by": "2979"
         },
         {
             "multiverse_id": "40ab763d-05ee-408d-aeba-eaf18c4f2e21",
@@ -23,7 +23,7 @@
         },
         {
             "multiverse_id": "165357cc-ec74-490f-aec3-7048bb43c8f9",
-            "owned_by": null
+            "owned_by": "2495"
         },
         {
             "multiverse_id": "0e758594-a48c-4508-b400-9028aec07f63",
@@ -47,7 +47,7 @@
         },
         {
             "multiverse_id": "44178ece-af31-4a94-88bc-c9ce43bb4573",
-            "owned_by": null
+            "owned_by": "2952"
         },
         {
             "multiverse_id": "65721bc1-87fa-45b9-8b45-ee77c1aab6ac",
