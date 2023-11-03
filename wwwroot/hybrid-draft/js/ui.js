@@ -187,27 +187,64 @@ const ui = new Vue({
                         }
                     ]
                 }else{
-                    // var config = {
-                    //     'rarity:mythic': 0,
-                    //     'rarity:rare': 1,
-                    //     // at most mono-colored commons (include colorless)
-                    //     '-type:/Basic Land/+rarity:common+color=U+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color=B+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color=G+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color=W+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color=R+type:creature': 1, // basic lands list as common on scryfall, we want non-basic commons
+                    var config = [
+                        // special (n/a) [0]
+                        {
+                            uri: 'type:{special rules go here}',
+                            quantity: 0
+                        },
+                        //mythic: [1]
+                        {
+                            uri: 'rarity:mythic',
+                            quantity: 0
+                        },
+                        //rare: [2]
+                        {
+                            uri: 'rarity:rare',
+                            quantity: 1
+                        },
+                        // uncommon: [3]
+                        {
+                            uri: 'rarity:uncommon',
+                            quantity: 5
+                        },
 
-                    //     // at least each of the 5 colors
-                    //     '-type:/Basic Land/+rarity:common+color>=U': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color>=B': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color>=G': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color>=W': 1, // basic lands list as common on scryfall, we want non-basic commons
-                    //     '-type:/Basic Land/+rarity:common+color>=R': 1, // basic lands list as common on scryfall, we want non-basic commons
-                        
-                    //     'rarity:uncommon': 3,
-                    //     'type:/Basic Land/': 1,
-                    //     'type:land+rarity:common-type:/Basic Land/': 0 
-                    //     }
+                        // common (generic): [4]
+                        {
+                            uri: '-type:land+rarity:common',
+                            quantity: 3
+                        },
+                        // common_creature_w: [5]
+                        {
+                            uri: '-type:land+rarity:common+color=W',
+                            quantity: 1  
+                        },
+                        //common_creature_u: [6]
+                        {
+                            uri: '-type:land+rarity:common+color=U',
+                            quantity: 1  
+                        },
+                        //common_creature_b: [7]
+                        {
+                            uri: '-type:land+rarity:common+color=B',
+                            quantity: 1  
+                        },
+                        // common_creature_r: [8]
+                        {
+                            uri: '-type:land+rarity:common+color=R',
+                            quantity: 1  
+                        },
+                        //common_creature_g: [9]
+                        {
+                            uri: '-type:land+rarity:common+color=G',
+                            quantity: 1  
+                        },
+                        // common non-basic land: [10]
+                        {
+                            uri: 'type:land+rarity:common+-type:basic',
+                            quantity: 1
+                        }
+                    ]
                 }
 
                 if(Math.random() < 0.125){

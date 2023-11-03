@@ -314,3 +314,6 @@
 2023-04-27 15:39:06 Hybrid Draft Log: Card Picker DEBUG: {"card": "165357cc-ec74-490f-aec3-7048bb43c8f9", "pack": "6446e4acd1b1ea5b0cb9547c", "player": "2790"}
 2023-04-27 15:39:08 Hybrid Draft Log: Card Picker DEBUG: {"card": "93345804-dda4-42a2-84d4-8fcd376dd2d4", "pack": "6446e4f0d1b1ea0884666def", "player": "2790"}
 2023-04-27 15:39:18 Hybrid Draft Log: Card Picker DEBUG: {"card": "4a63d530-27c3-4cd7-ac37-c62b5a1afbc1", "pack": "6446e4acd1b1ea5b0cb9547c", "player": "2495"}
+2023-11-03 15:13:59 Hybrid Draft Log: Card Picker DEBUG: {"card": "062e00a1-f1dc-4089-b640-800ab781c590", "pack": "65454612d1b1ea050c1bdb34", "player": "2790"}
+2023-11-03 15:15:36 Hybrid Draft Log: Card Picker DEBUG: {"card": "5a96d8ae-200a-40be-95a8-72b53638a090", "pack": "654546bcd1b1ea5eb84c5425", "player": "2952"}
+2023-11-03 15:15:52 Hybrid Draft Log: Card Picker DEBUG: {"card": "5e6f4aba-3500-4fb7-ab78-02f63c03778a", "pack": "654546ded1b1ea4d4ccdabd9", "player": "1816"}

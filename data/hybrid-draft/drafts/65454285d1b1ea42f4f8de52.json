@@ -1,0 +1,28 @@
+{
+    "set": "LCI",
+    "type": "proxy",
+    "num_packs": "3",
+    "players": [
+        {
+            "name": "Joe",
+            "_id": "2790"
+        },
+        {
+            "name": "Austin L.",
+            "_id": "2979"
+        },
+        {
+            "name": "Doug",
+            "_id": "2790"
+        },
+        {
+            "name": "Austin B.",
+            "_id": "2952"
+        },
+        {
+            "name": "Rob",
+            "_id": "1816"
+        }
+    ],
+    "_id": "65454285d1b1ea42f4f8de52"
+}
