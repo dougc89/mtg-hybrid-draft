@@ -1,0 +1,16 @@
+{
+    "set": "MKM",
+    "type": "proxy",
+    "num_packs": "3",
+    "players": [
+        {
+            "name": "Doug",
+            "_id": "2790"
+        },
+        {
+            "name": "Austin L.",
+            "_id": "2979"
+        }
+    ],
+    "_id": "65b7b7ca3cdfbc10e7613df7"
+}
