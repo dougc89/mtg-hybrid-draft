@@ -1,4 +1,6 @@
-import json, os
+import json, os, sys
+sys.path.append("C:\\users\\2790\\appdata\\local\\programs\\python\\python310\\lib\\site-packages")
+
 from bson.objectid import ObjectId
 from pprint import pprint
 

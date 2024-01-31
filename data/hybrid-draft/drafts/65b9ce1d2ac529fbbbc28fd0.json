@@ -1,0 +1,32 @@
+{
+    "set": "MKM",
+    "type": "proxy",
+    "num_packs": "3",
+    "players": [
+        {
+            "name": "Doug",
+            "_id": "2790"
+        },
+        {
+            "name": "Austin L.",
+            "_id": "2979"
+        },
+        {
+            "name": "Austin B.",
+            "_id": "2952"
+        },
+        {
+            "name": "Joe",
+            "_id": "3503"
+        },
+        {
+            "name": "Rob",
+            "_id": "1816"
+        },
+        {
+            "name": "Ian",
+            "_id": "2495"
+        }
+    ],
+    "_id": "65b9ce1d2ac529fbbbc28fd0"
+}
