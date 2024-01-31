@@ -212,7 +212,7 @@ const ui = new Vue({
                         // common (generic): [4]
                         {
                             uri: '-type:land+rarity:common',
-                            quantity: 3
+                            quantity: 2
                         },
                         // common_creature_w: [5]
                         {
@@ -378,7 +378,7 @@ const ui = new Vue({
             if(!this.draft || !this.active_player){
                 // the first tab is for selecting a player
                 this.tab = 0
-            }else if(this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs && !(this.player_packs.length > 0 && this.player_packs.find(el => el.cards_remaining == 15))){       
+            }else if( (this.draft.type == 'solo' && !this.player_packs.length && this.player_cards.length < 49) || (this.draft.type != 'solo' && this.player_cards.length % 15 == 0 && this.player_cards.length < 15*this.draft.num_packs && !(this.player_packs.length > 0 && this.player_packs.find(el => el.cards_remaining == 15)))){       
                 // pack opener  
                 this.tab = 1
             }else{

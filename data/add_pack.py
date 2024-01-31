@@ -36,8 +36,8 @@ try:
     with open(f"c:\\github\\mtg-hybrid-draft\\data\\hybrid-draft\\pack_cards_temp\\{args.cards}") as f:
         card_list = json.load(f)
 
-    if len(card_list) != 15:
-        raise Exception('There needs to be exactly 15 cards in the pack')
+    # if len(card_list) != 15:
+    #     raise Exception('There needs to be exactly 15 cards in the pack')
 
     new_pack = {
         'draft_id': draft_id,

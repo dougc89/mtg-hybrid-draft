@@ -19,3 +19,6 @@
 .selected-card .mtg-card{
     background-color: teal;
 }
+.card-rotated{
+    transform: rotate(90deg);
+}

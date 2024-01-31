@@ -25,7 +25,8 @@ export default Vue.component('mtg-card', {
                 }
             },
             // the index of which card face to display
-            display_face: 0
+            display_face: 0,
+            rotation: 0,
         }
     }, 
     computed: {
@@ -36,12 +37,12 @@ export default Vue.component('mtg-card', {
         //     // return `https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=${this.card_info.multiverse_ids[this.display_face]}&type=card`
         // },
         best_card_img(){
-            if(this.card_info.card_faces && this.card_info.card_faces[this.display_face].image_uris.normal){
+            if(this.card_info.card_faces && this.card_info.card_faces[this.display_face].image_uris && this.card_info.card_faces[this.display_face].image_uris.normal){
                  return this.card_info.card_faces[this.display_face].image_uris.normal
             }else if(this.card_info.image_uris.normal){
                 return this.card_info.image_uris.normal
             }else{
-                return '/hybrid-draft/packaging/cardback.png'
+                return null // '/hybrid-draft/packaging/cardback.png'
             }
         },
         multiface_card(){
@@ -84,8 +85,13 @@ export default Vue.component('mtg-card', {
             this.$emit('select_card', {index:this.pack_index, multiverse_id:this.multiverse_id})
         },
         swap_card_face(){
-            // toggle between 0 and 1
-            this.display_face = (this.display_face + 1) % 2
+            if(this.card_info.card_faces[this.display_face].image_uris){
+                // for flipping 2 sided cards
+                this.display_face = (this.display_face + 1) % 2
+            }else{
+                // for rotating split cards
+                this.rotation = (this.rotation + 90) % 180
+            }
         }
     }
 });

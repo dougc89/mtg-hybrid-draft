@@ -5,7 +5,7 @@
         :elevation="elevation" 
         min-width='253' max-width='255' rounded @click='select'
         >
-        <v-img :src='best_card_img' height='353' width='253' contain class='card-edges'>
+        <v-img :src='best_card_img' height='353' width='253' contain :class="{'card-edges':true, 'card-rotated': rotation}">
                 <v-app-bar
                 flat color="rgba(0, 0, 0, 0)" >
                     <v-btn v-if='multiface_card'

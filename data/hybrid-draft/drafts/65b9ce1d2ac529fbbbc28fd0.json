@@ -1,7 +1,7 @@
 {
     "set": "MKM",
-    "type": "proxy",
-    "num_packs": "3",
+    "type": "solo",
+    "num_packs": "13",
     "players": [
         {
             "name": "Doug",

@@ -2,7 +2,8 @@ export default Vue.component('card-selection', {
     template: '#card-selection-template',
     props: {
         state: 0,
-        player_packs: []
+        player_packs: [],
+        draft: null,
     },
     data(){
         return {
@@ -23,7 +24,11 @@ export default Vue.component('card-selection', {
         //     }
         // }
         selection_limit(){
-            return 3
+            if(this.draft.type == 'solo' && this.player_packs[0] && this.player_packs[0].round){
+                return this.player_packs[0].round <= 7 ? this.player_packs[0].round : 14 - this.player_packs[0].round
+            }
+            // default to 1
+            return 1
         },
     },
     mounted(){
@@ -41,18 +46,26 @@ export default Vue.component('card-selection', {
     },
     methods: {            
         select_card(args){
-            console.log('selecting', args)
+            // console.log('selecting', args)
             // check if we are deselecting or selecting
             if(this.selected_cards.find(x => x == args.multiverse_id)){
                 // we are deselecting
                 this.selected_cards = this.selected_cards.filter(x => x != args.multiverse_id)
                 this.selected_index = this.selected_index.filter(x => x != args.index)
             }else{
-                // use set conversion to prevent duplications
+                // push their new selection
                 this.selected_cards.push(args.multiverse_id)
-                this.selected_cards = [...new Set(this.selected_cards)]
                 this.selected_index.push(args.index)
+
+                // use set conversion to prevent duplications
+                this.selected_cards = [...new Set(this.selected_cards)]
                 this.selected_index = [...new Set(this.selected_index)]
+
+                // then trim to the selection limit
+                if(this.selected_cards.length > this.selection_limit){
+                    this.selected_cards.shift()
+                    this.selected_index.shift()
+                }
             }
         },
         async confirm_selection(){
