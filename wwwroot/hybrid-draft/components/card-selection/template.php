@@ -2,9 +2,9 @@
 <v-card 
     class="mb-2 px-3" dark
     :elevation="elevation" height='500'>
-    <p class='h3 text-center mt-4'>Card Selection</p>
+    <p class='h3 text-center mt-4'>Card Selection ({{this.selected_cards.length}}/{{this.selection_limit}})</p>
     <v-slide-group
-        v-model='selected_index'
+        v-model='selected_index' multiple
         show-arrows v-if='!this.card_chosen && player_packs.length > 0' center-active active-class='selected-card' @change='select_card'
         >
             <v-slide-item
@@ -16,7 +16,7 @@
                 @select_card='select_card' :class="{'selected-card': active, clickable: !active}" @scryfall_api='scryfall_call'></mtg-card>
             </v-slide-item>
     </v-slide-group>
-    <v-row v-if='selected_card && !this.card_chosen' class='mt-1'>
+    <v-row v-if='selected_cards.length == selection_limit && !this.card_chosen' class='mt-1'>
         <v-spacer></v-spacer>
         <v-btn rounded color='teal' @click='confirm_selection'>Confirm Selection</v-btn>
         <v-btn rounded text  @click='clear_selection'>Clear Selection</v-btn>

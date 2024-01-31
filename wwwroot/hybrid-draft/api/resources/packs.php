@@ -63,14 +63,16 @@ class Packs extends Resource{
         # map out expected/accepted fields
         $field_map = [
             'required'=>[
-                'card'=>'multiverse_id of selected card'], 
+                'cards'=>'(array) list of multiverse_id(s) of selected card(s)'
+            ], 
             'optional'=>[]
         ];
 
         $vals = $this->request_fields($field_map);
-
-        $cmd = "py c:\\github\\mtg-hybrid-draft\\data\\pick_card.py -u {$player_id} -p {$pack_id} -c {$vals['card']}";
-        $updated_pack = shell_exec(escapeshellcmd($cmd));
+        foreach($vals['cards'] as $card){
+            $cmd = "py c:\\github\\mtg-hybrid-draft\\data\\pick_card.py -u {$player_id} -p {$pack_id} -c {$card}";
+            $updated_pack = shell_exec(escapeshellcmd($cmd));
+        }
         $this->success(['pack'=>json_decode($updated_pack, true), 'cmd'=>$cmd]);
     }
 
