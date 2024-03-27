@@ -1,0 +1,66 @@
+{
+    "draft_id": "65b9ce1d2ac529fbbbc28fd0",
+    "opened_by": "2979",
+    "round": 11,
+    "cards_remaining": 11,
+    "assigned_to": null,
+    "cards": [
+        {
+            "multiverse_id": "2faa0e56-527c-4be5-b8c9-b10ccde275f5",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "b6a50807-058e-45dc-847c-8ffd13b1bd48",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "0862bf07-8a76-4e80-bba2-20d22f8eee30",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "f0713025-581f-451b-97a3-97d891285dcc",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "c8eff4d0-67ad-4900-b33d-605659b59161",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "4ea29c34-4b55-4170-9120-0a8dda61f2eb",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "29bbfe93-8225-444c-835b-33ffa006ef66",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "7a914416-effd-4eda-b609-2773c53a08ec",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "c0ebfe5d-8819-495d-bf72-b9c28c6fd23e",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "7cbb17af-e17e-438a-ad72-0c942e6706b6",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "1ea6438b-0e6c-4d65-8bcd-34a988717c81",
+            "owned_by": "2979"
+        },
+        {
+            "multiverse_id": "6900a344-a155-4ee1-a3ac-d6c28e024270",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "03d0365e-6dee-4236-a997-6761e3cde90d",
+            "owned_by": null
+        },
+        {
+            "multiverse_id": "93ddde4f-d35e-4128-8f43-d0eadbd715de",
+            "owned_by": null
+        }
+    ],
+    "_id": "65bba627c9529271549c01e3"
+}
